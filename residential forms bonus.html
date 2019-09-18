@@ -3,11 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        div.a {
+             text-align: right;
+        }
+        div.b {
+             text-align: center;
+        }
+        p.realtor {
+            text-align: center;
+            line-height:5px ;
+        }
+        h2 {
+             text-align: center;
+            line-height:4px;
+        }
+        p.form {
+            text-align: center;
+            font-size: 10px ;
+            line-height:4px;
+        }
+        p.association {
+            text-align: center;
+            font-size: 9px;
+            font-weight: bold;
+            line-height: 5px;
+        }
+         p.occupant {
+             font-weight: bold;
+             text-align: center;
+             line-height: 10px;
+         }
 
     </style>
     <title>Residential Lease Application</title>
 </head>
 <body>
-    <p id="a">Received on_______________(date) at ________________(time)</p>
+    <div class="a">
+    <p>Received on_______________(date) at ________________(time)</p>
+    </div>
+    <br>
+    <div class="b">
+    <img src="img/square.png" alt="square logo"
+         style="width:50px"; height="60px;">
+    </div>
+    <p class="realtor">TEXAS ASSOCIATION OF REALTORS</p>
+    <h2>RESIDENTIAL LEASE APPLICATIONS</h2>
+    <p class="form">USE OF THIS FORM BY PERSONS WHO ARE NOT MEMBERS OF THE TEXAS ASSOCIATION OF REALTORES IS NOT AUTORIZED.</p>
+    <p class="association">Texas Association of REALTORS, Inc. 2017</p>
+    <p class="occupant">Each occupant and co-applicant 18 years or older must submit a separate application. </p>
+    <hr>
+    <p>
+        <label for= "address">Property Address: </label>
+        <input id="address" name="address" placeholder="Enter address">
+    </p>
 </body>
 </html>
