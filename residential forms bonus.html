@@ -39,7 +39,12 @@
 </head>
 <body>
     <div class="a">
-    <p>Received on_______________(date) at ________________(time)</p>
+     <p>
+         <label for="date">Received on</label>
+         <input id="date" name="date" placeholder="date">
+         <label for="date">at</label>
+         <input id="date" name="date" placeholder="time">
+     </p>
     </div>
     <br>
     <div class="b">
@@ -54,7 +59,26 @@
     <hr>
     <p>
         <label for= "address">Property Address: </label>
-        <input id="address" name="address" placeholder="Enter address">
+        <input id="address" name="address">
+    </p>
+    <p>
+        <label for="address">Anticipated: Move-in Date:</label>
+        <input id="address" name="address">
+        <label for="address">Montly rent: $</label>
+        <input id="address" name="address">
+        <label for="address">Security Deposit $</label>
+        <input id="address" name="address">
+    </p>
+    <p>Applicant was referred to Landlord by:
+        <br>
+        <input type="checkbox" name="referred" value="Real estate agent"> Real estate agent
+        <input id="referred" name="referred" placeholder="Enter agent name">
+        <input id="referred" name="referred" placeholder="Enter agent phone #"><br>
+        <input type="checkbox" name="referred" value="Newspaper ">Newspaper
+        <input type="checkbox" name="reffered" value="Sign ">Sign
+        <input type="checkbox" name="reffered" value="Internet">Internet
+        <input type="checkbox" name="reffered" value="Other">Other
+
     </p>
 </body>
 </html>
