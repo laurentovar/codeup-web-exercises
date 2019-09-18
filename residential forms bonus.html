@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <style>
@@ -33,7 +33,9 @@
              text-align: center;
              line-height: 10px;
          }
-
+        div.c {
+            text-indent: hanging;
+        }
     </style>
     <title>Residential Lease Application</title>
 </head>
@@ -78,7 +80,18 @@
         <input type="checkbox" name="reffered" value="Sign ">Sign
         <input type="checkbox" name="reffered" value="Internet">Internet
         <input type="checkbox" name="reffered" value="Other">Other
+        <input id="referred" name="referred">
+    </p>
+    <p>
+        <label for="name">Applicant's name (first, middle, last)</label>
+        <input id="name" name="name"><br>
+    </p>
+    <div class="c"
+    <p>Is there a co-applicant?
+        <input type="radio" name="coapplicant" value="yes">Yes
+        <input type="radio" name="coapplicant" value="no">No
 
     </p>
+    </div>
 </body>
 </html>
