@@ -36,6 +36,9 @@
          div.c {
              text-indent:50px;
          }
+        # {
+            text-indent: each-line;
+        }
     </style>
     <title>Residential Lease Application</title>
 </head>
@@ -85,11 +88,89 @@
         <input id="applicantname" name="name"><br>
     </p>
     <div class="c">
-    <p>Is there a co-applicant?
-        <input type="radio" name="coapplicant" value="yes">Yes
+        <label for="coapplicant">Is there a co-applicant?</label>
+        <input id="coapplicant" type="radio" name="coapplicant" value="yes">Yes
         <input type="radio" name="coapplicant" value="no">No
-        <p>If yes, co-applicant must submit a separate application.</p>
-    </p>
+        (If yes, co-applicant must submit a separate application.)</p>
     </div>
+    <p>
+        <label for="lastname">Applicant's former last name (madien or married)</label>
+        <input id="lastname" name="lastname">
+    </p>
+    <p>
+        <label for="info">Email</label>
+        <input id="info" Email="info">
+
+        <label for="info">Home Phone</label>
+        <input name="info"><br>
+
+        <label for="info">Work Phone</label>
+        <input name="info">
+
+        <label for="info">Mobile/Pager</label>
+        <input name="info"><br>
+
+        <label for="info">Soc Sec</label>
+        <input name="info">
+
+        <label for="info">Drivers License #</label>
+        <input name="info">
+
+        <label for="info">in</label>
+        <input name="info" placeholder="state">
+    </p>
+    <p>Emergency Contact:
+        <label for="emergency">Name:</label>
+        <input id="emergency" Name="emergency"><br>
+
+        <label for="emergency">Address:</label>
+        <input name="emergency"><br>
+
+        <label for="emergency">Phone:</label>
+        <input name="emergency">
+
+        <label for="emergency">Email:</label>
+        <input name="emergency">
+    </p>
+    <p>Name all other persons who will occupy the Property:<br>
+        <label for="persons">Name:</label>
+        <input id="persons" Name="persons">
+
+        <label for="persons">Relationship:</label>
+        <input name="persons">
+
+        <label for="persons">Age:</label>
+        <input name="persons"><br>
+
+        <label for="persons">Name:</label>
+        <input id="persons" Name="persons">
+
+        <label for="persons">Relationship:</label>
+        <input name="persons">
+
+        <label for="persons">Age:</label>
+        <input name="persons"><br>
+
+        <label for="persons">Name:</label>
+        <input id="persons" Name="persons">
+
+        <label for="persons">Relationship:</label>
+        <input name="persons">
+
+        <label for="persons">Age:</label>
+        <input name="persons"><br>
+    </p>
+    <p>
+        <label for="current">Applicants current Address:</label>
+        <input id="current" Name="current">
+
+        <label for="current">Apt No:</label>
+        <input name="current" placeholder="city,state,zip"><br>
+
+        <label for="current">Landlord's Name:</label>
+        <input name="current">
+    </p>
+
+
 </body>
 </html>
