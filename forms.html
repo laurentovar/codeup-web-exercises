@@ -5,37 +5,33 @@
     <title>Register With Us</title>
 </head>
 <body>
-    <form id="myform" method="POST" action="https://request-inspector.glitch.me/">
+<form method="POST" action="https://request-inspector.glitch.me/">
         <h2>User Login Info:</h2>
         <p>
             <label for= "email">Email: </label>
             <input id="email" type="email" name="email" placeholder="Enter Email">
         </p>
-        <p>
+
             <label for= "password">Password: </label>
             <input id="password" type="password" name="password" placeholder="Enter Password">
         </p>
         <h2>Short Bio:</h2>
-         <p>
              <textarea name="textarea" rows="4" cols="50" placeholder="Enter a short Bio"></textarea>
-         </p>
+         <br>
         <h2>How did you hear about us?</h2>
-            <input type="checkbox" name="advertisement" value="Billboard">Billboard
-            <input type="checkbox" name="advertisement" value="Internet Advertisement">Internet Advertisement
-<!--            <span class="checkbox"></span>-->
-            <input type="checkbox" name="advertisement" value="Radio Advertisement">Radio Advertisement
-<!--            <span class="checkbox"></span>-->
-            <input type="checkbox" name="advertisement" value="Other">Other
-<!--            <span class="checkbox"></span>-->
-    <h2>What browser are you using?</h2>
-    <select name="browser">
+            <input type="checkbox" name="advertisement" value="Billboard">Billboard <br>
+            <input type="checkbox" name="advertisement" value="Internet Advertisement">Internet Advertisement<br>
+            <input type="checkbox" name="advertisement" value="Radio Advertisement">Radio Advertisement<br>
+            <input type="checkbox" name="advertisement" value="Other">Other<br>
+   <h2>What type of browser are you using?</h2>
+    <label for="browser"></label>
+    <select id="browser" name="browser">
         <option value="internet explorer">Internet Explorer</option>
         <option value="safari">Safari</option>
-        <option value="chrome">Chrome</option>
+        <option value="chrome" selected>Chrome</option>
         <option value="firefox">Firefox</option>
         <option value="mozilla">Mozilla</option>
     </select>
-    <br>
     <br>
     <br>
     <button type="submit">Submit this form</button>
