@@ -6,7 +6,7 @@
 </head>
 <body>
 <form method="POST" action="https://request-inspector.glitch.me/">
-        <h2>User Login Info:</h2>
+        <h1>User Login Info:</h1>
         <p>
             <label for= "email">Email: </label>
             <input id="email" type="email" name="email" placeholder="Enter Email">
@@ -15,15 +15,22 @@
             <label for= "password">Password: </label>
             <input id="password" type="password" name="password" placeholder="Enter Password">
         </p>
-        <h2>Short Bio:</h2>
-             <textarea name="textarea" rows="4" cols="50" placeholder="Enter a short Bio"></textarea>
+    <h2>Short Bio:</h2>
+             <textarea name="bio" rows="4" cols="50" placeholder="Enter a short Bio"></textarea>
          <br>
-        <h2>How did you hear about us?</h2>
-            <input type="checkbox" name="advertisement" value="Billboard">Billboard <br>
-            <input type="checkbox" name="advertisement" value="Internet Advertisement">Internet Advertisement<br>
-            <input type="checkbox" name="advertisement" value="Radio Advertisement">Radio Advertisement<br>
-            <input type="checkbox" name="advertisement" value="Other">Other<br>
-   <h2>What type of browser are you using?</h2>
+    <h3>How did you hear about us?</h3>
+        <label for="billboard">Billboard</label><input id="billboard"
+               name="advertisment" value="billboard" type="checkbox">
+
+        <label for="Internet Advertisement">Internet Advertisement</label><input id="Internet Advertisement"
+               name="advertisment" value="Internet Advertisement" type="checkbox">
+
+        <label for="Radio Advertisement">Radio Advertisement</label><input id="Radio Advertisement"
+               name="advertisment" value="radio Advertisement" type="checkbox">
+
+        <label for="Other">Other</label><input id="Other"
+               name="advertisment" value="Other" type="checkbox">
+   <h3>What type of browser are you using?</h3>
     <label for="browser"></label>
     <select id="browser" name="browser">
         <option value="internet explorer">Internet Explorer</option>
