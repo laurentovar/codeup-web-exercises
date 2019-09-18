@@ -6,7 +6,7 @@
 </head>
 <body>
     <form method="POST" action="https://request-inspector.glitch.me/">
-        <h2>User Login:</h2>
+        <h2>User Login Info:</h2>
         <p>
             <label for= "email">Email: </label>
             <input id="email" name="email" placeholder="Enter Email">
@@ -21,6 +21,7 @@
          </p>
         <h2>How did you hear about us?</h2>
             <input type="checkbox" name="advertisement" value="Billboard">Billboard
+            </l>
             <span class="checkmark"></span>
             <input type="checkbox" name="advertisement" value="Internet Advertisement">Internet Advertisement
             <span class="checkbox"></span>
@@ -28,6 +29,17 @@
             <span class="checkbox"></span>
             <input type="checkbox" name="advertisement" value="Other">Other
             <span class="checkbox"></span>
-
+    </form>
+    <h2>What browser are you using?</h2>
+    <select>
+        <option value="internet explorer">Internet Explorer</option>
+        <option value="safari">Safari</option>
+        <option value="chrome">Chrome</option>
+        <option value="firefox">Firefox</option>
+        <option value="mozilla">Mozilla</option>
+    </select>
+    <br>
+    <br>
+    <button type="submit">Submit this form</button>
 </body>
 </html>
