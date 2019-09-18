@@ -33,9 +33,9 @@
              text-align: center;
              line-height: 10px;
          }
-        div.c {
-            text-indent: hanging;
-        }
+         div.c {
+             text-indent:50px;
+         }
     </style>
     <title>Residential Lease Application</title>
 </head>
@@ -45,7 +45,7 @@
          <label for="date">Received on</label>
          <input id="date" name="date" placeholder="date">
          <label for="date">at</label>
-         <input id="date" name="date" placeholder="time">
+         <input name="date" placeholder="time">
      </p>
     </div>
     <br>
@@ -65,32 +65,30 @@
     </p>
     <p>
         <label for="address">Anticipated: Move-in Date:</label>
-        <input id="address" name="address">
+        <input name="address">
         <label for="address">Montly rent: $</label>
-        <input id="address" name="address">
+        <input name="address">
         <label for="address">Security Deposit $</label>
-        <input id="address" name="address">
+        <input name="address">
     </p>
-    <p>Applicant was referred to Landlord by:
-        <br>
+    <p>Applicant was referred to Landlord by:</p>
         <input type="checkbox" name="referred" value="Real estate agent"> Real estate agent
         <input id="referred" name="referred" placeholder="Enter agent name">
-        <input id="referred" name="referred" placeholder="Enter agent phone #"><br>
+        <input name="referred" placeholder="Enter agent phone #"><br>
         <input type="checkbox" name="referred" value="Newspaper ">Newspaper
         <input type="checkbox" name="reffered" value="Sign ">Sign
         <input type="checkbox" name="reffered" value="Internet">Internet
         <input type="checkbox" name="reffered" value="Other">Other
-        <input id="referred" name="referred">
-    </p>
+        <input name="referred">
     <p>
-        <label for="name">Applicant's name (first, middle, last)</label>
-        <input id="name" name="name"><br>
+        <label for="applicantname">Applicant's name (first, middle, last)</label>
+        <input id="applicantname" name="name"><br>
     </p>
-    <div class="c"
+    <div class="c">
     <p>Is there a co-applicant?
         <input type="radio" name="coapplicant" value="yes">Yes
         <input type="radio" name="coapplicant" value="no">No
-
+        <p>If yes, co-applicant must submit a separate application.</p>
     </p>
     </div>
 </body>
