@@ -38,10 +38,11 @@
          }
 
          #emergencyContactSection {
-
+             line-height: 1;
          }
         #emergencyContactFields {
-            /*margin-left: 50px;*/
+            margin-left: 132px;
+
 
         }
         #emergencyContactFields input {
@@ -86,7 +87,7 @@
     <p>
         <label for="address">Anticipated: Move-in Date:</label>
         <input name="address">
-        <label for="address">Montly rent: $</label>
+        <label for="address">Monthly rent: $</label>
         <input name="address">
         <label for="address">Security Deposit $</label>
         <input name="address">
@@ -137,20 +138,19 @@
         <input name="info" placeholder="state">
     </p>
     <div id="emergencyContactSection">
-        <p>Emergency Contact:
+        <p>Emergency Contact: <label for="emergency">Name:</label>
+            <input id="emergency" Name="emergency">
             <div id="emergencyContactFields">
-                <label for="emergency">Name:</label>
-                <input id="emergency" Name="emergency"><br>
 
                 <label for="emergency">Address:</label>
                 <input name="emergency"><br>
 
                 <label for="emergency">Phone:</label>
                 <input name="emergency">
-            </div>
+
                 <label for="emergency">Email:</label>
                 <input name="emergency">
-
+             </div>
 
         </p>
     </div>
