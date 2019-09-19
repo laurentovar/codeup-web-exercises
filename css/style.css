@@ -23,6 +23,7 @@ table, th, td {
     border-collapse: collapse;
     width: 10%;
     color: darkblue;
+    background-color: lightblue;
 }
 a:link {
     color: darkturquoise;
