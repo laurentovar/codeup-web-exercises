@@ -36,9 +36,26 @@
          div.c {
              text-indent:50px;
          }
-        # {
-            text-indent: each-line;
+
+         #emergencyContactSection {
+
+         }
+        #emergencyContactFields {
+            /*margin-left: 50px;*/
+
         }
+        #emergencyContactFields input {
+            /*float: outside;*/
+
+
+        }
+        #emergencyContactFields label {
+            /*width: 50%;*/
+
+        }
+        /*# {*/
+        /*    text-indent: each-line;*/
+        /*}*/
     </style>
     <title>Residential Lease Application</title>
 </head>
@@ -91,7 +108,7 @@
         <label for="coapplicant">Is there a co-applicant?</label>
         <input id="coapplicant" type="radio" name="coapplicant" value="yes">Yes
         <input type="radio" name="coapplicant" value="no">No
-        (If yes, co-applicant must submit a separate application.)</p>
+        <strong>(If yes, co-applicant must submit a separate application.)</strong></p>
     </div>
     <p>
         <label for="lastname">Applicant's former last name (madien or married)</label>
@@ -119,19 +136,25 @@
         <label for="info">in</label>
         <input name="info" placeholder="state">
     </p>
-    <p>Emergency Contact:
-        <label for="emergency">Name:</label>
-        <input id="emergency" Name="emergency"><br>
+    <div id="emergencyContactSection">
+        <p>Emergency Contact:
+            <div id="emergencyContactFields">
+                <label for="emergency">Name:</label>
+                <input id="emergency" Name="emergency"><br>
 
-        <label for="emergency">Address:</label>
-        <input name="emergency"><br>
+                <label for="emergency">Address:</label>
+                <input name="emergency"><br>
 
-        <label for="emergency">Phone:</label>
-        <input name="emergency">
+                <label for="emergency">Phone:</label>
+                <input name="emergency">
+            </div>
+                <label for="emergency">Email:</label>
+                <input name="emergency">
 
-        <label for="emergency">Email:</label>
-        <input name="emergency">
-    </p>
+
+        </p>
+    </div>
+
     <p>Name all other persons who will occupy the Property:<br>
         <label for="persons">Name:</label>
         <input id="persons" Name="persons">
