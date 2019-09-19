@@ -1,9 +1,9 @@
 .fancy-header,h2{
-    color: blueviolet;
+    color: cadetblue;
     text-decoration: underline;
 }
 .fancy-header {
-    background-color: cornflowerblue;
+   text-align: center;
 }
 /*command forward slash for a shorcut*/
 body {
@@ -13,15 +13,28 @@ body {
 ul {
     list-style-type: square;
 }
-p,ol,ul,h2,h1,table {
+p,ol,ul,table {
     font-family: "Comic Sans MS", cursive, sans-serif;
-    color: aliceblue;
+    color: dimgrey;
 }
 table, th, td {
-    border: 2px solid blueviolet;
+    border: 2px solid darkslategray;
     border-collapse: collapse;
     width: 10%;
 }
+a:link {
+    color: darkturquoise;
+}
+a:visited {
+    color: green;
+}
 a:hover {
     color: cornflowerblue;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333333;
+    padding: 8px 10px;
+    font-size: 17px;
+    text-align: right;
 }
