@@ -1,4 +1,4 @@
-.fancy-header,h2{
+.fancy-header,h2, h3{
     color: cadetblue;
     text-decoration: underline;
 }
@@ -16,14 +16,12 @@ ul {
 }
 p,ol,ul,table {
     font-family: "Comic Sans MS", cursive, sans-serif;
-    color: dimgrey;
 }
 table, th, td {
     border: 2px solid cadetblue;
     border-collapse: collapse;
     width: 10%;
     color: darkblue;
-    background-color: lightblue;
 }
 a:link {
     color: darkturquoise;
@@ -55,5 +53,11 @@ div.logo {
     text-align: center;
     color: darkred;
     text-decoration: underline;
+}
+th{
+    background-color: darkturquoise;
+}
+td {
+    background-color: lightsteelblue;
 }
 
