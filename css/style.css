@@ -1,7 +1,27 @@
 .fancy-header,h2{
-    color: darkred;
+    color: blueviolet;
     text-decoration: underline;
 }
 .fancy-header {
-    background: lightgrey;
+    background-color: cornflowerblue;
+}
+/*command forward slash for a shorcut*/
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+}
+ul {
+    list-style-type: square;
+}
+p,ol,ul,h2,h1,table {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: aliceblue;
+}
+table, th, td {
+    border: 2px solid blueviolet;
+    border-collapse: collapse;
+    width: 10%;
+}
+a:hover {
+    color: cornflowerblue;
 }
