@@ -1,10 +1,11 @@
-.fancy-header,h2, h3{
+h2, h3{
     color: cadetblue;
     text-decoration: underline;
 }
-.fancy-header, div.pictures {
+div.pictures {
    text-align: center;
 }
+
 /*command forward slash for a shorcut*/
 body {
     background-image: url("../img/background1.jpg");
@@ -34,7 +35,7 @@ a:hover {
 }
 .topnav {
     overflow: hidden;
-    background-color: darkgrey;
+    background-color: darkseagreen;
     padding: 4px 4px;
     font-size: 20px;
     text-align: right;
@@ -60,4 +61,6 @@ th{
 td {
     background-color: lightsteelblue;
 }
-
+#robot {
+    float: left;
+}
