@@ -61,6 +61,30 @@ a {
     float: right;
     line-height: 80px;
 }
+.profile-details{
+    width: 25%;
+    float: left;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: 0
+    margin-bottom: 0;
+}
+.timeline{
+    width: 50%;
+    float: left;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.who-to-follow{
+    width: 25%;
+    float: right;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
