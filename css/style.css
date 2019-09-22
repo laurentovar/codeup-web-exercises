@@ -1,6 +1,7 @@
 h2, h3{
     color: cadetblue;
     text-decoration: underline;
+    text-align: center;
 }
 div.pictures {
    text-align: center;
@@ -13,16 +14,23 @@ body {
 }
 ul {
     list-style-type: square;
+    list-style-position: inherit;
+    width: 40%;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
 
 }
 p,ol,ul,table {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
-table, th, td {
+
+#pricing table, th, td {
     border: 2px solid cadetblue;
     border-collapse: collapse;
     width: 10%;
     color: darkblue;
+
 }
 a:link {
     color: darkturquoise;
@@ -58,9 +66,29 @@ div.logo {
 th{
     background-color: darkturquoise;
 }
-td {
-    background-color: lightsteelblue;
-}
+/*td {*/
+/*    background-color: lightsteelblue;*/
+/*}*/
 #robot {
     float: left;
+}
+
+#mainTable {
+    margin-top: 40px;
+
+}
+
+#mainTable tr {
+    background-color: transparent;
+
+}
+#mainTable td {
+    border-style: none;
+
+}
+
+#ourProcessCell  a {
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
 }
