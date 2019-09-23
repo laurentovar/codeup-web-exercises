@@ -72,7 +72,7 @@ a {
 .who-to-follow{
     float: right;
     margin:0.5em 0.5em;
-    width: calc (25%- 1em);
+    width: calc(25%- 1em);
 }
 .profile-details{
     float: left;
