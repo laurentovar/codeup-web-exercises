@@ -29,7 +29,7 @@ a {
     background: var(--light-bg);
     position: fixed;
     width: 100%;
-    z-index: 10;
+    z-index: 1000;
 }
 .nav {
     list-style-type: none;
@@ -53,6 +53,13 @@ a {
     background: var(--light-bg);
     height: 80px;
 }
+.profile-items{
+    list-style-type: none;
+    padding: 0;
+}
+.profile-entry{
+    margin: .5em;
+}
 .profile-image{
     position: absolute;
     top: 220px;
@@ -60,17 +67,17 @@ a {
 .profile-form{
     float: right;
     line-height: 80px;
+    align-content: center;
 }
 .profile-details, .who-to-follow {
     float: left;
-    margin:(0,.5em, 0,.5em);
-    width: calc (50%- 1em);
-    border: 10px;
+    margin:0.5em 0.5em;
+    width: calc (25%- 1em);
 }
 .timeline{
     float: left;
-    margin:(0,.5em, 0,.5em);
-    width: calc (25% - 1em);
+    margin:0.5em 0.5em;
+    width: calc (50% - 1em);
 }
 
 .container {
@@ -78,17 +85,16 @@ a {
 }
 .media{
     width: 100%;
-    padding: .5em;
     background: var(--light-bg);
-    border-bottom: 1px;
-    border-color: var(--separator-color);
-    overflow: hidden;
+    padding: .5em;
+    border-bottom: solid;
+    border-bottom-color: #DDDDDD;
+
 }
 .media-image{
     width: 50px;
-    float: center;
+    float: left;
     margin-top: 1.33em;
-
 }
 
 .btn {
