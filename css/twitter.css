@@ -61,15 +61,16 @@ a {
     float: right;
     line-height: 80px;
 }
-.profile-details, .who-to-follow{
+.profile-details, .who-to-follow {
     float: left;
     margin:(0,.5em, 0,.5em);
-    width: calc (25%- 1em);
+    width: calc (50%- 1em);
+    border: 10px;
 }
 .timeline{
     float: left;
     margin:(0,.5em, 0,.5em);
-    width: calc (50% - 1em);
+    width: calc (25% - 1em);
 }
 
 .container {
@@ -77,16 +78,19 @@ a {
 }
 .media{
     width: 100%;
+    padding: .5em;
     background: var(--light-bg);
     border-bottom: 1px;
-    border-color: var (--separator-color);
-    overflow: auto;
+    border-color: var(--separator-color);
+    overflow: hidden;
 }
 .media-image{
     width: 50px;
     float: center;
     margin-top: 1.33em;
+
 }
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
