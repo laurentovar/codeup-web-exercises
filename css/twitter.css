@@ -69,7 +69,12 @@ a {
     line-height: 80px;
     align-content: center;
 }
-.profile-details, .who-to-follow {
+.who-to-follow{
+    float: right;
+    margin:0.5em 0.5em;
+    width: calc (25%- 1em);
+}
+.profile-details{
     float: left;
     margin:0.5em 0.5em;
     width: calc (25%- 1em);
@@ -89,14 +94,17 @@ a {
     padding: .5em;
     border-bottom: solid;
     border-bottom-color: #DDDDDD;
-
+    overflow: auto;
 }
-.media-image{
+.media-image {
     width: 50px;
     float: left;
     margin-top: 1.33em;
 }
-
+.media-body {
+    float: left;
+    width: calc (100- 50px);
+}
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
