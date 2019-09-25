@@ -26,14 +26,18 @@ nav a:hover {
 
 #logo{
     font-family: 'Montserrat', sans-serif;
-    padding: .2em  3em;
+    font-size: 3em;
+    padding: .2em;
     left: 50%;
     /*so that it is in the center of the nav bar*/
-    margin-left: -102px;
+    margin-left: -56px;
     position: absolute;
-    text-align: center;
-    font-size: x-large;
+    /*text-align: center;*/
 
+
+}
+#logo-a {
+    padding: 0;
 }
 
 /*Center all li in the nav*/
