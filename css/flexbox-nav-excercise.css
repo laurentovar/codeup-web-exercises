@@ -16,30 +16,41 @@ ul {
 nav a {
     text-decoration: none;
     color: #111111;
-    font-family: Montserrat-Work Sans;
+    font-family: 'Work Sans', sans-serif;
     display: inline-block; /* inline-block to increase clickable area beyond the text */
     padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
 }
 nav a:hover {
-    background: white;
+    background: cornflowerblue;
 }
+
+/*NOTES*/
 /*nav ul li:nth-child(4) {*/
     /*
         this allows the last flex item to be right justified
         by filling remaining space to the left of the flex item with margin
     */
     /*margin-left: auto;*/
-.logo{
 
-    padding: 3em .2em;
-    /*position: absolute;*/
+
+#logo{
+    font-family: 'Montserrat', sans-serif;
+    padding: .2em  3em;
+    left: 50%;
+    margin-left: -102px;
+    position: absolute;
+    text-align: center;
+    font-size: x-large;
+
 }
-nav ul li:nth-child(5) {
+
+/*Center all li in the nav*/
+nav ul li{
     align-self: center;
+
 }
+
+
 nav ul li:nth-child(6) {
-    align-self: center;
-}
-nav ul li:nth-child(7) {
-    margin-right: auto;
+    margin-left: auto;
 }
