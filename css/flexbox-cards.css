@@ -70,12 +70,13 @@ a {
 .container {
     /* This is a flex container */
     display: flex;
-    align-items: baseline;
+    align-items: center;
 }
 
 .card {
     /* This is a flex item */
+    flex-basis: 100%;
     text-align: center;
-    align-self: center;
+    /*align-self: center;*/
 
 }
