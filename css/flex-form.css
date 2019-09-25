@@ -31,8 +31,6 @@ body {
     position: relative;
     border:20px solid rgba(0,0,0,0.3);
     border-radius:5px;
-
-
 }
 
 .flex-form > * {
@@ -63,6 +61,5 @@ body {
 }
 .destination {
     /* bigger item */
-
 
 }
