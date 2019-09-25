@@ -19,7 +19,7 @@ a {
 .container {
     max-width: 750px;
     margin: 0 auto;
-    display: flex;
+
 }
 
 .card {
@@ -27,7 +27,7 @@ a {
     margin: 20px;
     padding: 20px;
     border-radius: 4px;
-    text-align: center;
+
 
 }
 
@@ -69,10 +69,13 @@ a {
 
 .container {
     /* This is a flex container */
+    display: flex;
+    align-items: baseline;
 }
 
 .card {
     /* This is a flex item */
-
+    text-align: center;
+    align-self: center;
 
 }
