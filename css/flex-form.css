@@ -60,14 +60,13 @@ body {
 }
 .flex-form {
     /* flex items */
-    align-items: center;
-    background-color: #0fb784;
     display: flex;
+    margin: auto;
 
 }
 .destination {
     /* bigger item */
     flex-basis: 30%;
-    position: relative;
+
 
 }
