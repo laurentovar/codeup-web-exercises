@@ -14,6 +14,7 @@ main {
     /*grid-gap-color;*/
     grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
+
 }
 main div {
     border: 4px solid black;
