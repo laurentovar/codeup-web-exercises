@@ -5,14 +5,14 @@ body {
         "header header header"
         "nav article ads"
         "nav footer footer";
-    grid-template-columns: 220px 1fr 120px;
+    grid-template-columns: 280px 1fr 220px;
     grid-template-rows: 80px 1fr 90px;
     grid-gap: 10px;
     height: 100vh;
-    margin: fill;
+    margin: 0;
 }
-header, footer, article, nav, div {
-    padding: 30px;
+header, nav, article, footer, div {
+    padding: 20px;
     background: #FCD801 ;
 }
 #pageHeader {
@@ -30,4 +30,3 @@ header, footer, article, nav, div {
 #siteAds {
     grid-area: ads;
 }
-                                                                                                             <footer id="pageFooter">Footer</footer>

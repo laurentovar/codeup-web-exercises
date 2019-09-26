@@ -5,14 +5,14 @@ body {
             "nav article"
             "nav ads"
             "footer footer";
-    grid-template-rows: 100px 1fr 85px 85px;
-    grid-template-columns: 240px 1fr;
+    grid-template-rows: 80px 1fr 73px 73px;
+    grid-template-columns: 285px 1fr;
     grid-gap: 10px;
     height: 100vh;
-    margin: fill;
+    margin: 0;
 }
 header, footer, article, nav, div {
-    padding: 30px;
+    padding: 20px;
     background:#9BCE0B;
 }
 #pageHeader {
