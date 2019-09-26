@@ -9,7 +9,7 @@ body {
     grid-template-rows: 80px 1fr 90px ;
     grid-gap: 10px;
     height: 100vh;
-    margin: 2;
+    margin: fill;
 }
 header, footer, article, nav, div {
     padding: 30px;
