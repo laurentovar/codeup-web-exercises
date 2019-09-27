@@ -7,24 +7,24 @@
     height: 100vh;
     margin: 0;
 }
-#gridBody > div {
+#gridBody  div {
     color: white;
     font-size: 40px;
     padding: 10px;
     background:#FDDA00;
 }
-#gridBody > div:nth-child(1) {
+#gridBody  div:nth-child(1) {
     grid-column: span 4;
 }
-#gridBody > div:nth-child(2) {
+#gridBody  div:nth-child(2) {
     grid-row: span 4;
 }
-#gridBody > div:nth-child(4) {
+#gridBody  div:nth-child(4) {
     grid-column: span 2;
 }
-#gridBody > div:nth-child(5) {
+#gridBody  div:nth-child(5) {
     grid-column: span 2 ;
 }
-#gridBody > div:nth-child(10) {
+#gridBody  div:nth-child(10) {
     grid-column: span 3;
 }

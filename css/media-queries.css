@@ -35,13 +35,13 @@ ul {
     list-style-type: none;
     display: inline;
 }
-/*#main {*/
-/*    display: flex;*/
-/*}*/
-p {
+#main {
     display: flex;
-
-    /*flex-wrap: wrap;*/
+    justify-content: left;
+}
+/*.main {*/
+/*    justify-content: left;*/
+/*    !*flex-wrap: wrap;*!*/
 }
 /*.sub-section {*/
 /*    float:right ;*/
