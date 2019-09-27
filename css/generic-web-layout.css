@@ -1,4 +1,3 @@
-/*4 rows 3 columns*/
 /*font-family: Roboto, sans-serif;*/
 /*tablet width breakpoint: 992px and below mobile width breakpoint: 600px and below*/
 
@@ -137,12 +136,13 @@ p {
     grid-row-gap: 5px;
 }
 
-.adbock{
+.adblock{
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
+    padding: 15px;
     font-family: Roboto, sans-serif;
 }
 
@@ -180,6 +180,8 @@ p {
     grid-area: 8 / 1 / 9 / 2;
     border: 3px solid lightgrey;
 }
+/*tablet width breakpoint: 992px and below mobile width breakpoint: 600px and below*/
+
 
 
 
