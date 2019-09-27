@@ -1,67 +1,82 @@
 * {
     box-sizing: border-box;
 }
+header {
+    width: 100%;
+    height: 20%;
+}
 h1 {
-   text-align: left;
+   float:  left;
 }
 ul {
-    display: flex;
-    align-items: right;
+    list-style-type: none;
+    margin: 30px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
 }
 
+li {
+    float: right;
+}
 
+li a {
+    display: block;
+    padding: 10px;
+}
 
-
-
-
-
+img {
+    width: 890px;
+    heighth: 385px;
+    margin: 50px;
+}
 
 ul {
     list-style-type: none;
+    display: inline;
+}
+/*#main {*/
+/*    display: flex;*/
+/*}*/
+p {
+    display: flex;
+
+    /*flex-wrap: wrap;*/
+}
+/*.sub-section {*/
+/*    float:right ;*/
 }
 
 
+/*@media screen and (max-width:760px) {*/
+/*    h1 {*/
+/*        text-align: center;*/
+/*    }*/
+/*    */
+/*    .alert-info {*/
+/*        display: flex;*/
+/*       justify-content: center;*/
+/*        background-color: #CCFFFF;*/
+/*        */
+/*    }*/
 
+/*    ul {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        align-items: stretch;*/
+/*        */
+/*    }*/
 
-@media screen and (max-width:760px) {
-    h1 {
-        /*background-color: #0fb784;*/
-        text-align: center;
-    }
-    /*nav {*/
-        /*border: #848487;*/
-    }
-    .alert-info {
-        display: flex;
-       justify-content: center;
-        background-color: #CCFFFF;
-        /*border: #84 8487;*/
-        /*text-decoration: none;*/
-    }
+/*    li {*/
+/*        text-align: center;*/
+/*        margin: 5px 35px  7px 2px ;*/
+/*        background-color: #848487;*/
+/*        padding: 5px;*/
+/*    }*/
 
-    ul {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-
-        /*align-content: center;*/
-        /*background-color: #848487;*/
-    }
-
-    li {
-        text-align: center;
-        margin: 5px 35px  7px 2px ;
-        background-color: #848487;
-        padding: 5px;
-    }
-
-    img {
-        height:344 px;
-        width: 359px;
-        align-items: center;
-    }
-}
-@media screen and (min-width:900px) and (max-width: 1500px) {
-
-
-}
+/*    img {*/
+/*        height:344 px;*/
+/*        width: 359px;*/
+/*        align-items: center;*/
+/*    }*/
+/*}*/
