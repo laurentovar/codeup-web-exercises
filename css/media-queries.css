@@ -1,0 +1,15 @@
+ul {
+    list-style-type: none;
+}
+/*@media screen and (min-width:500px) {*/
+/*    selector {*/
+/*        property: value;*/
+/*    }*/
+/*}*/
+/*for mobile phones*/
+@media screen and (min-width:320px) and (max-width:480px) {
+    h1 {
+        /*background-color: #0fb784;*/
+        text-align: center;
+    }
+}
