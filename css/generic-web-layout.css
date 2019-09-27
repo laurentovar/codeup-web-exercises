@@ -90,9 +90,8 @@ h1{
 }
 p {
     font-family: Roboto, sans-serif;
-    font-size: 14px;
-    margin: 10px;
     font-size: 15px;
+    margin: 35px 10px;
 }
 .div1 { grid-area: 1 / 1 / 2 / 5;
 }
