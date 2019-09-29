@@ -14,7 +14,7 @@ header {
     height: 20%;
 }
 h1 {
-   float:  left;
+   float: left;
 }
 ul {
     list-style-type: none;
@@ -45,7 +45,7 @@ li a {
 
 img {
     width: 890px;
-    heighth: 385px;
+    height: 385px;
     /*margin: 50px;*/
 }
 
@@ -91,40 +91,29 @@ section{
         padding: 20px;
         /*border-color: #848487;*/
     }
-    #main {
-        display: flex;
-    }
 
     ul {
-        display: inline-block;
-        /*flex-direction: column;*/
+        display: flex;
+        flex-flow: column wrap;
         background-color: transparent;
-        margin: 5px 35px  7px 2px ;
-        /*align-items: stretch;*/
-
+        /*margin: 5px 35px  7px 2px ;*/
+        align-items: stretch;
+        width: 340px;
+        align-items: center;
+        margin-top: 0;
     }
-
-    /*ul {*/
-    /*    list-style-type: none;*/
-    /*    margin: 30px;*/
-    /*    padding: 0;*/
-    /*    overflow: hidden;*/
-    /*  */
-
-    /*}*/
-
-
 
 
     li a {
         display: flex;
         flex-direction: column;
         text-align: center;
-        margin: 5px 35px  7px 2px ;
+        margin: 5px 20px 7px 2px;
         background-color: #848487;
-        padding: 30px;
-
+        padding: 20px;
     }
+
+    /*}*/
 
     img {
         display: flex;
