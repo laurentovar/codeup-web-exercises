@@ -1,0 +1,15 @@
+
+ul {
+    list-style-type: none;
+}
+.nav-item-signUp {
+    margin-top: 15px;
+}
+.nav-link-signUp {
+    color: #848487;
+}
+button {
+    /*text-decoration: none;*/
+    background-color: white;
+    /*border-color: 1px solid grey;*/
+}
