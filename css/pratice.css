@@ -1,0 +1,14 @@
+
+/*this is for smaller desktops, ipad pro*/
+@media screen and (max-width:1024px) {
+    .box {
+        background-color: ;
+    }
+
+
+
+}
+/*mobile devices*/
+@media screen and (max-width: 760px) {
+
+}
