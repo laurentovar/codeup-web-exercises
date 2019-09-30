@@ -1,33 +1,33 @@
 
-ul {
-    list-style-type: none;
-}
-.nav-item-signUp {
-    margin-top: 15px;
-}
-.nav-link-signUp {
-    color: #848487;
-}
-button {
-    /*text-decoration: none;*/
-    background-color: white;
-    /*border-color: 1px solid grey;*/
-}
-.jumbotron-fluid {
-    display: flex;
-    text-align: center;
-    width: 100%;
-    background-image: url("../img/pizza.png");
-    /*background-color: white;*/
-    /*opacity: .3;*/
-
-
-}
-/*.display-4 {*/
-/*    display: flex;*/
-/*    width: 100%;*/
-/*    text-align: center;*/
-/*    background-color: white;*/
-/*    opacity: .2;*/
-
+/*ul {*/
+/*    list-style-type: none;*/
 /*}*/
+/*.nav-item-signUp {*/
+/*    margin-top: 15px;*/
+/*}*/
+/*.nav-link-signUp {*/
+/*    color: #848487;*/
+/*}*/
+/*button {*/
+/*    !*text-decoration: none;*!*/
+/*    background-color: white;*/
+/*    !*border-color: 1px solid grey;*!*/
+/*}*/
+/*.jumbotron-fluid {*/
+/*    display: flex;*/
+/*    text-align: center;*/
+/*    width: 100%;*/
+/*    background-image: url("../img/pizza.png");*/
+/*    !*background-color: white;*!*/
+/*    !*opacity: .3;*!*/
+/*}*/
+
+/*.display-4 {*/
+/*    !*display: flex;*!*/
+/*    width: 100%;*/
+/*    !*text-align: center;*!*/
+/*    background-color: white;*/
+/*    opacity: .4;*/
+/*    margin: 0;*/
+
+/*!*}*!*/
