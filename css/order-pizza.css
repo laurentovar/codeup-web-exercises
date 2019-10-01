@@ -1,1 +1,10 @@
 
+.jumbotron-fluid {
+    background-image: url("../img/pizza.png");
+
+}
+
+.text-center {
+    opacity: 0.6;
+
+}
