@@ -9,13 +9,9 @@
 
 }
 
-.handTossedSizes{
-   padding-left: 10px;
-}
-.crispyThin {
-    padding-left: 10px;
+.crispyThin, .nonMeats, .handTossedSizes, .Meats, .cheese1, .sauce1, .sauce2 {
+    padding-left: 20px;
 }
 .list-group-item-sauce {
     padding: 20px;
     list-style-type: none;
-}

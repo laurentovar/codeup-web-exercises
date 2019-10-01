@@ -177,10 +177,7 @@
                 <div class="card-header">
                     Cheese
                 </div>
-                <!--            Create a List group to hold all "rows" in a card-->
-                <ul class="list-group">
-                    <!--                First Row, The Description-->
-<!--                    <li class="list-group-item-sauce">How much?</li>-->
+                <div class="cheese1">
                     <div class="form-group">
                         <label for="cheese">How much?</label>
                         <select class="form-control" id="cheese">
@@ -189,16 +186,16 @@
                             <option>Extra</option>
                         </select>
                     </div>
-                </ul>
             </div>
             <br>
+            </div>
 
             <div class="card">
                 <div class="card-header">
                     Sauce
                 </div>
-                <ul class="list-group">
-
+<!--                <ul class="list-group">-->
+                    <div class="sauce1">
                     <div class="form-group">
                         <label for="sauce">What type?</label>
                         <select class="form-control" id="sauceKind">
@@ -208,9 +205,9 @@
                             <option>Alfredo Sauce</option>
                         </select>
                     </div>
-                </ul>
-                <ul class="list-group">
-
+                    </div>
+<!--                </ul>-->
+                <div class="sauce2">
                     <div class="form-group">
                         <label for="sauce">How much?</label>
                         <select class="form-control" id="sauce">
@@ -219,7 +216,7 @@
                             <option>Extra</option>
                         </select>
                     </div>
-                </ul>
+                </div>
                 <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-end">
                     <li class="page-item">
@@ -239,6 +236,7 @@
                 </ul>
             </nav>
             </div>
+
 <!--                for the third card-->
             <div id="chooseToppings">
                 <!--Parent Card-->
@@ -252,8 +250,8 @@
                            Choose Meats
                         </div>
                         <!--            Create a List group to hold all "rows" in a card-->
-                        <ul class="list-group">
-                            <div class="form-check">
+                        <div class="Meats">
+                        <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="beef">
                                 <label class="form-check-label" for="beef">
                                     Beef
@@ -277,6 +275,7 @@
                                     Bacon
                                 </label>
                             </div>
+                        </div>
 <!--                            for the veggies-->
                             <!--        Create a Child Card-->
                             <br>
@@ -285,6 +284,7 @@
                                 <div class="card-header">
                                     Choose Non-Meats
                                 </div>
+                                <div class="nonMeats">
                                 <!--            Create a List group to hold all "rows" in a card-->
 <!--                                <ul class="list-group">-->
                                     <div class="form-check">
@@ -311,19 +311,17 @@
                                             Jalepeno Peppers
                                         </label>
                                     </div>
-                                <br>
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-end">
-                                        <li class="page-item">
-                                        </li>
-                                        <li class="page-item"><a class="page-link bg-primary text-white" href="#">Checkout  <img src="img/cart-white.png" height=30px width=25px;></a></li>
-                                    </ul>
-                                </nav>
+                                </div>
                             </div>
-
-
-
-
+                        <p>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-end">
+                                <li class="page-item">
+                                </li>
+                                <li class="page-item"><a class="page-link bg-primary text-white" href="#">Checkout  <img src="img/cart-white.png" height=30px width=25px;></a></li>
+                            </ul>
+                        </nav>
+                        </p>
 
 
 </body>
