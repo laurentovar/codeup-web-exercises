@@ -8,3 +8,14 @@
     opacity: 0.6;
 
 }
+
+.handTossedSizes{
+   padding-left: 10px;
+}
+.crispyThin {
+    padding-left: 10px;
+}
+.list-group-item-sauce {
+    padding: 20px;
+    list-style-type: none;
+}

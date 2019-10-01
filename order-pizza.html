@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="css/order-pizza.css ">
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <a class="navbar-brand" href="#">Pizza World</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -25,15 +27,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Menu</a>
             </li>
-            <!--            <li class="nav-item">-->
-            <!--                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-            <!--            </li>-->
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you</button>
             </form>
         </ul>
     </div>
+
     <div class="float-right">
         <a class="navbar-brand" href="#">
             <img src="img/profile.png" width="40" height="40" alt="">
@@ -48,10 +48,12 @@
     </div>
              </span>
     <h2>Build your own pizza!</h2>
+
     <ul class="nav nav-tabs">
 
         <li class="nav-item">
-            <a class="nav-link active" href="#"><span class="badge badge-pill badge-secondary">1</span> Size and crust</a>
+            <a class="nav-link active" href="#"><span class="badge badge-pill badge-secondary">1</span> Size and
+                crust</a>
 
         </li>
         <li class="nav-item">
@@ -62,7 +64,144 @@
         </li>
     </ul>
 
+    <!--Parent Card-->
+    <div class="card bg-primary text-white">Choose size and crust</div>
+    <!--Define the body of the parent card    -->
+    <div class="card-body">
+<!--        Create a Child Card-->
+        <div class="card">
+<!--            Create a Header for the child Card-->
+            <div class="card-header">
+                Hand Tossed
+            </div>
+<!--            Create a List group to hold all "rows" in a card-->
+            <ul class="list-group">
+<!--                First Row, The Description-->
+                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+<!--                Small Pizza Row-->
+                <li class="list-group-item">
+<!--                    Create a Div to hold radio input and label. Used to position element in row-->
+                    <div class="handTossedSizes">
+<!--                        Radio Button Input for Small Hand Tossed Size-->
+                        <input class="form-check-input" type="radio" name="handTossedSize" id="smallHandTossed"
+                               value="10"
+                               checked>
+<!--                        Label for the radio Button-->
+                        <label class="form-check-label" for="smallHandTossed">
+                            Small (10")
+                        </label>
+                    </div>
+                </li>
 
-</div>
+<!--                Medium Pizza Row-->
+                <li class="list-group-item">
+<!--                    Create a Div to hold radio input and label. Used to position element in row-->
+                    <div class="handTossedSizes">
+<!--                        Radio Button Input for Medium Hand Tossed Size-->
+                        <input class="form-check-input" type="radio" name="handTossedSize" id="mediumHandTossed"
+                               value="12"
+                               checked>
+<!--                        Label for the radio Button-->
+                        <label class="form-check-label" for="mediumHandTossed">
+                            Medium (12")
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+<!--        <br>-->
+
+        <div class="card">
+            <!--            Create a Header for the child Card-->
+            <div class="card-header">
+                Crispy Thin
+            </div>
+            <!--            Create a List group to hold all "rows" in a card-->
+            <ul class="list-group">
+                <!--                First Row, The Description-->
+                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                <!--                Small Pizza Row-->
+                <li class="list-group-item">
+                    <!--                    Create a Div to hold radio input and label. Used to position element in row-->
+                    <div class="crispyThin">
+                        <!--                        Radio Button Input for Small Hand Tossed Size-->
+                        <input class="form-check-input" type="radio" name="crispyThin" id="mediumThin"
+                               value="10"
+                               checked>
+                        <!--                        Label for the radio Button-->
+                        <label class="form-check-label" for="mediumThin">
+                            Medium (12")
+                        </label>
+                    </div>
+                </li>
+
+                <!--                Medium Pizza Row-->
+                <li class="list-group-item">
+                    <!--                    Create a Div to hold radio input and label. Used to position element in row-->
+                    <div class="crispyThin">
+                        <!--                        Radio Button Input for Medium Hand Tossed Size-->
+                        <input class="form-check-input" type="radio" name="crispyThin" id="LargeHandTossed"
+                               value="12"
+                               checked>
+                        <!--                        Label for the radio Button-->
+                        <label class="form-check-label" for="LargeHandTossed">
+                            Large (14")
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <!--Parent Card-->
+        <div class="card bg-primary text-white">Choose size and crust</div>
+        <!--Define the body of the parent card    -->
+        <div class="card-body">
+            <!--        Create a Child Card-->
+            <div class="card">
+                <!--            Create a Header for the child Card-->
+                <div class="card-header">
+                    Cheese
+                </div>
+                <!--            Create a List group to hold all "rows" in a card-->
+                <ul class="list-group">
+                    <!--                First Row, The Description-->
+<!--                    <li class="list-group-item-sauce">How much?</li>-->
+                    <div class="form-group">
+                        <label for="cheese">How much?</label>
+                        <select class="form-control" id="cheese">
+                            <option>Light</option>
+                            <option>Average</option>
+                            <option>Heavy</option>
+                            <option>None</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <br>
+
+            <div class="card">
+                <div class="card-header">
+                    Sauce
+                </div>
+                <ul class="list-group">
+                    <!--                First Row, The Description-->
+                    <!--                    <li class="list-group-item-sauce">How much?</li>-->
+                    <div class="form-group">
+                        <label for="cheese">How much?</label>
+                        <select class="form-control" id="cheese">
+                            <option>Light</option>
+                            <option>Average</option>
+                            <option>Heavy</option>
+                            <option>None</option>
+                        </select>
+                        </li>
+                </ul>
+            </div>
+
+
+
+
+
+
 </body>
 </html>
