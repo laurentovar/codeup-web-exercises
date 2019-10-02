@@ -12,12 +12,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
-        .bs-example{
+        .bs-example {
             margin: 20px;
         }
     </style>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#myTab a:last").tab('show'); // show last tab on page load
         });
     </script>
@@ -26,7 +26,8 @@
 <body>
 <!--for the navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+    <button aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"
             data-target="#navbarTogglerDemo01" data-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -69,22 +70,25 @@
     <div class="bs-example">
         <ul class="nav nav-tabs" id="myTab">
             <li class="nav-item">
-                <a href="#sizeAndCrust" class="nav-link" data-toggle="tab"><span class="badge badge-pill badge-secondary">1 </span> Size and crust</a>
+                <a href="#sizeAndCrust" class="nav-link" data-toggle="tab"><span
+                        class="badge badge-pill badge-secondary">1 </span> Size and crust</a>
 
             <li class="nav-item">
-                <a href="#" class="nav-link" data-toggle="tab"><span class="badge badge-pill badge-secondary">2 </span> Cheese and Sauce</a>
+                <a href="#cheeseAndSauce" class="nav-link" data-toggle="tab"><span
+                        class="badge badge-pill badge-secondary">2 </span> Cheese and Sauce</a>
             <li class="nav-item">
-                <a href="#" class="nav-link" data-toggle="tab"><span class="badge badge-pill badge-secondary">3 </span> Toppings</a>
+                <a href="#toppings" class="nav-link" data-toggle="tab"><span
+                        class="badge badge-pill badge-secondary">3 </span> Toppings</a>
 
 
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">3</span> Toppings</a>-->
-<!--        </li>-->
+                <!--        <li class="nav-item">-->
+                <!--            <a class="nav-link" href="#"><span class="badge badge-pill badge-secondary">3</span> Toppings</a>-->
+                <!--        </li>-->
 
-    </ul>
+        </ul>
 
-    <!--    for the first card-->
-    <!--Parent Card-->
+        <!--    for the first card-->
+        <!--Parent Card-->
         <div class="tab-content">
             <div class="tab-pane fade" id="sizeAndCrust">
                 <div class=" tab-pane card bg-primary text-white">Choose size and crust</div>
@@ -92,163 +96,166 @@
                     <!--        Create a Child Card-->
                     <div class="card">
                         <!--    Create a Header for the child Card-->
-                <div class="card-header">Hand Tossed</div>
-                <!--            Create a List group to hold all "rows" in a card-->
-                <ul class="list-group">
-                    <!--                First Row, The Description-->
-                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-                    <!--                Small Pizza Row-->
-                    <li class="list-group-item">
-                        <!--          Create a Div to hold radio input and label. Used to position element in row-->
-                        <div class="handTossedSizes">
-                            <!--                  Radio Button Input for Small Hand Tossed Size-->
-                            <input class="form-check-input" id="smallHandTossed" name="handTossedSize" type="radio">
-                            <!--                  Label for the radio Button-->
-                            <label class="form-check-label" for="smallHandTossed">
-                                Small (10")
-                            </label>
-                        </div>
-                    </li>
+                        <div class="card-header">Hand Tossed</div>
+                        <!--            Create a List group to hold all "rows" in a card-->
+                        <ul class="list-group">
+                            <!--                First Row, The Description-->
+                            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                            <!--                Small Pizza Row-->
+                            <li class="list-group-item">
+                                <!--          Create a Div to hold radio input and label. Used to position element in row-->
+                                <div class="handTossedSizes">
+                                    <!--                  Radio Button Input for Small Hand Tossed Size-->
+                                    <input class="form-check-input" id="smallHandTossed" name="handTossedSize"
+                                           type="radio">
+                                    <!--                  Label for the radio Button-->
+                                    <label class="form-check-label" for="smallHandTossed">
+                                        Small (10")
+                                    </label>
+                                </div>
+                            </li>
 
 
-                    <!--      Medium Pizza Row-->
-                    <li class="list-group-item">
-                        <!--                    Create a Div to hold radio input and label. Used to position element in row-->
-                        <div class="handTossedSizes">
-                            <!--                        Radio Button Input for Medium Hand Tossed Size-->
-                            <input class="form-check-input" id="mediumHandTossed" name="handTossedSize" type="radio">
-                            <!--                        Label for the radio Button-->
-                            <label class="form-check-label" for="mediumHandTossed">
-                                Medium (12")
-                            </label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <br>
-
-
-            <div class="card">
-                <!-- Create a Header for the child Card-->
-                <div class="card-header">
-                    Crispy Thin
-                </div>
-                <!--Create a List group to hold all "rows" in a card-->
-                <ul class="list-group">
-                    <!--First Row, The Description-->
-                    <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-                    <!--Small Pizza Row-->
-                    <li class="list-group-item">
-                        <!-- Create a Div to hold radio input and label. Used to position element in row-->
-                        <div class="crispyThin">
-                            <!--Radio Button Input for Small Hand Tossed Size-->
-                            <input class="form-check-input" id="mediumThin" name="crispyThin" type="radio">
-                            <!--Label for the radio Button-->
-                            <label class="form-check-label" for="mediumThin">
-                                Medium (12")
-                            </label>
-                        </div>
-                    </li>
-
-                    <!-- Large Pizza Row-->
-                    <li class="list-group-item">
-                        <!--Create a Div to hold radio input and label. Used to position element in row-->
-                        <div class="crispyThin">
-                            <!--Radio Button Input for Medium Hand Tossed Size-->
-                            <input class="form-check-input" id="LargeHandTossed" name="crispyThin" type="radio">
-                            <!--Label for the radio Button-->
-                            <label class="form-check-label" for="LargeHandTossed">
-                                Large (14")
-                            </label>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <br>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-end">
-                <li class="page-item">
-                </li>
-                <li class="page-item"><a class="page-link bg-primary text-white" href="#cheeseAndSauce">Next Step</a>
-                </li>
-            </ul>
-        </nav>
-            </div>
-
-        <!-- for the second parent card-->
-        <div id="cheeseAndSauce">
-            <!--Parent Card-->
-            <div class="card bg-primary text-white">Choose cheese and sauce</div>
-            <!--Define the body of the parent card    -->
-            <!--        <div class="card-body2">-->
-            <!-- Create a Child Card-->
-            <div class="card">
-                <!-- Create a Header for the child Card-->
-                <div class="card-header">
-                    Cheese
-                </div>
-                <div class="cheese1">
-                    <div class="form-group">
-                        <label for="cheese">How much?</label>
-                        <select class="form-control" id="cheese">
-                            <option>Light</option>
-                            <option>Normal</option>
-                            <option>Extra</option>
-                        </select>
+                            <!--      Medium Pizza Row-->
+                            <li class="list-group-item">
+                                <!--                    Create a Div to hold radio input and label. Used to position element in row-->
+                                <div class="handTossedSizes">
+                                    <!--                        Radio Button Input for Medium Hand Tossed Size-->
+                                    <input class="form-check-input" id="mediumHandTossed" name="handTossedSize"
+                                           type="radio">
+                                    <!--                        Label for the radio Button-->
+                                    <label class="form-check-label" for="mediumHandTossed">
+                                        Medium (12")
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
+                    <br>
+
+
+                    <div class="card">
+                        <!-- Create a Header for the child Card-->
+                        <div class="card-header">Crispy Thin</div>
+                        <!--Create a List group to hold all "rows" in a card-->
+                        <ul class="list-group">
+                            <!--First Row, The Description-->
+                            <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                            <!--Small Pizza Row-->
+                            <li class="list-group-item">
+                                <!-- Create a Div to hold radio input and label. Used to position element in row-->
+                                <div class="crispyThin">
+                                    <!--Radio Button Input for Small Hand Tossed Size-->
+                                    <input class="form-check-input" id="mediumThin" name="crispyThin" type="radio">
+                                    <!--Label for the radio Button-->
+                                    <label class="form-check-label" for="mediumThin">
+                                        Medium (12")
+                                    </label>
+                                </div>
+                            </li>
+
+                            <!-- Large Pizza Row-->
+                            <li class="list-group-item">
+                                <!--Create a Div to hold radio input and label. Used to position element in row-->
+                                <div class="crispyThin">
+                                    <!--Radio Button Input for Medium Hand Tossed Size-->
+                                    <input class="form-check-input" id="LargeHandTossed" name="crispyThin" type="radio">
+                                    <!--Label for the radio Button-->
+                                    <label class="form-check-label" for="LargeHandTossed">
+                                        Large (14")
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <br>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-end">
+                                <li class="page-item">
+                                </li>
+                                <li class="page-item"><a class="page-link bg-primary text-white" href="#cheeseAndSauce">Next
+                                    Step</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!-- for the second parent card-->
+
+            <div class="tab-pane fade" id="cheeseAndSauce">
+                <div class="card bg-primary text-white">Choose cheese and sauce</div>
+                <!--Parent Card-->
+
+                <!--Define the body of the parent card    -->
+                <div class="card-body2">
+                    <!-- Create a Child Card-->
+                    <div class="card">
+                        <div class="card-header">Cheese</div>
+                        <div class="cheese1">
+                            <div class="form-group">
+                                <label for="cheese">How much?</label>
+                                <select class="form-control" id="cheese">
+                                    <option>Light</option>
+                                    <option>Normal</option>
+                                    <option>Extra</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
                 </div>
                 <br>
-            </div>
-            <br>
-            <div class="card">
-                <div class="card-header">
-                    Sauce
-                </div>
-                <!--                <ul class="list-group">-->
-                <div class="sauce1">
-                    <div class="form-group">
-                        <label for="sauce">What type?</label>
-                        <select class="form-control" id="sauceKind">
-                            <option>Tomato sauce</option>
-                            <option>Marinara sauce</option>
-                            <option>BBQ sauce</option>
-                            <option>Alfredo Sauce</option>
-                        </select>
+                <div class="card">
+                    <div class="card-header">
+                        Sauce
                     </div>
-                </div>
-                <!--                </ul>-->
-                <div class="sauce2">
-                    <div class="form-group">
-                        <label for="sauce">How much?</label>
-                        <select class="form-control" id="sauce">
-                            <option>Light</option>
-                            <option>Normal</option>
-                            <option>Extra</option>
-                        </select>
+                    <!--                <ul class="list-group">-->
+                    <div class="sauce1">
+                        <div class="form-group">
+                            <label for="sauce">What type?</label>
+                            <select class="form-control" id="sauceKind">
+                                <option>Tomato sauce</option>
+                                <option>Marinara sauce</option>
+                                <option>BBQ sauce</option>
+                                <option>Alfredo Sauce</option>
+                            </select>
+                        </div>
                     </div>
+                    <!--                </ul>-->
+                    <div class="sauce2">
+                        <div class="form-group">
+                            <label for="sauce">How much?</label>
+                            <select class="form-control" id="sauce">
+                                <option>Light</option>
+                                <option>Normal</option>
+                                <option>Extra</option>
+                            </select>
+                        </div>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item">
+                                <a aria-label="Previous" class="page-link bg-primary text-white" href="#sizeAndCrust">
+                                    <span aria-hidden="true">&laquo;</span> Previous Step</a>
+                                <!--                            <span class="sr-only">Previous</span>-->
+                            </li>
+                            <li class="page-item">
+                                <a aria-label="Next" class="page-link bg-primary text-white" href="#toppings">Next Step
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-end">
-                        <li class="page-item">
-                            <a aria-label="Previous" class="page-link bg-primary text-white" href="#sizeAndCrust">
-                                <span aria-hidden="true">&laquo;</span> Previous Step</a>
-                            <!--                            <span class="sr-only">Previous</span>-->
-                        </li>
-                        <li class="page-item">
-                            <a aria-label="Next" class="page-link bg-primary text-white" href="#chooseToppings">Next
-                                Step
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
             <br>
 
             <!--for the third card-->
-            <div id="chooseToppings">
+            <div class="tab-pane fade" id="toppings">
                 <!--Parent Card-->
                 <div class="card bg-primary text-white">Choose toppings</div>
                 <!--Define the body of the parent card    -->
@@ -333,6 +340,12 @@
                                 </ul>
                             </nav>
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body>
