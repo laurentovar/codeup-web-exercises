@@ -1,0 +1,76 @@
+body{
+    font-family: 'Anton', sans-serif;
+    background-color: #F0F0F0;
+
+}
+h1{
+    font-size: 64px;
+}
+h2{
+    font-size: 40px;
+}
+.circle h3{
+    color: white;
+}
+p{
+    font-size: 28px;
+}
+h5{
+    padding-top: 10px;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    border: solid white 10px;
+}
+.circleRed {
+    background-color: #E6563B;
+}
+.circleOrange {
+    background-color: #EB9D3A;
+}
+.circleGreen {
+    background-color: #7CB06C;
+}
+.circleBlue {
+    background-color: #00ABA9;
+}
+.mini-circle{
+    width: 35px;
+    height: 35px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    color: black;
+    font-size: ;
+}
+
+.para{
+    font-family: 'Abel', sans-serif;
+
+}
+.parent-card{
+    align-self: center;
+}
+.card-footer{
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1em;
+}
+/*.extra-small{*/
+/*padding-bottom: 5em;*/
+/*}*/
+#apple, #man, #security, #macbook {
+
+    border: solid red 10px;
+    border-radius: 5px;
+}
+@media screen and (min-width: 576px) {
+
+
+
+}
