@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline JS</title>
+</head>
+<body>
+    <script>
+        // JavaScript code goes here
+        console.log('Hello from inline JavaScript!');
+        //Use .length to find the number of characters in the string.
+        var sample = "Hello Codeup";
+        //Try to make the sample string all upper or all lower case.
+        sample.toUpperCase();
+       // Update the variable sample via concatenation so that it contains "Hello Codeup Students".
+        sample = sample + " Students";
+        //Replace "Students" with "Class".
+        sample.replace(" Students", "Class");
+        //Find the index of "c" using .indexOf(). What do you observe?
+        sample.indexOf("c");
+        //Find the index of "C" using .indexOf().
+        sample.indexOf("C");
+        //Retrieve a substring that contains only the word "Codeup" by using indexOf() and substring().
+        sample.substring(sample.indexOf("C"), sample.indexOf("S"));
+
+        //rented movies for kids
+        var liitleMermaidDays = 3;
+        var brotherBearDays = 5;
+        var herculesDays = 1;
+        //price of movie per day $3
+        var totalRental = (liitleMermaidDays + brotherBearDays + herculesDays);
+        console.log (totalRental);
+        var totalCost = 3 * totalRental;
+        console.log (totalCost);
+
+        //working for 3 companies, how much did you make?
+        var googlePayRate = 400;
+        var amazonPayRate = 380;
+        var facebookPayRate = 350;
+
+        var googleMoney = 6 * googlePayRate;
+        var amazonMoney = 4 * amazonPayRate;
+        var facebookMoney = 10 * facebookPayRate;
+
+       var FinalMoney = googleMoney + amazonMoney + facebookMoney
+        console.log (FinalMoney);
+
+        //enrolled in a class that is not full and does not conflict with her schedule
+       var classTime = "9am"
+        var classSize = 125;
+       var currentClassSize = 108;
+       var studentClassesTime = "9am";
+       var studentCanSignUp = currentClassSize < classSize && classTime !== studentClassesTime;
+        console.log (studentCanSignUp);
+
+        // a offer applied only if a person buys more than 2 items, hasnt expired, preminum members do not need to buy a specific amount
+        var offerValid = true;
+        var cart = 3;
+        var ispremiumMember = false;
+        var canUseDiscount = offerValid && (cart > 2 || ispremiumMember);
+        console.log (canUseDiscount);
+
+        // create a variable that holds a boolean value with password 5 character long, not include a username, username no more than 20 characters, no whitespaces
+        var username = 'codeup';
+        var password = 'notastrongpassword';
+        password.length >= 5 && password.indexOf(username) === -1 && username.length <=20 && username === username.trim() && password === password.trim();
+
+
+
+
+    </script>
+
+</body>
+</html>
