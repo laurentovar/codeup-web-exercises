@@ -9,43 +9,33 @@ var brotherBear =  parseInt(prompt("How may days did you use brother Bear?"));
 var hercules = parseInt(prompt("how many days did you use Hercules?"));
 var totalRental = (littleMermaid + brotherBear + hercules);
 console.log(totalRental);
+var totalCost = totalRental * 3;
+alert("You spent $" + totalCost);
 
 
+//working for 3 companies, how much did you make?
+var googleHours =  parseInt(prompt("How many hours did you work?"));
+var googleTotalPay = (googleHours * 400);
+console.log(googleTotalPay);
+console.log(typeof googleTotalPay);
+var amazonHours =  parseInt(prompt("How many hours did you work?"));
+var amazonTotalPay = (amazonHours * 380);
+var facebookHours =  parseInt(prompt("How many hours did you work"));
+var facebookTotalPay = (facebookHours * 350);
+alert ("You made $" + (googleTotalPay + amazonTotalPay + facebookTotalPay));
 
 
-// //rented movies for kids
-// var liitleMermaidDays = 3;
-// var brotherBearDays = 5;
-// var herculesDays = 1;
-// //price of movie per day $3
-// var totalRental = (liitleMermaidDays + brotherBearDays + herculesDays);
-// console.log (totalRental);
-// var totalCost = 3 * totalRental;
-// console.log (totalCost);
-
-
-
-
-// //working for 3 companies, how much did you make?
-// var googlePayRate = 400;
-// var amazonPayRate = 380;
-// var facebookPayRate = 350;
-//
-// var googleMoney = 6 * googlePayRate;
-// var amazonMoney = 4 * amazonPayRate;
-// var facebookMoney = 10 * facebookPayRate;
-//
-// var FinalMoney = googleMoney + amazonMoney + facebookMoney
-// console.log (FinalMoney);
-//
 // //enrolled in a class that is not full and does not conflict with her schedule
-// var classTime = "9am"
-// var classSize = 125;
-// var currentClassSize = 108;
-// var studentClassesTime = "9am";
-// var studentCanSignUp = currentClassSize < classSize && classTime !== studentClassesTime;
-// console.log (studentCanSignUp);
-//
+var classTime = parseInt(9);
+var classSize = 25;
+var currentClassSize = 20;
+var studentSchedule = parseInt(prompt("What is your class schedule"));
+var StudentSignUp = currentClassSize < classSize && classTime !== studentSchedule;
+alert ("Can you signup? " + StudentSignUp);
+
+
+
+
 // // a offer applied only if a person buys more than 2 items, hasnt expired, preminum members do not need to buy a specific amount
 // var offerValid = true;
 // var cart = 3;
@@ -53,6 +43,8 @@ console.log(totalRental);
 // var canUseDiscount = offerValid && (cart > 2 || ispremiumMember);
 // console.log (canUseDiscount);
 //
+
+
 // // create a variable that holds a boolean value with password 5 character long, not include a username, username no more than 20 characters, no whitespaces
 // var username = 'codeup';
 // var password = 'notastrongpassword';
