@@ -1,0 +1,18 @@
+/*1. must be mobile responsive
+ 2.Have contact information
+ 3.Link to social media presence
+ 4. Link to GitHub
+ 5. Contain a portfolio
+ 6. Link resume and identify as job seeker
+*/
+nav {
+    padding: 10px;
+    /*background-color: #00ABA9;*/
+}
+nav a {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #F0F0F0;
+    background-color: #111111;
+}
