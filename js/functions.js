@@ -97,6 +97,7 @@ var totalBill =  parseFloat(prompt("What is the bill total? "));
 var tipPercentage =  parseFloat(prompt("What is the tip percentage? "));
 
 // alert("The expected tip will be $" + calculateTip(tipPercentage , totalBill));
+
 //to fixed makes the decimal places fixed to a number
 alert("With a bill of $" + bill.toFixed(2) + " and a tip of " + (tipPercentage * 100) + "%, you should add a tip of: $" + calculateTip(tipPercentage, bill).toFixed(2));
 
