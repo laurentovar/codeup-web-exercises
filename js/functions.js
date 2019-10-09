@@ -9,7 +9,7 @@
  */
 
 function sayHello(name) {
-    return "Hello " + name;
+    return "Hello " + name + "!";
 }
 
 
@@ -30,7 +30,7 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myName = sayHello("Bob");
+var myName = sayHello("Bobby");
 console.log(myName);
 
 
@@ -55,17 +55,23 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+// function isTwo(num) {
+//      if (num == 2){
+//          return true;
+//      }
+//      else{
+//          return false;
+//      }
+//    }
+
 function isTwo(num) {
-     if (num == 2){
-         return true;
-     }
-     else{
-         return false;
-     }
-   }
+    //this checks if num is true or false
+    return num === 2;
+}
+console.log(isTwo(random));
 
 
-/**
+    /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
  * restaurant. The function should accept a tip percentage and the total of the
@@ -90,7 +96,9 @@ function calculateTip(tipPercentage, totalBill){
 var totalBill =  parseFloat(prompt("What is the bill total? "));
 var tipPercentage =  parseFloat(prompt("What is the tip percentage? "));
 
-alert("The expected tip will be $" + calculateTip(tipPercentage, totalBill) );
+// alert("The expected tip will be $" + calculateTip(tipPercentage , totalBill));
+//to fixed makes the decimal places fixed to a number
+alert("With a bill of $" + bill.toFixed(2) + " and a tip of " + (tipPercentage * 100) + "%, you should add a tip of: $" + calculateTip(tipPercentage, bill).toFixed(2));
 
 
 
