@@ -45,6 +45,41 @@
 
 //code refactor the code to a function
 
+//use this for is this a number (true false)
+function isNumber(number) {
+    if (isNaN(number) == true) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+//use this for is this number even or odd
+function isEvenOdd(number) {
+    var evenOdd = "";
+    if (number % 2 == 0) {
+        evenOdd = "Even";
+    }
+    else {
+        evenOdd = "Odd";
+    }
+    return evenOdd;
+}
+//use this to add a hundred to the number the user entered
+function addHundred(number) {
+    return number + 100;
+}
+//use this to determine if the number is positive or negative
+function isPositiveNegative(number) {
+    var positiveNegative = "";
+    if (number < 0) {
+        positiveNegative = "Negative";
+    } else {
+        positiveNegative = "Positive";
+    }
+    return positiveNegative;
+}
+//this is the Main function that we will use
      parentFunction();
    function parentFunction() {
        var response = confirm("Would you like to enter a number?");
@@ -65,36 +100,7 @@
 
        }
    }
-   function isNumber(number) {
-       if (isNaN(number) == true) {
-           return true;
-       }
-       else {
-           return false;
-       }
-   }
-   function isEvenOdd(number) {
-       var evenOdd = "";
-       if (number % 2 == 0) {
-           evenOdd = "Even";
-       }
-       else {
-           evenOdd = "Odd";
-       }
-       return evenOdd;
-   }
-   function addHundred(number) {
-       return number + 100;
-   }
-   function isPositiveNegative(number) {
-       var positiveNegative = "";
-       if (number < 0) {
-           positiveNegative = "Negative";
-       } else {
-           positiveNegative = "Positive";
-       }
-       return positiveNegative;
-   }
+
 
 
 /**
@@ -161,25 +167,25 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //     function yourColor(randomColor) {
 //         switch (randomColor) {
 //             case "red":
-//                 return "The random color is red";
+//                 return "The color is red";
 //                 break;
 //             case "orange" :
-//                 return "The random olor is orange";
+//                 return "The color is orange";
 //                 break;
 //             case "yellow":
-//                 return "The random color is yellow";
+//                 return "The color is yellow";
 //                 break;
 //             case "green":
-//                 return "The random color is green";
+//                 return "The color is green";
 //                 break;
 //             case "blue" :
-//                 return "The random color is blue";
+//                 return "The color is blue";
 //                 break;
 //             case "indigo":
-//                 return "The random color is indigo";
+//                 return "The color is indigo";
 //                 break;
 //             case "violet":
-//                 return "The random color is violet";
+//                 return "The color is violet";
 //                 break;
 //             default:
 //                 return "I dont know that color";
@@ -194,10 +200,10 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * pass the input from the user to your `analyzeColor` function.
  * Alert the return value from your function to show it to the user.
  */
-// var UserColor =prompt("Can I have a color? ");
+// var UserColor = prompt("Can I have your favorite color? ");
 // analyzeColor();
 // function analyzeColor(color){
-//     alert("The color you entered was " + UserColor);
+//     alert("Your favorite color is " + UserColor);
 // }
 
 
@@ -207,11 +213,13 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 /**
  * TODO:
- * Suppose there's a promotion in Walmart, each customer is given a randomly
- * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
- * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
- * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
- * all for free!.
+ * Suppose there's a promotion in Walmart, each customer is given a randomly generated "lucky number" between 0 and 5.
+ * If your lucky number is 0 you have no discount,
+ * if your lucky number is 1 you'll get a 10% discount,
+ * if it's 2, the discount is 25%,
+ * if it's 3, 35%,
+ * if it's 4, 50%,
+ * and if it's 5 you'll get all for free!.
  *
  * Write a function named `calculateTotal` that accepts a lucky number and total
  * amount, and returns the discounted price.
@@ -224,6 +232,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+
 // function calculateTotal(luckyNumber, totalAmount) {
 //    var discountPercentage;
 //     switch (luckyNumber) {
