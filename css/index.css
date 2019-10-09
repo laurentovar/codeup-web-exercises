@@ -6,19 +6,19 @@
  6. Link resume and identify as job seeker
 */
 nav {
-    padding: 10px;
+    padding: 5px;
     /*background-color: #00ABA9;*/
 }
 nav a:hover {
     text-decoration: none;
-    color: #00ABA9;
+    color: darkslategrey;
 
 }
-.navbar {
+.smnavbar {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     color: #F0F0F0;
-    background-color: #111111;
+    background-color: #00ABA9;
 }

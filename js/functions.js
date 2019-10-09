@@ -4,18 +4,25 @@
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
  * When called, the function should return a message that says hello to the passed in name.
- *
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+function sayHello(name) {
+    return "Hello " + name;
+}
+
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
- * Store the result of the function call in a variable named 'helloMessage'.
  *
+ * Store the result of the function call in a variable named 'helloMessage'.
  * console.log 'helloMessage' to check your work
  */
+var helloMessage= sayHello("Bobby");
+console.log(helloMessage);
+
 
 /**
  * TODO:
@@ -23,6 +30,9 @@
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+var myName = sayHello("Bob");
+console.log(myName);
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -45,6 +55,15 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo(num) {
+     if (num == 2){
+         return true;
+     }
+     else{
+         return false;
+     }
+   }
+
 
 /**
  * TODO:
@@ -57,7 +76,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.25, 25.50) // returns 6.37
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
+function calculateTip(tipPercentage, totalBill){
 
+    return tipPercentage * totalBill;
+}
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -65,17 +87,32 @@ var random = Math.floor((Math.random() * 3) + 1);
  * then display the dollar amount they should tip
  */
 
+var totalBill =  parseFloat(prompt("What is the bill total? "));
+var tipPercentage =  parseFloat(prompt("What is the tip percentage? "));
+
+alert("The expected tip will be $" + calculateTip(tipPercentage, totalBill) );
+
+
+
 /**
  * TODO:
- * Create a function named `applyDiscount`. This function should accept a price
- * (before a discount is applied), and a discount percentage (a number between 0
- * and 1). It should return the result of applying the discount to the original
- * price.
+ * Create a function named `applyDiscount`.
+ * This function should accept a price (before a discount is applied),
+ * and a discount percentage (a number between 0 and 1).
+ *
+ * It should return the result of applying the discount to the original price.
  *
  * Example:
  * > var originalPrice = 100;
- * > var dicountPercent = .2; // 20%
+ * > var discountPercent = .2; // 20%
  * > applyDiscount(originalPrice, dicountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+
+function applyDiscount(price, discountPercentage){
+
+    return price - (price * discountPercentage);
+
+}
