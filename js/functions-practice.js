@@ -18,38 +18,43 @@ var multiple1 = function (x , y) {
 var divide1 = function (x , y){
     return x / y;
 };
-//make a function called returnTwo that returns the number 2 when called
-//test this function with console.log (returnTwo())
-function returnTwo(number) {
-
-
+//write a function that calculates a dogs age in human years
+function calculateDogAge(dogsAge) {
+    return dogsAge * 7;
 }
+console.log("Your doggie is " + calculateDogAge(3) + " years old in human years");
+console.log("Your doggie is " + calculateDogAge(9) + " years old in human years");
 
-
-//make a function called sayHowdy() which console.log the string Howdy
-//test this function by directly calling sayHowdy
-function sayHowdy(howdy) {
-    return  howdy;
-
+//write a function that reverses a number
+//example x = 1234 so expected outcome 4321
+function reverseNumber(n)
+{
+    n = n + "";
+    return n.split("").reverse().join("");
 }
+console.log(reverseNumber(1234));
 
-
-
-//make a function called returnName() that returns the string of your name
-//test this with console.log (returnName())
-function returnName() {
-    
+//you have a farm with chickens, cows and pigs
+//find the number of legs you would have on your farm with them all
+var chicken = 2;
+var cows = 4;
+var pigs = 4;
+function animals(chickens, cows, pigs) {
+    return (chickens * 2) + (cows * 4) + (pigs *4);
 }
+console.log("Total animal legs are: " + animals(2,3,4));
+
+//
 
 
-//write a function called addThree that takes in a number input and returns the number plus 3
-//test this using console.log (addThree(5))
-function addThree(x) {
 
-}
-
-//make a function called sayString that returns the string input passed in
-//test the function using console.log(sayString("hello"))
-function sayString() {
-    
-}
+//VARIABLES
+//store your birth year in var
+// store future year in var
+//calculate your 2 possible ages based on that year based on the stored values
+//ex. born in 1988 then in 2026 you will be 37 or 38 depending on the month
+//output them "i will be NN or NN in YYYY
+var birthYear = 1902;
+var futureYear = 2000;
+var age = futureYear - birthYear;
+console.log ("The age I will be is either " + age + " or " + (age-1) + " depending on the month I was born");
