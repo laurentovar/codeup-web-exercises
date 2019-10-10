@@ -20,12 +20,14 @@
 //    console.log(response);
 //    if (response == true) {
 //        var number = prompt("Can I have a number?");
+//       // console.log("Th users number is: " + number);
+//
 //        if (isNaN(number) == true) {
 //            alert("That is not a number!!");
 //        }
 //        else {
 //            var evenOdd = "";
-//            if (number % 2 == 0) {
+//            if (number % 2 === 0) {
 //                evenOdd = "Even";
 //            }
 //            else {
@@ -121,13 +123,13 @@ function isPositiveNegative(number) {
  * console.logging the function's return value
  */
 function analyzeColor(color) {
-    if (color == "blue"){
+    if (color === "blue"){
         return "Blue is the color of the sky";
     }
-    else if (color == "red"){
+    else if (color === "red"){
         return "Strawberries are red";
     }
-    else if (color == "cyan"){
+    else if (color === "cyan"){
         return "I don't know anything about cyan";
     }
 
@@ -168,25 +170,18 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //         switch (randomColor) {
 //             case "red":
 //                 return "The color is red";
-//                 break;
 //             case "orange" :
 //                 return "The color is orange";
-//                 break;
 //             case "yellow":
 //                 return "The color is yellow";
-//                 break;
 //             case "green":
 //                 return "The color is green";
-//                 break;
 //             case "blue" :
 //                 return "The color is blue";
-//                 break;
 //             case "indigo":
 //                 return "The color is indigo";
-//                 break;
 //             case "violet":
 //                 return "The color is violet";
-//                 break;
 //             default:
 //                 return "I dont know that color";
 //         }
@@ -234,44 +229,44 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 
 
-// function calculateTotal(luckyNumber, totalAmount) {
-//    var discountPercentage;
-//     switch (luckyNumber) {
-//         case 0:
-//             discountPercentage = 0;
-//             break;
-//         case 1:
-//             discountPercentage = .10;
-//             break;
-//         case 2:
-//             discountPercentage = .25;
-//             break;
-//         case 3:
-//             discountPercentage = .35;
-//             break;
-//         case 4:
-//             discountPercentage = .50;
-//             break;
-//         case 5:
-//             discountPercentage = 1;
-//             break;
-//             //default is your else
-//         default:
-//             discountPercentage = 0;
-//             break;
-//
-//     }
-//
-//     return totalAmount - (totalAmount * discountPercentage);
-//
-// }
-// console.log("finalPrice: " + calculateTotal(0, 20));
-// console.log("finalPrice: " + calculateTotal(1, 20));
-// console.log("finalPrice: " + calculateTotal(2, 20));
-// console.log("finalPrice: " + calculateTotal(3, 20));
-// console.log("finalPrice: " + calculateTotal(4, 20));
-// console.log("finalPrice: " + calculateTotal(5, 20));
-// console.log("finalPrice: " + calculateTotal(6, 20));
+function calculateTotal(luckyNumber, totalAmount) {
+   var discountPercentage;
+    switch (luckyNumber) {
+        case 0:
+            discountPercentage = 0;
+            break;
+        case 1:
+            discountPercentage = .10;
+            break;
+        case 2:
+            discountPercentage = .25;
+            break;
+        case 3:
+            discountPercentage = .35;
+            break;
+        case 4:
+            discountPercentage = .50;
+            break;
+        case 5:
+            discountPercentage = 1;
+            break;
+            //default is your else
+        default:
+            discountPercentage = 0;
+            break;
+
+    }
+
+    return totalAmount - (totalAmount * discountPercentage);
+
+}
+console.log("finalPrice: " + calculateTotal(0, 20));
+console.log("finalPrice: " + calculateTotal(1, 20));
+console.log("finalPrice: " + calculateTotal(2, 20));
+console.log("finalPrice: " + calculateTotal(3, 20));
+console.log("finalPrice: " + calculateTotal(4, 20));
+console.log("finalPrice: " + calculateTotal(5, 20));
+console.log("finalPrice: " + calculateTotal(6, 20));
 
 
 
@@ -284,7 +279,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+//
 // getAndCalculateFinalPrice(luckyNumber);
+//
 // function getAndCalculateFinalPrice(luckyNumber) {
 //     var totalBill = prompt("Enter your total bill");
 //         alert("Your lucky number was " + luckyNumber);
