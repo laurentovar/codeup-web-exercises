@@ -96,4 +96,10 @@ function helloThere(string = "stranger") {
 }
 var promptTheUser = prompt("Input string, plox. ")
 alert(helloThere(promptTheUser));
+//function that accepts an array and returns the length of that array
+//array is a list
 
+function arrayLength (array){
+    return array.length;
+}
+console.log(arrayLength([1 ,2, 3 ,4]);
