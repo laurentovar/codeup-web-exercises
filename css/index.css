@@ -5,9 +5,12 @@
  5. Contain a portfolio
  6. Link resume and identify as job seeker
 */
+
+
 nav {
     padding: 5px;
-    /*background-color: #00ABA9;*/
+    font-family: 'Anton', sans-serif;
+
 }
 nav a:hover {
     text-decoration: none;
@@ -22,3 +25,10 @@ nav a:hover {
     color: #F0F0F0;
     background-color: #00ABA9;
 }
+
+
+
+
+
+
+
