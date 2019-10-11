@@ -181,6 +181,7 @@ function canJoinClub(desiredClubDay, existingClubDay) {
     //takes what we had and turned them into strings (they were booleans)
     return  "Can you join the club? " + (desiredClubDay !== existingClubDay).toString();
 }
+//
 
 
 //VARIABLES
