@@ -63,7 +63,7 @@ console.log(circleArea(5));
 
 //Write a function that returns the perimeter of a quadrilateral
 //perimeter is 4sides added together
-function perimeterQuadrilateral (s1, s2, s3, s4);
+function perimeterQuadrilateral (s1, s2, s3, s4){
 return s1 + s2 + s3 + s4;
 }
 console.log(perimeterQuadrilateral(3,2,5,7));
