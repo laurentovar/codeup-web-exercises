@@ -104,14 +104,16 @@ function notZero (input){
 function trim(string) {
     return string.trim();
 }
-
-
-
-
-
-
-
-
+//Heather is wanting to join an after school club.
+// She is currently involved with another club at school, but luckily all after
+// school clubs will only meet on one day out of the week.
+// Return a string to Heather as to whether or not she can join another club.
+    //what day does the club she wants to join meet
+    //what day does the club shes in meet
+function canJoinClub(desiredClubDay, existingClubDay) {
+    //takes what we had and turned them into strings (they were booleans)
+    return  "Can you join the club? " + (desiredClubDay !== existingClubDay).toString();
+}
 
 
 //VARIABLES
