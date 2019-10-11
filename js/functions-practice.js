@@ -50,7 +50,7 @@ console.log("Total animal legs are: " + animals(2,3,4));
 function identity(input) {
     return input;
 }
-//---------------LOOK AT------------------
+
 //function called getRandomNumber (min, max)
 // that returns a random number between min and max values sent to that function call.
 function getRandomNumber(min, max) {
