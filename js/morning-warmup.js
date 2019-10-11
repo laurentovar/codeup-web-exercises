@@ -67,6 +67,7 @@ function perimeterQuadrilateral (s1, s2, s3, s4);
 return s1 + s2 + s3 + s4;
 }
 console.log(perimeterQuadrilateral(3,2,5,7));
+
 //write a function that finds a type of something
 function checkType (x) {
     return typeof (x);
