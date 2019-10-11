@@ -54,35 +54,43 @@ function identity(input) {
 //function called getRandomNumber (min, max)
 // that returns a random number between min and max values sent to that function call.
 function getRandomNumber(min, max) {
-    return max - min;
+    return Math.floor((Math.random() * max) + min);
 }
 //Write a function called first(input) that returns the first character in the provided string.
 function first(input) {
     return input.charAt(0);
 }
-//-------------LOOK AT-----------------------
+
 //Write a function called last(input) that returns the last character of a string
 function last(input) {
-    return input.lastIndexOf();
+    return input.lastIndexOf(input.length -1);
 }
 //Write a function called isNumeric(input) that takes an input
 // and returns a boolean if the input is numeric.
-
-
-
+function isNumeric(input) {
+    return  !isNaN(input);
+}
 
 
 //Write a function called count(input) that takes in a string
 // and returns the number of characters.
+function count(string) {
+    return string.length;
+}
 
 
 //Write a remainder(number, divisor) function that returns the remainder left over
 // when dividing number by the divisor
-
+function remainder(number, divisor) {
+    return number % divisor;
+}
 
 
 //Create a function that will return how many whitespace characters
 // are at the beginning and end of a string.
+function whiteSpaces(string) {
+    return string.split(" ").length -1;
+}
 
 
 //Make a function named notZero(input) that returns true if the input is not zero
@@ -91,8 +99,11 @@ function notZero (input){
 }
 
 
+
 //Make a function named trim(string) that removes empty spaces before and after the input.
-.
+function trim(string) {
+    return string.trim();
+}
 
 
 
