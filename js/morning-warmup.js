@@ -102,4 +102,17 @@ alert(helloThere(promptTheUser));
 function arrayLength (array){
     return array.length;
 }
-console.log(arrayLength([1 ,2, 3 ,4]);
+console.log(arrayLength([1 ,2, 3 ,4]));
+
+//function that quotient of two numbers, ONLY when passed two numbers it should return false in all all other cases
+//quotient is dividing two numbers together
+function quotient(num1, num2) {
+   if (typeof num1 === "number" && typeof num2 === "number") {
+       return num1 / num2;
+   } else {
+       return false;
+   }
+}
+console.log(quotient(21, 7));
+//returns back as false
+console.log(quotient(21, "7"));
