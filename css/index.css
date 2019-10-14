@@ -6,26 +6,64 @@
  6. Link resume and identify as job seeker
 */
 
-
-nav {
-    padding: 5px;
-    font-family: 'Anton', sans-serif;
+*{
+    font-family: 'Shadows Into Light', cursive;
 
 }
-nav a:hover {
-    text-decoration: none;
-    color: darkslategrey;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkcyan;
 
 }
-.smnavbar {
+
+li {
+    /*float: left;*/
+    align-items: center;
+
+
+}
+
+li a {
+    display: block;
+    color: white;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    color: #F0F0F0;
-    background-color: #00ABA9;
+    padding: 5px;
+    margin: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
 }
 
+li a:hover {
+    background-color: cadetblue;
+}
+#profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+}
+h1 {
+   text-align: center;
+    font-size: 35px;
+    color: lightcoral;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Turret Road', cursive;
+    font-size: 30px;
+    color: darkred;
+
+}
 
 
 

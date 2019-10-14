@@ -166,7 +166,6 @@ function concat(x, y) {
 }
 
 
-
 //Make a function named trim(string) that removes empty spaces before and after the input.
 function trim(string) {
     return string.trim();
@@ -181,7 +180,28 @@ function canJoinClub(desiredClubDay, existingClubDay) {
     //takes what we had and turned them into strings (they were booleans)
     return  "Can you join the club? " + (desiredClubDay !== existingClubDay).toString();
 }
-//
+//write a function names greaterNum that takes in 2 arguments, both numbers
+//return whichever number is greater
+function greaterNum(a, b) {
+    return Math.max(a, b);
+}
+//function named assignGrade that takes in one argument and a number score
+//return the grade for the score (A ,B ,C , D, F)
+function assignGrade(score) {
+    if (score >= 90) {
+        return "A";
+    }else if (score >= 80) {
+        return  "B";
+    }else if (score >= 70){
+        return  "C";
+    }else if (score >= 60){
+        return "D";
+    }else {
+        return "F";
+    }
+}
+
+
 
 
 //VARIABLES
