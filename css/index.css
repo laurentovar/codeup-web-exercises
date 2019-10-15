@@ -49,7 +49,7 @@ li a:hover {
 }
 h1 {
    text-align: center;
-    font-size: 35px;
+    font-size: 30px;
     color: lightcoral;
     font-weight: bold;
     margin-top: 0;
@@ -60,12 +60,37 @@ h2 {
     margin-top: 0;
     margin-bottom: 0;
     font-family: 'Turret Road', cursive;
-    font-size: 30px;
+    font-size: 25px;
     color: darkred;
 
 }
+.hexagon {
+    position: relative;
+    width: 50px;
+    height: 28.87px;
+    background-color: #cc6575;
+    margin: 14.43px 0;
+}
 
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+}
 
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 14.43px solid #cc6575;
+}
+
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 14.43px solid #cc6575;
+}
 
 
 
