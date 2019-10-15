@@ -117,3 +117,13 @@ function quotient(num1, num2) {
 console.log(quotient(21, 7));
 //returns back as false
 console.log(quotient(21, "7"));
+//function that takes in an array that has a length of 5. console.log each element of the array
+
+function logArray(Arrayinput) {
+    console.log(Arrayinput [1]);
+    console.log(Arrayinput [2]);
+    console.log(Arrayinput [3]);
+    console.log(Arrayinput [4]);
+    console.log(Arrayinput [5]);
+}
+logArray(Arrayinput[1,2,3,4,5]);
