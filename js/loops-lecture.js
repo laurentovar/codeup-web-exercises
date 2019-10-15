@@ -1,3 +1,4 @@
+
 "use strict";
 /*
 * WHILE LOOPS
@@ -72,7 +73,7 @@ function countFrom(x) {
 //     for (var y= 0; y < randomColors.length; y++){
 //         console.log(randomColors[y]);
 //     }
-    //only want to console even
+//only want to console even
 var randomColors = ["red","orange","yellow","blue","green"];
 for (y% 2 === 0; y < randomColors.length; y++){
     console.log(randomColors[y]);
@@ -125,7 +126,7 @@ for (var b=10; b<10; b++){
 //cont backwards from 100
 for (var g= 100; b > 1; g--){
     if (g === 10){
-      console.log("skip 10" + 10);
+        console.log("skip 10" + 10);
         continue;
     }
     console.log(g);
