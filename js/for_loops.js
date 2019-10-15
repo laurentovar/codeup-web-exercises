@@ -2,7 +2,7 @@
 //function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number
     //multiply by the numbers 1 - 10
     function showMultiplicationTable(input) {
-        
+
     }
 
 

@@ -5,7 +5,7 @@
  5. Contain a portfolio
  6. Link resume and identify as job seeker
 */
-
+/*may want to use parallax scrolling*/
 *{
     font-family: 'Shadows Into Light', cursive;
 
@@ -70,6 +70,7 @@ h2 {
     height: 28.87px;
     background-color: #cc6575;
     margin: 14.43px 0;
+
 }
 
 .hexagon:before,
@@ -91,6 +92,10 @@ h2 {
     width: 0;
     border-top: 14.43px solid #cc6575;
 }
+/*#about {*/
+/*    display: flex;*/
+
+/*}*/
 
 
 

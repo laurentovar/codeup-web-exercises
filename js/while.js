@@ -5,6 +5,8 @@ while(i < 65536) {
     i = i * 2
     console.log(i);
 }
+
+
 //generates a random number between 50 and 100 representing the amount of cones to sell
 //code should generate numbers between 50 and 100 representing the amount of cones being bought
 //use a do-while loop to log to the console the amount of cones sold to each person
@@ -20,7 +22,7 @@ var conesWanted= Math.floor(Math.random() * 5) + 1;
     //yay. I sold all the cones (if no more cones)
     do {
         //body
-
-    } while ();
+        allCones
+    } while (allCones <6 );
 
 })();
