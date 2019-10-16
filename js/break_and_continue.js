@@ -1,31 +1,33 @@
 (function () {
-for (var g= 1 ; g <= 49; g++){
-    if (g ===27){
-        console.log("Yikes! Skipping number " + g);
-        continue;
+// for (var g= 1 ; g <= 49; g++){
+//     if (g ===27){
+//         console.log("Yikes! Skipping number " + g);
+//         continue;
+//     }
+//
+//     else if (g % 2 !==0){
+//         console.log("here is the odd number " + g);
+//
+//     }
+// }
+
+
+    while(true) {
+        var num = parseInt(prompt("Give me an odd number between 1 and 50."));
+        if (num % 2 !== 0 && num <= 50 && num >= 1) {
+            break;
+        }
     }
 
-    else if (g % 2 !==0){
-        console.log("here is the odd number " + g);
+    console.log("Skipping the number: " + num);
 
+    for (var q = 1; q <= 50; q += 2) {
+        if (q === num) {
+            console.log("Yikers, skipping that number.");
+            continue;
+        }
+        console.log("Here is the odd number: " + q);
     }
-}
-
-
-
-for (var i = 1 ; i <= 49; i++) {
-
-    if (i % 2 == 0) {
-        continue;
-    } else if (i == 27) {
-        console.log("Yikes! Skipping number " + i);
-        continue;
-    } else {
-        console.log("here is the odd number " + i);
-    }
-
-}
-
 
 
 

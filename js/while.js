@@ -2,7 +2,7 @@
 //a number times 2(2,4, 8,16,32,64,128,256,512...) create a while loop that uses console.log
 var i= 1;
 while(i < 65536) {
-    i = i * 2
+    i = i * 2;
     console.log(i);
 }
 
@@ -35,6 +35,5 @@ var allCones = Math.floor(Math.random() * 100) + 50;
     } while (allCones >= conesWanted );
 
     console.log("Yay I sold all the cones");
-
 
 })();
