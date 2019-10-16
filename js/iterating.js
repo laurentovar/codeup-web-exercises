@@ -54,5 +54,17 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    // var number = [1,2,3,4,5];
+    // var numberOne = number.find(function (element) {
+    //     return element == 1;
+    // });
+    // console.log (numberOne);
+
+
+
+
+
+
+
 
 })();
