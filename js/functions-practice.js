@@ -200,8 +200,28 @@ function assignGrade(score) {
         return "F";
     }
 }
-
-
+//function that takes in 3 arguments (prob,prize,pay) and returns true if prob * prize> pay else false
+//profitableGamble(0.2, 50, 9) ➞ true
+//profitableGamble(0.9, 1, 2) ➞ false
+//profitableGamble(0.9, 3, 2) ➞ true
+function profitableGamble(prob, prize, pay) {
+    if (prob * prize > pay){
+        return true;
+    } else {
+        return false;
+    }
+}
+//function that takes three integer arguments (a,b,c) and returns the number of equal values
+//(3,4,3) returns 2
+function threeIntegers(a,b,c) {
+    if (a == b && b==c){
+        return 3;
+    } else if (a == b || b===c || a==c){
+        return 2;
+    }else {
+        return 0;
+    }
+}
 
 
 //VARIABLES
