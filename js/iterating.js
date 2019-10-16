@@ -55,33 +55,25 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    var number = [1,2,3,4,5];
-    function ReturnFirstElement(){
-        var numberOne = number.find(function (element) {
-            return element == 1;
-        });
-        return numberOne;
+    // var number = [1,2,3,4,5];
+    // function ReturnFirstElement(){
+    //     var numberOne = number.find(function (element) {
+    //         return element == 1;
+    //     });
+    //     return numberOne;
+    // }
+    // console.log (ReturnFirstElement());
+
+    //
+    // function returnSecondElement(input) {
+    //     return input[input.length[1]];
+    // }
+    // console.log (returnSecondElement(names));
+
+
+    function returnLastElement(input) {
+        return input[input.length - 1];
     }
-    console.log (ReturnFirstElement());
-
-
-    function ReturnSecondElement(){
-        var numberTwo = number.find(function (input) {
-            return input == 2;
-        });
-        return numberTwo;
-    }
-    console.log (ReturnSecondElement());
-
-    var number = [1,2,3,4,5];
-    function ReturnLastElement(){
-        var numbeFive = number.find(function (number) {
-            return number == 5;
-        });
-        return numbeFive;
-    }
-    console.log (ReturnLastElement());
-
-
+    console.log(returnLastElement(names));
 
 })();
