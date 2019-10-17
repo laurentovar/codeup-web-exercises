@@ -222,6 +222,15 @@ function threeIntegers(a,b,c) {
         return 0;
     }
 }
+//function that takes in a string name and a number num (either 0 or 1)
+//name if num is 1 otherwise return bye + name
+function sayHelloBye(name, number) {
+    if (number === 1){
+        return "Hello " + name.charAt(0).toUpperCase() + name.substring(1,name.length );
+    }else {
+         return "Bye " + name.charAt(0).toUpperCase() + name.substring(1,name.length)
+    }
+}
 
 
 //VARIABLES
