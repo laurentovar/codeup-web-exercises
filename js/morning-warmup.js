@@ -127,3 +127,18 @@ function logArray(Arrayinput) {
     console.log(Arrayinput [5]);
 }
 logArray(Arrayinput[1,2,3,4,5]);
+
+//function that takes in an input and returns true if the input is a string at least 8 characters long
+//it should return false for all other input
+function eightCharatersLong(input) {
+    if (typeof input === 'string' && input.length >= 8){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+console.log(eightCharatersLong("Helloooo"));
+console.log(eightCharatersLong("Helllo"));
+console.log(eightCharatersLong(888888888));
