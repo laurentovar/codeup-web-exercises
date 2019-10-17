@@ -231,7 +231,54 @@ function sayHelloBye(name, number) {
          return "Bye " + name.charAt(0).toUpperCase() + name.substring(1,name.length)
     }
 }
+//function that takes in 2 arguments (numbers) and returns the larger of the two
+function maxOfTwo(num1, num2) {
+    if (num1 > num2){
+        return parseInt(num1);
+    }
+    else {
+        return parseInt(num2);
+    }
+}
 
+//function that takes in two arguments (numbers)
+// returns true if the first argument is evenly divided by the second or vise-versa
+//returns false otherwise
+//return false if either argument is zero
+function evenlyDivided(a, b){
+    //check to see if it is zero first!!
+    if (a ===0 || b === 0){
+        return false;
+    }
+    else if (a % b === 0 || b % a === 0){
+        return true;
+    }
+    // else if (a % b !== 0 || b % a !== 0){
+    //     return false;
+    // }
+    else {
+        return false;
+    }
+}
+//function that accepts 3 floating point numbers.
+//should return true if the first two arguments are equal within the tolerance of the third
+function floatEquals(arg1, arg2, arg3) {
+    var float = arg2 - arg1;
+    if (float <= arg3){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+//function that takes in argument and returns the corresponding floating numner (round to one decimal place)
+function floating (num) {
+    var x = parseFloat(num);
+    x = x.toFixed(2);
+    return parseFloat(x);
+
+}
 
 //VARIABLES
 //store your birth year in var
