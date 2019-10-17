@@ -58,20 +58,21 @@
     function returnFirstElement(array) {
         return array[0];
     }
-    console.log(returnFirstElement(array [1,2,3,4]));
+
+    console.log(returnFirstElement([1,2,3,4]));
 
 
     function returnSecondElement(array) {
         return array[1];
     }
-    console.log(returnSecondElement(array[1,2,3,4]));
+    console.log(returnSecondElement([1,2,3,4]));
 
 
 
     function returnLastElement(input) {
         return input[input.length - 1];
     }
-    console.log(returnLastElement(array [1,2,3,4,5]));
+    console.log(returnLastElement([1,2,3,4,5]));
 
 
 
