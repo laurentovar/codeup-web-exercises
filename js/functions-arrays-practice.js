@@ -39,3 +39,23 @@ function longestString(arr) {
     return long;
 }
 console.log(longestString(longest));
+//Write a function named getShortestString that takes in an array of strings and
+// returns the shortest string in that array.
+var shortest = ["cats", "puppy", "cows" ,"snakes" , "doggggooooo", "bee"];
+
+function getShortestString(arr) {
+    var short = arr[0];
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].length < short.length) {
+            short = arr[i];
+        }
+    }
+    return short;
+}
+console.log(getShortestString(shortest));
+
+//  Write a function named getRandomQuote().
+//   Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
+//   getRandomQuote should generate a random number between 0 and the array's length minus 1
+//   use the randomly generated number as your index
+//   return a random quote.
