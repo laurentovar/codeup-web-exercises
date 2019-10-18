@@ -145,7 +145,7 @@ console.log(eightCharatersLong(888888888));
 //that takes in a float point number, and returns a number rounded down. return false for all inputs that aren't numbers
 //math.floor rounds down a number
 function floatingNumber(num) {
-    if (typeof === 'number' && !isNaN(num)){
+    if (typeof num === 'number' && !isNaN(num)){
         return Math.floor(num);
     }
     else {
