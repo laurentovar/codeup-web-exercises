@@ -10,8 +10,8 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-    var planetsArray = planetsString.split(" ,");
-
+    var planetsArray = planetsString.split("|");
+    console.log("line 14");
     console.log(planetsArray);
 
     /**
@@ -26,6 +26,7 @@
      */
     var planetsStr = "Mercury<br>Venus<br>Earth"
     var plantsArr = planetsStr.split('<br>');
+    console.log("line 29");
     console.log (plantsArr);
 
 })();
