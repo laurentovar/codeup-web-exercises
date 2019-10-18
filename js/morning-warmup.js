@@ -93,7 +93,7 @@ console.log(greaterThanFive());
 //refactor so that the function stranger is the default value for the parameter
 
 function helloThere(string = "stranger") {
-    return "Hello there, " + string;
+    return 'Hello there, ' + string + '.';
 }
 var promptTheUser = prompt("Input string, plox. ")
 alert(helloThere(promptTheUser));
@@ -142,3 +142,14 @@ function eightCharatersLong(input) {
 console.log(eightCharatersLong("Helloooo"));
 console.log(eightCharatersLong("Helllo"));
 console.log(eightCharatersLong(888888888));
+//that takes in a float point number, and returns a number rounded down. return false for all inputs that aren't numbers
+//math.floor rounds down a number
+function floatingNumber(num) {
+    if (typeof === 'number' && !isNaN(num)){
+        return Math.floor(num);
+    }
+    else {
+        return false;
+    }
+}
+console.log(floatingNumber(3.67));
