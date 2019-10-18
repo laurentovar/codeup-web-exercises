@@ -1,0 +1,226 @@
+<!doctype html5>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Activating Bootstrap 4 Individual Tabs via JavaScript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .bs-example{
+            margin: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#myTab a:last").tab('show'); // show last tab on page load
+        });
+    </script>
+
+<!--    <link rel="stylesheet" href="css/order-pizza.css ">-->
+
+</head>
+<body>
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--    <a class="navbar-brand" href="#">Pizza world</a>-->
+
+<!--    <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--        <ul class="navbar-nav mr-auto">-->
+<!--            <li class="nav-item active">-->
+<!--                <a class="nav-link" href="#">Order online <span class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">Menu</a>-->
+<!--            </li>-->
+
+<!--            <form class="form-inline my-2 my-lg-0">-->
+<!--                <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="zipcode">-->
+<!--                <button class="btn-outline-success" type="submit">Search stores near you</button>-->
+<!--            </form>-->
+<!--        </ul>-->
+<!--        <ul>-->
+<!--            <li class="nav-item-signUp">-->
+<!--                <img id="nav-link-sign" src="img/profile.png" alt="profile"-->
+<!--                     style="width:30px" height="30px;">-->
+<!--                <a class="nav-link-signUp" href="#">Sign Up</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</nav>-->
+
+
+
+
+<!--<div class="container-fluid">-->
+<!--<div class="jumbotron jumbotron-fluid">-->
+<!--    <div class="container">-->
+<!--        <h1 class="display-4">Welcome to Pizza World!</h1>-->
+<!--    </div>-->
+
+<div class="bs-example">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+            <a href="#sizeAndCrust" class="nav-link" data-toggle="tab"><span class="badge badge-pill badge-secondary">1 </span> Size and crust</a>
+
+        </li>
+        <li class="nav-item">
+            <a href="#cheeseSauce" class="nav-link" data-toggle="tab">Cheese and sauce</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages" class="nav-link" data-toggle="tab">Messages</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane fade" id="sizeAndCrust">
+            <div class=" tab-pane card bg-primary text-white">Choose size and crust</div>
+            <div class="card-body1">
+                <!--        Create a Child Card-->
+                <div class="card">
+                    <!--    Create a Header for the child Card-->
+                    <div class="card-header">Hand Tossed</div>
+                    <!--            Create a List group to hold all "rows" in a card-->
+                    <ul class="list-group">
+                        <!--                First Row, The Description-->
+                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                        <!--                Small Pizza Row-->
+                        <li class="list-group-item">
+                            <!--          Create a Div to hold radio input and label. Used to position element in row-->
+                            <div class="handTossedSizes">
+                                <!--                  Radio Button Input for Small Hand Tossed Size-->
+                                <input class="form-check-input" id="smallHandTossed" name="handTossedSize" type="radio">
+                                <!--                  Label for the radio Button-->
+                                <label class="form-check-label" for="smallHandTossed">
+                                    Small (10")
+                                </label>
+                            </div>
+                        </li>
+
+                        <!--      Medium Pizza Row-->
+                        <li class="list-group-item">
+                            <!--                    Create a Div to hold radio input and label. Used to position element in row-->
+                            <div class="handTossedSizes">
+                                <!--                        Radio Button Input for Medium Hand Tossed Size-->
+                                <input class="form-check-input" id="mediumHandTossed" name="handTossedSize" type="radio">
+                                <!--                        Label for the radio Button-->
+                                <label class="form-check-label" for="mediumHandTossed">
+                                    Medium (12")
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+
+
+<!--            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>-->
+        </div>
+
+<!--    <div id="sizeAndCrust">-->
+<!--        <div class=" tab-pane card bg-primary text-white">Choose size and crust</div>-->
+        <!--Define the body of the parent card    -->
+
+            <div class="tab-content">
+                <div class="tab-pane fade" id="cheeseSauce">
+                    <div class=" tab-pane card bg-primary text-white">Choose cheese and sauce</div>
+                    <div class="card-body2">
+                        <!--        Create a Child Card-->
+                        <div class="card">
+                            <!--    Create a Header for the child Card-->
+<!--                            <div class="card-header">Hand Tossed</div>-->
+
+
+<!--                            <div id="cheeseAndSauce">-->
+<!--                                &lt;!&ndash;Parent Card&ndash;&gt;-->
+                                <div class="card bg-primary text-white">Choose cheese and sauce</div>
+                                <!--Define the body of the parent card    -->
+                                <!--        <div class="card-body2">-->
+                                <!-- Create a Child Card-->
+                                <div class="card">
+                                    Create a Header for the child Card
+                                    <div class="card-header2">Cheese</div>
+                                    <div class="cheese1">
+                                        <div class="form-group">
+                                            <label for="cheese">How much?</label>
+                                            <select class="form-control" id="cheese">
+                                                <option>Light</option>
+                                                <option>Normal</option>
+                                                <option>Extra</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <!--            </div>-->
+                                <br>
+                                <div class="card">
+                                    <div class="card-header">
+                                        Sauce
+                                    </div>
+                                    <!--                <ul class="list-group">-->
+                                    <div class="sauce1">
+                                        <div class="form-group">
+                                            <label for="sauce">What type?</label>
+                                            <select class="form-control" id="sauceKind">
+                                                <option>Tomato sauce</option>
+                                                <option>Marinara sauce</option>
+                                                <option>BBQ sauce</option>
+                                                <option>Alfredo Sauce</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--                </ul>-->
+                                    <div class="sauce2">
+                                        <div class="form-group">
+                                            <label for="sauce">How much?</label>
+                                            <select class="form-control" id="sauce">
+                                                <option>Light</option>
+                                                <option>Normal</option>
+                                                <option>Extra</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-end">
+                                            <li class="page-item">
+                                                <a aria-label="Previous" class="page-link bg-primary text-white" href="#sizeAndCrust">
+                                                    <span aria-hidden="true">&laquo;</span> Previous Step</a>
+                                                <!--                            <span class="sr-only">Previous</span>-->
+                                            </li>
+                                            <li class="page-item">
+                                                <a aria-label="Next" class="page-link bg-primary text-white" href="#chooseToppings">Next
+                                                    Step
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

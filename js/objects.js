@@ -11,6 +11,13 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+   var persons = {
+       firstName: "Tom",
+       lastName: "Jerry"
+    };
+    console.log(persons.firstName);
+    console.log(persons.lastName);
+
 
     /**
      * TODO:
@@ -21,6 +28,15 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    // persons.sayHello = function () {
+    //
+    // }
+    persons.sayHello = function () {
+        console.log("Hello from Tom & Jerry");
+    };
+//add functionality to that object
+    console.log(persons.sayHello());
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -28,19 +44,37 @@
      * discount. Write a JS program, using conditionals, that logs to the
      * browser, how much Ryan, Cameron and George need to pay. We know that
      * Cameron bought $180, Ryan $250 and George $320. Your program will have to
-     * display a line with the name of the person, the amount before the
-     * discount, the discount, if any, and the amount after the discount.
+     *
+     * display a line with the name of the person,
+     * the amount before the discount, the discount, if any,
+     * and the amount after the discount.
      *
      * Uncomment the lines below to create an array of objects where each object
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
+        //cameron no discount
+        // ryan discount .12
+        // george discount .12
+    var shoppers = [
+        {   name: 'Cameron',
+            amount: 180,
+            total:180
+        },
+        {   name: 'Ryan',
+            amount: 250,
+            total: 220
+        },
+        {   name: 'George',
+            amount: 320,
+            total:290
+        }
+    ];
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+
+    shoppers.forEach(function (shopper) {
+        console.log(shopper.name + " is the customer.He spent " + shopper.amount + " his total with the discount is " +shopper.total)
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -54,6 +88,47 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+    var books = [
+        {
+            title: "The Shining",
+            author: {
+                firstName: "Steven",
+                lastName: "King"
+            }
+        },
+        {
+            title: "Inferno",
+            author: {
+                firstName: "Dante",
+                lastName: "Alighieri"
+            }
+        },
+        {
+            title: "Lord of the Rings",
+            author: {
+                firstName: "J.R.R",
+                lastName: "Tolkien"
+            }
+        },
+        {
+            title: "The Raven",
+            author: {
+                firstName: "Edgar",
+                lastName: "Allen Poe"
+            }
+        },
+        {
+            title: "To Kill a Mockingbird",
+            author: {
+                firstName: "Harper",
+                lastName: "Lee"
+            }
+        }
+    ];
+     console.log(books[0].title) // "The Shining"
+     console.log(books[0].author.firstName) // "Steven"
+     console.log(books[0].author.lastName) // "King"
+
 
     /**
      * TODO:
@@ -77,8 +152,22 @@
      *      Title: A Brief History of Time
      *      Author: Stephen Hawking
      *      ---
-     *      ...
      */
+    // books.forEach(function(book){
+    //     console.log(book.name.firstName + ": " + fighter.catchPhrase());
+    //     console.log(book.name.firstName + "'s attacks are: ");
+    //     fighter.attacks.forEach(function(attack){
+    //         console.log(attack);
+    //     });
+    //     console.log("----------");
+    // });
+    books.forEach(function (book) {
+        console.log ("Book:");
+        console.log("Title: " + book.title);
+        console.log(("Author: " + book.author.firstName + " " +  book.author.lastName));
+        console.log ("-----------");
+    });
+
 
     /**
      * Bonus:
@@ -90,5 +179,6 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
 
 })();
