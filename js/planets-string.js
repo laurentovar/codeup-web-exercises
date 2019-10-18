@@ -11,7 +11,7 @@
      * console.log planetsArray to check your work
      */
     var planetsArray = planetsString.split("|");
-    console.log("line 14");
+    // console.log("line 14");
     console.log(planetsArray);
 
     /**
@@ -24,9 +24,10 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-    var planetsStr = "Mercury<br>Venus<br>Earth"
-    var plantsArr = planetsStr.split('<br>');
-    console.log("line 29");
-    console.log (plantsArr);
+    var plantsStr = planetsArray.join('<br>');
+    document.write(plantsStr);
+    console.log (plantsStr);
+
+
 
 })();
