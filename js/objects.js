@@ -28,13 +28,10 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
-    // persons.sayHello = function () {
-    //
-    // }
+
     persons.sayHello = function () {
-        console.log("Hello from Tom & Jerry");
+        return  "Hello from " + this.firstName + " " + this.lastName;
     };
-//add functionality to that object
     console.log(persons.sayHello());
 
 
@@ -58,22 +55,31 @@
         // george discount .12
     var shoppers = [
         {   name: 'Cameron',
-            amount: 180,
-            total:180
+            amount: 180
+
         },
         {   name: 'Ryan',
-            amount: 250,
-            total: 220
+            amount: 250
+
         },
         {   name: 'George',
-            amount: 320,
-            total:290
+            amount: 320
+
         }
     ];
 
 
     shoppers.forEach(function (shopper) {
-        console.log(shopper.name + " is the customer.He spent " + shopper.amount + " his total with the discount is " +shopper.total)
+        var individualAmount  = shopper.amount;
+        var discount = shopper.amount * .12;
+        var finalAmount = individualAmount - discount;
+        if (individualAmount > 200){
+            console.log (shopper.name + " spent " + individualAmount + " they get a discount of " + discount + " The total pay was " + finalAmount);
+        }
+        else {
+            console.log (shopper.name + " paid " + individualAmount);
+        }
+        // console.log(shopper.name + " is the customer.He spent " + shopper.amount + " his total with the discount is " +shopper.total)
     });
 
     /** TODO:
@@ -153,19 +159,17 @@
      *      Author: Stephen Hawking
      *      ---
      */
-    // books.forEach(function(book){
-    //     console.log(book.name.firstName + ": " + fighter.catchPhrase());
-    //     console.log(book.name.firstName + "'s attacks are: ");
-    //     fighter.attacks.forEach(function(attack){
-    //         console.log(attack);
-    //     });
-    //     console.log("----------");
-    // });
-    books.forEach(function (book) {
-        console.log ("Book:");
-        console.log("Title: " + book.title);
-        console.log(("Author: " + book.author.firstName + " " +  book.author.lastName));
-        console.log ("-----------");
+
+    books.forEach(function (book, i) {
+       // var output = " ",
+       //   output += "Book # " + (i + 1);
+        var output = "";
+        output += "Book # " + (i + 1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
+
     });
 
 
@@ -179,9 +183,16 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    function creatBook(title, author) {
-
+    function createBook(title,first,last){
+        var book = {};
+        book.title = title;
+        book.author = {
+            firstName: first,
+            lastName: last
+        };
+        return book;
     }
+    books.push(createBook("The Alchemist", "Paulo", "Coelho" ));
 
 
 })();
