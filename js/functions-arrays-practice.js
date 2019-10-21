@@ -122,20 +122,23 @@ console.log(getRandomQuote());
 
 //function called twoDice that returns the sum of rolling 2 six sided dice
 function twoDice(firstRoll, secondRoll) {
-    //  firstRoll = (Math.floor(Math.random()* 6));
-    //  secondRoll = (Math.floor(Math.random()* 6));
-    // console.log(firstRoll);
-    // console.log(secondRoll);
-    // return firstRoll + secondRoll;
+     firstRoll = (Math.floor(Math.random()* 6) + 1);
+     secondRoll = (Math.floor(Math.random()* 6) + 1);
+    console.log("The first roll is " + parseInt(firstRoll));
+    console.log("The second roll is " + parseInt(secondRoll));
+    return "The sum of your rolls is " + parseInt(firstRoll + secondRoll);
 
 }
+console.log(twoDice());
+//function called rollDice () that returns an integer between 1 and 6
+function rollDice(integer) {
+    integer = (Math.floor(Math.random()* 6) + 1);
+}
 
-// console.log(twoDice();
 
-
-
-
-
+//function called listOfRolls (num) that takes in a number containing how many 6 sided dice rolls you want to make
+    //the listOfRolls should return an array of that length,
+    //where each element of the array is a result of the rollDice function
 
 
 
@@ -143,6 +146,13 @@ function twoDice(firstRoll, secondRoll) {
 
 
 //functions with objects
+
+
+
+
+
+
+
 
 //create a dog object that has the (breed (string), weightInPounds (number), age (number), color (string)
 // , sterilized (boolean), shotRecords (array of objects with properties for date and typeOfShot)
