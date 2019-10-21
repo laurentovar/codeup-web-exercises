@@ -10,7 +10,7 @@
 
         getArea: function () {
             // TODO: complete this method
-           var area = Math.PI * Math.sqrt(this.radius);
+           var area = Math.PI * Math.pow(this.radius, 2);
             // hint: area = pi * radius^2
 
             return area; // TODO: return the proper value
