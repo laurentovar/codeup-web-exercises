@@ -90,7 +90,7 @@ function coinFlip() {
 console.log(coinFlip());
 
 
-//      you can make it specifically say heads or tails
+    // you can make it specifically say heads or tails
 function flipCoin() {
     var flip = coinFlip();
     if (flip % 2 === 0){
@@ -99,7 +99,6 @@ function flipCoin() {
     else {
         return flip + " is tails";
     }
-    // return (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';
 }
 
 console.log(flipCoin());
@@ -120,3 +119,4 @@ function getRandomQuote() {
 
 }
 console.log(getRandomQuote());
+//function called randomIntBetween

@@ -1,6 +1,7 @@
 (function() {
     "use strict";
-    // return  Math.PI * Math.sqrt(circle);
+   //this. means for this specific function (use it when you are just using it here,
+    // if you were to use it somewhere else later then you use the actual name instead of this
 
 
     // create a circle object
