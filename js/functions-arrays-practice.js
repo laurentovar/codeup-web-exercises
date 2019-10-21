@@ -133,14 +133,19 @@ console.log(twoDice());
 //function called rollDice () that returns an integer between 1 and 6
 function rollDice(integer) {
     integer = (Math.floor(Math.random()* 6) + 1);
+    return "this is your random roll " + integer;
 }
 
+console.log(rollDice());
 
 //function called listOfRolls (num) that takes in a number containing how many 6 sided dice rolls you want to make
     //the listOfRolls should return an array of that length,
     //where each element of the array is a result of the rollDice function
 
+function listOfRolls(num) {
+    var rollsWanted= num * rollDice();
 
+}
 
 
 
