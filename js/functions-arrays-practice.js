@@ -122,11 +122,12 @@ console.log(getRandomQuote());
 
 //function called twoDice that returns the sum of rolling 2 six sided dice
 function twoDice(firstRoll, secondRoll) {
-     firstRoll = (Math.floor(Math.random()* 6 - 1) + 1);
-     secondRoll = (Math.floor(Math.random()* 6 - 1) + 1);
-    console.log(firstRoll);
-    console.log(secondRoll);
-    return firstRoll + secondRoll;
+    //  firstRoll = (Math.floor(Math.random()* 6));
+    //  secondRoll = (Math.floor(Math.random()* 6));
+    // console.log(firstRoll);
+    // console.log(secondRoll);
+    // return firstRoll + secondRoll;
+
 }
 
 // console.log(twoDice();
