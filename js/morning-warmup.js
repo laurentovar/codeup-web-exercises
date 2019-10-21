@@ -142,6 +142,7 @@ function eightCharatersLong(input) {
 console.log(eightCharatersLong("Helloooo"));
 console.log(eightCharatersLong("Helllo"));
 console.log(eightCharatersLong(888888888));
+
 //that takes in a float point number, and returns a number rounded down. return false for all inputs that aren't numbers
 //math.floor rounds down a number
 function floatingNumber(num) {
@@ -153,3 +154,10 @@ function floatingNumber(num) {
     }
 }
 console.log(floatingNumber(3.67));
+
+//function that counts from 1 up to the number that the user passes in. ex. if input is 10 then it should log numbers 1-10
+function counting(x) {
+    for (var i = 1; i < x; i++)
+       console.log(i);
+    return "Done counting";
+}
