@@ -66,6 +66,7 @@ function longestString(arr) {
     return long;
 }
 console.log(longestString(longest));
+
 //Write a function named getShortestString that takes in an array of strings and
 // returns the shortest string in that array.
 var shortest = ["cats", "puppy", "cows" ,"snakes" , "doggggooooo", "bee"];
@@ -80,7 +81,6 @@ function getShortestString(arr) {
     return short;
 }
 console.log(getShortestString(shortest));
-
 
 //function called coinFlip that returns either 0 or 1 randomly
 function coinFlip() {
@@ -137,27 +137,21 @@ function rollDice(integer) {
 }
 
 console.log(rollDice());
-
+//======
 //function called listOfRolls (num) that takes in a number containing how many 6 sided dice rolls you want to make
     //the listOfRolls should return an array of that length,
     //where each element of the array is a result of the rollDice function
 
 function listOfRolls(num) {
     var rollsWanted= num * rollDice();
-
+    return
+}
+//function named reverseArray that takes in an array and returns it reversed but without altering it
+function reverseArray() {
+    
 }
 
-
-
-
 //functions with objects
-
-
-
-
-
-
-
 
 //create a dog object that has the (breed (string), weightInPounds (number), age (number), color (string)
 // , sterilized (boolean), shotRecords (array of objects with properties for date and typeOfShot)
