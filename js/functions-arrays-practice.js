@@ -72,23 +72,17 @@ console.log(coinFlip());
 
 //      you can make it specifically say heads or tails
 function flipCoin() {
-    return (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';
+    var flip = coinFlip();
+    if (flip % 2 === 0){
+        return flip + " is heads";
+    }
+    else {
+        return flip + " is tails";
+    }
+    // return (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';
 }
+
 console.log(flipCoin());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //  Write a function named getRandomQuote().
 //   Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
@@ -96,11 +90,16 @@ console.log(flipCoin());
 //   use the randomly generated number as your index
 //   return a random quote.
     //random quotes:
-    // "A successful person is one who takes these challenges and emerges out victorious. -Unknown"
-    // "Insanity: doing the same thing over and over again and expecting different results -Einstein"
-    // "When you go in search of honey you must expect to be stung by bees -Joseph Joubert"
-    // "Nothing is hopeless; we must hope for everything. -Euripides"
-    // "To live is so startling it leaves little time for anything else. -Emily Dickinson"
-    // "Love looks not with the eyes, but with the mind; And therefore is winged Cupid painted blind.-William Shakespeare"
-    // "The price of anything is the amount of life you exchange for it -Henry David Thoreau"
 
+
+
+function getRandomQuote() {
+    var quotes = ["Insanity: doing the same thing over and over again and expecting different results -Einstein",
+     "Nothing is hopeless; we must hope for everything. -Euripides" ,
+        "To live is so startling it leaves little time for anything else. -Emily Dickinson" ];
+    var randomNumber = (Math.floor(Math.random()* quotes.length -1) + 1);
+    console.log(randomNumber);
+    return quotes [randomNumber];
+
+}
+console.log(getRandomQuote());
