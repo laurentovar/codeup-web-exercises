@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Map</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<!-- Custom JS -->
+<script>
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v9',
+        zoom: 10,
+        center: [-98.48753, 29.42172]
+    });
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            })}
+
+    var markerOptions = {
+        color: "#886b89"
+
+    };
+
+//array of objects with information about each restaurant. use a for each to loop
+    //for alexanders -98.481249, 29.495037
+    // for kims galbi 98.401919 29.482751
+    var favoriteResturants = [
+        {
+            Name: "Dough Pizzeria",
+            longitude:-98.48753,
+            latitude:29.42172
+        },
+        {
+            Name: "Alexanders",
+            longitude:-98.481249,
+            latitude:29.495037
+        },
+        {
+            Name: "Kims Galbi",
+            longitude:-98.401919 ,
+            latitude:29.482751
+        }
+    ];
+
+    favoriteResturants.forEach(function (element) {
+        //makes a marker for all three
+        var marker = new mapboxgl.Marker(markerOptions)
+            .setLngLat([element.longitude, element.latitude])
+            .addTo(map);
+
+        //makes a popup for all three
+        var popUp = new mapboxgl.Popup()
+            .setHTML("<p>"+ element.Name + "</p>")
+            .addTo(map);
+
+        //ties marker to popup and shows them both on page
+        marker.setPopup(popUp);
+
+    });
+
+
+
+</script>
+
+</body>
+</html>
