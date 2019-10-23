@@ -161,3 +161,14 @@ function counting(x) {
        console.log(i);
     return "Done counting";
 }
+//function createPersonObject that takes in name (string) and and age(num) and returns a person object containing both
+    //ex. createPersonObject ('hannah", 47)
+function createPersonObject(name, age) {
+    var person = {
+        name: name,
+        age: age
+    };
+    return person;
+}
+
+console.log(createPersonObject("Hannah", 27));
