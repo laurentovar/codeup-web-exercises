@@ -190,3 +190,14 @@ function fizzBuzz(num) {
         }
     }
 }
+//function that returns the number 5 but only when passed the string "five"
+function returnFive(num) {
+    if (num === "five" || num === "Five"){
+        return 5;
+    }
+    // else {
+    //     return "Write a different number"
+    // }
+}
+
+console.log(returnFive("Five"));
