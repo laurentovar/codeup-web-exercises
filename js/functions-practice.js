@@ -333,7 +333,7 @@ console.log(removeElement([10], 10));
 function sumOfNumbers(array) {
     var sum = 0;
     //keep track of the amount that you have through a for loop (going through an array (for, foreach, while)
-    for (i = 0; i <= array.length -1; i++) {
+    for (var i = 0; i <= array.length -1; i++) {
         //[i] changes everytime you go through the loop!
         sum = sum + array[i];
     }
@@ -348,7 +348,7 @@ console.log(sumOfNumbers([-1, 15]));
 function evensIndex(arrayNum) {
     //create an empty array so that the even numbers can get added to this array
     var evenIndex = [];
-    for (i =0; i <= arrayNum.length -1; i++){
+    for (var i =0; i <= arrayNum.length -1; i++){
         if (arrayNum[i] % 2 === 0){
             //evenIndex.push (i) give you the indexs of the numbers
             //evenIndex.push (array [i]); gives you the actual numbers
@@ -392,7 +392,7 @@ myMac.users = [
 function findUsers(array) {
     //needs to be outside so it doesnt just equal that last name, it will have all of them if its outside the loop
     var usernames = [];
-    for (i = 0; i <= array.length -1; i++){
+    for (var i = 0; i <= array.length -1; i++){
         //fill out the empty array and push it to that array
        usernames.push(array[i].username);
     }
@@ -421,7 +421,7 @@ var instrutor = [
     }
 ];
 function addRole(arrayObjects, newRole) {
-    for (i = 0; i <= arrayObjects.length -1; i++){
+    for (var i = 0; i <= arrayObjects.length -1; i++){
         //role is the new key for the object
         //*****this is adding a new property to an object*****
         arrayObjects[i].role = newRole;
@@ -436,7 +436,7 @@ function countLetters(str, character) {
     var number = 0;
     var newString= str.toLowerCase();
     var newCharacter = character.toLowerCase()
-    for (i=0; i <= str.length; i++ ){
+    for (var i=0; i <= str.length; i++ ){
         if (newString[i] === newCharacter){
             number++
         }
@@ -448,4 +448,18 @@ console.log(countLetters("banana", "a")); // returns 3
 console.log(countLetters("Bob", "b")); // returns 2
 console.log(countLetters("javascript", "x")); // returns 0
     //it works with special characters! (might be a js thing)
-console.log(countLetters("!hello&", "!"));
+console.log(countLetters("!hello&", "!")); //returns 1
+
+//- Write a function 'countAll' that takes in an array of strings and returns an array with the count of a character for each string.
+// You may be able to use your countLetters function here.
+function countAll (arrayStr, letter){
+    var array = [];
+    for (var i =0; i <= arrayStr.length -1; i++){
+        console.log(arrayStr[i]);
+        array.push(countLetters(arrayStr[i], letter))
+    }
+    return array;
+}
+
+console.log(countAll(["banana", "html", "java"], "a")); // returns [3,0,2]
+console.log(countAll(["push", "your", "commits"], "u")); // returns [1,1,0]
