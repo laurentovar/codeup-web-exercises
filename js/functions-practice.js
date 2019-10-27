@@ -350,6 +350,8 @@ function evensIndex(arrayNum) {
     var evenIndex = [];
     for (i =0; i <= arrayNum.length -1; i++){
         if (arrayNum[i] % 2 === 0){
+            //evenIndex.push (i) give you the indexs of the numbers
+            //evenIndex.push (array [i]); gives you the actual numbers
             evenIndex.push (i)
         }
     }
@@ -398,3 +400,33 @@ function findUsers(array) {
 }
 console.log(findUsers(myMac.users)); // returns ['sophie','vivian','david']
 
+//Write a function 'addRole' that accepts the array of objects, then adds the
+//  property 'role' to each object with a value of 'instructor.' The
+//  results should look like this:
+var instrutor = [
+    {
+       username: "sophie",
+       id: 1
+       // role: "instructor"
+    },
+    {
+        username: "vivian",
+        id: 2
+        // role: "instructor"
+    },
+    {
+        username: "david",
+        id: 3
+        // role: "instructor"
+    }
+];
+function addRole(arrayObjects, newRole) {
+    for (i = 0; i <= arrayObjects.length -1; i++){
+        //role is the new key for the object
+        //*****this is adding a new property to an object*****
+        arrayObjects[i].role = newRole;
+    }
+    return arrayObjects;
+}
+
+console.log(addRole(instrutor,"instructor"));
