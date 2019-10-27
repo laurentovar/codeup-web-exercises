@@ -33,7 +33,7 @@ removeElement([2,2,4,4,5], 2) // returns [2,4,4,5]
 removeElement([10], 10) // returns []
 ```
 
-- Write a function 'sumOfNumbers' that takes in an array of numbers and 
+- **Write a function 'sumOfNumbers' that takes in an array of numbers and 
 returns the sum of all values.
 
 ```$xslt
@@ -41,7 +41,7 @@ sumOfNumbers([1,2,3,4,5]) // 15
 sumOfNumbers([-1, 15]) // 14
 ```
 
-- Write a function 'evensIndex' that takes in an array of numbers and returns
+- **Write a function 'evensIndex' that takes in an array of numbers and returns
  an array containing the index values of all even numbers.
  
  ```$xslt
@@ -50,7 +50,7 @@ evensIndex([3,7,11,12]) // returns [3]
 evensIndex([5,5,7,13]) // returns []
 ```
 
-- Write a function 'stringToArray' that takes in a comma separated list and 
+- **Write a function 'stringToArray' that takes in a comma separated list and 
 returns it as an array.
 
 ```$xslt
@@ -59,7 +59,7 @@ stringToArray("red,orange,yellow,green,blue") // returns ['red','orange',
 
 stringToArray("1,2,3") // returns ['1','2','3']
 stringToArray("dog") // returns ['dog']
-```
+   ```
 
 - Given the following array of objects, write a function 'findUsers' that 
 returns

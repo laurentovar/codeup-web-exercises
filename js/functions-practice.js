@@ -311,6 +311,7 @@ function isPositive(num) {
         return false;
     }
 }
+
 //Write a function 'removeElement' that takes in an array and a value, and returns an Array with the first instance of the indicated value removed.
     //https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript
     //splice removes or replaces existing elements
@@ -327,6 +328,7 @@ function removeElement(array,elementToRemove) {
 console.log(removeElement([1, 2, 3, 4, 5], 4));
 console.log(removeElement([2, 4, 6, 8, 10], 1));
 console.log(removeElement([10], 10));
+
 //Write a function 'sumOfNumbers' that takes in an array of numbers and returns the sum of all values.
 function sumOfNumbers(array) {
     var sum = 0;
@@ -340,3 +342,59 @@ function sumOfNumbers(array) {
 
 console.log(sumOfNumbers([1, 2, 3, 4, 5]));
 console.log(sumOfNumbers([-1, 15]));
+
+// Write a function 'evensIndex' that takes in an array of numbers and returns an array containing the index values of all even numbers.
+    //make sure that you do a indexOf because it's asking for the index not the actual even numbers
+function evensIndex(arrayNum) {
+    //create an empty array so that the even numbers can get added to this array
+    var evenIndex = [];
+    for (i =0; i <= arrayNum.length -1; i++){
+        if (arrayNum[i] % 2 === 0){
+            evenIndex.push (i)
+        }
+    }
+    return evenIndex;
+}
+
+console.log(evensIndex([1, 2, 3, 4, 5, 6])); // returns [1,3,5]
+console.log(evensIndex([3, 7, 11, 12])); // returns [3]
+console.log(evensIndex([5, 5, 7, 13])); // returns []
+
+//Write a function 'stringToArray' that takes in a comma separated list and returns it as an array.
+function stringToArray(input) {
+    //put in what is actually separating them
+    return input.split(',');
+}
+
+console.log(stringToArray("red,orange,yellow,green,blue")); // returns ['red','orange','yellow','green','blue']
+console.log(stringToArray("1,2,3")); // returns ['1','2','3']
+console.log(stringToArray("dog")); // returns ['dog']
+
+// Given the following array of objects, write a function 'findUsers' that returns an Array of usernames.
+var myMac = {};
+myMac.users = [
+    {
+       username: "sophie",
+       id: 1
+    },
+    {
+        username: "vivian",
+        id: 2
+    },
+    {
+        username: "david",
+        id: 3
+    }
+];
+// findUsers(myMac.users) // returns ['sophie','vivian','david']
+function findUsers(array) {
+    //needs to be outside so it doesnt just equal that last name, it will have all of them if its outside the loop
+    var usernames = [];
+    for (i = 0; i <= array.length -1; i++){
+        //fill out the empty array and push it to that array
+       usernames.push(array[i].username);
+    }
+    return usernames;
+}
+console.log(findUsers(myMac.users)); // returns ['sophie','vivian','david']
+
