@@ -428,5 +428,24 @@ function addRole(arrayObjects, newRole) {
     }
     return arrayObjects;
 }
-
 console.log(addRole(instrutor,"instructor"));
+
+//Write a function 'countLetters' that takes in a string and a character, and
+    // counts the number of instances of that character in the string.
+function countLetters(str, character) {
+    var number = 0;
+    var newString= str.toLowerCase();
+    var newCharacter = character.toLowerCase()
+    for (i=0; i <= str.length; i++ ){
+        if (newString[i] === newCharacter){
+            number++
+        }
+    }
+    return number
+}
+
+console.log(countLetters("banana", "a")); // returns 3
+console.log(countLetters("Bob", "b")); // returns 2
+console.log(countLetters("javascript", "x")); // returns 0
+    //it works with special characters! (might be a js thing)
+console.log(countLetters("!hello&", "!"));
