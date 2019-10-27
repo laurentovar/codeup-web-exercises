@@ -291,11 +291,52 @@ var futureYear = 2000;
 var age = futureYear - birthYear;
 console.log ("The age I will be is either " + age + " or " + (age-1) + " depending on the month I was born");
 
-//======//
+//REVIEW FOR ASSESSMENT 3//
 //functions, objects, loops, arrays
-//function anom
-var sayHello = function () {
-    console.log("Hello");
-};
+    //function anom
+    var sayHello = function () {
+        console.log("Hello");
+    };
 
+//Write a function named 'typeOfValue' that takes in a value and returns its type.
+function typeOfValue(input) {
+    return typeof input;
+}
+//Write a function 'isPositive' that takes in a number and returns `true` or false` based on whether the input is positive.
+function isPositive(num) {
+    if (num > 0){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+//Write a function 'removeElement' that takes in an array and a value, and returns an Array with the first instance of the indicated value removed.
+    //https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript
+    //splice removes or replaces existing elements
+function removeElement(array,elementToRemove) {
+    var remove = array.indexOf(elementToRemove);
+    //do in two steps. returning it in one line gives you what you took out and not the changed array
+    if (remove > -1){
+        array.splice(remove,1);
 
+    }
+    return array
+}
+
+console.log(removeElement([1, 2, 3, 4, 5], 4));
+console.log(removeElement([2, 4, 6, 8, 10], 1));
+console.log(removeElement([10], 10));
+//Write a function 'sumOfNumbers' that takes in an array of numbers and returns the sum of all values.
+function sumOfNumbers(array) {
+    var sum = 0;
+    //keep track of the amount that you have through a for loop (going through an array (for, foreach, while)
+    for (i = 0; i <= array.length -1; i++) {
+        //[i] changes everytime you go through the loop!
+        sum = sum + array[i];
+    }
+    return sum;
+}
+
+console.log(sumOfNumbers([1, 2, 3, 4, 5]));
+console.log(sumOfNumbers([-1, 15]));

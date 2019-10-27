@@ -5,7 +5,7 @@ Welcome to your JS 2nd Assessment Review. This will include some things from
 the previous assessments, as well as Array and Object manipulation. Below are
  some practice questions for you to get started. 
  
- - Write a function named 'typeOfValue' that takes in a value and returns its 
+ -** Write a function named 'typeOfValue' that takes in a value and returns its 
  type.
  
  ```$xslt
@@ -15,7 +15,7 @@ the previous assessments, as well as Array and Object manipulation. Below are
  typeOfValue([4,5,6]) // "object"
 ```
  
- - Write a function 'isPositive' that takes in a number and returns `true` or
+ -** Write a function 'isPositive' that takes in a number and returns `true` or
  `false` based on whether the input is positive.
  
  ```$xslt
@@ -24,7 +24,7 @@ isPositive(-4) // false
 isPositive(0) // false
 ```
 
-- Write a function 'removeElement' that takes in an array and a value, and 
+- **Write a function 'removeElement' that takes in an array and a value, and 
 returns an Array with the first instance of the indicated value removed.
 
 ```$xslt
