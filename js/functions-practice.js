@@ -598,3 +598,17 @@ console.log(leaderboards(scores));
     }
 console.log("multipleAll");
 console.log(multipleAll([1, 2, 10, 3])); //60
+
+//function called multipleAllNegative that takes in an array and returns then all them multiplied together
+    //only want to know what the total is for negative numbers
+function multipleAllNegative(array) {
+    var total = 1;
+    for (var i = 0; i <= array.length -1; i++){
+        if (array[i] < 0){
+            total = total * array[i]
+        }
+    }
+    return total;
+}
+console.log("multipleAllNegative");
+console.log(multipleAllNegative([1, -2, 10, -3, -1, -4])); //24
