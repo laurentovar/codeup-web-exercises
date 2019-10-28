@@ -481,3 +481,21 @@ function removeAll(array,value) {
     return array
 }
 console.log(removeAll(bugs, "ant"));
+
+//function called arrayNumbers that returns an array with only numbers
+    // function isNumeric(value) {
+    //     //added parse
+    //     return  !isNaN(parseFloat(value));
+    // }
+
+// array = ["T", "one", 2, "3", false]
+function arrayNumbers(input) {
+    // for (var i = 0; i < input.length; i++){
+        if (isNumeric(input) === true){
+            return input
+        }
+    // }
+
+}
+
+console.log(arrayNumbers(["t", "one", 2, "3", false]));
