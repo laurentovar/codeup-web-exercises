@@ -186,3 +186,9 @@ console.log(removeElement([1, 2, 3, 3, 4, 5, 3], 3));
     //not either because they don't have any pizza that cost $100
 //pizzaPoints(customersObj, 5, 100) --> []
     //then sort the returned array of customer names in alphabetical order
+function freePizza(arr) {
+    var pizza = [];
+    for (var i = 0; i< arr.length -1; i++){
+        if (arr [i] )
+    }
+}
