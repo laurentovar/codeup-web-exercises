@@ -180,7 +180,9 @@ console.log(removeElement([1, 2, 3, 3, 4, 5, 3], 3));
     //"Batman": [22,30,11,17,15,52,27,12],
     //"Spider-Man": [5,17,30,33,40,22,26,10,11,45]
     //}
+    //not batman because it has 4 orders of 20+
 //pizzaPoints(customersObj, 5, 20) --> ["Spider-Man"]
 //pizzaPoints(customersObj, 3, 10) --> ["Batman", "Spider-Man"]
+    //not either because they don't have any pizza that cost $100
 //pizzaPoints(customersObj, 5, 100) --> []
     //then sort the returned array of customer names in alphabetical order
