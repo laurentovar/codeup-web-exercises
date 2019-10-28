@@ -523,3 +523,67 @@ function arrayNumbers2(input) {
 }
 
 console.log(arrayNumbers2(["t", "one", 4, "7", 6.5]));
+
+//function n named getLongestString that takes in an array of strings
+// and returns the longest string of that array
+var longest2 = ["cat", "puppy", "cows" ,"snakes" , "doggggooooo"];
+
+function longestString2(arr) {
+    var long = arr[0];
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i].length > long.length) {
+            long = arr[i];
+        }
+    }
+    return long;
+}
+console.log(longestString2(longest2));
+
+//SORTS AN ARRAY OF OBJECTS
+//Given an array of users, each defined by an object with the following properties: name, score, reputation
+// create a function that sorts the array to form the correct leaderboard.
+// so to get the trueScore, you should add the reputation multiplied by 2 to the score.
+
+// Once you know the trueScore of each user, sort the array according to it in descending order.
+
+//create an array of objects
+var scores = [
+    {
+        name: "Joyce",
+        score: 100,
+        reputation: 20
+    },
+    {
+        name: "Mike",
+        score: 90,
+        reputation: 40
+    },
+    {
+        name: "Eleven",
+        score: 110,
+        reputation: 40
+    },
+    {
+        name: "Hopper",
+        score: 70,
+        reputation: 20
+    },
+];
+
+//Sorts the area of objects based on their true score
+function leaderboards(arrayOfScores) {
+    arrayOfScores.sort(function (a,b) {
+
+        //truescore = reputation *2 + score
+        var aTrueScore = (a.reputation * 2 ) + a.score;
+        var bTrueScore = (b.reputation * 2 ) + b.score;
+
+        //this return sorts the scores in the function (sort)
+        return bTrueScore - aTrueScore;
+
+    });
+    //need this return to actually see the objects sorted (leaderboards)
+    return arrayOfScores
+}
+
+console.log(leaderboards(scores));
