@@ -639,4 +639,22 @@ function arrayToString(array) {
 
 console.log(arrayToString(["The", "dog", "is", "good!"]));
 
-
+//function sumObjectTotal return the total added together
+var shoppers = [
+    {
+        name: "Alex",
+        total: 300
+    },
+    {
+        name:"Bobby",
+        total: 500
+    }
+];
+function sumObjectTotal(object) {
+    var sum = 0;
+    for (var i = 0; i <= object.length -1; i++){
+        sum = shoppers[i].total + sum
+    }
+    return sum;
+}
+console.log(sumObjectTotal(shoppers));
