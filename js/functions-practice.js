@@ -585,5 +585,16 @@ function leaderboards(arrayOfScores) {
     //need this return to actually see the objects sorted (leaderboards)
     return arrayOfScores
 }
-
 console.log(leaderboards(scores));
+
+//function called multipleAll that takes in an array and returns them all multiplied together
+    function multipleAll(array) {
+        //use one because 0 times anything is 0
+        var total = 1;
+        for (var i = 0; i <= array.length -1; i++){
+            total = total * array[i]
+        }
+        return total;
+    }
+console.log("multipleAll");
+console.log(multipleAll([1, 2, 10, 3])); //60
