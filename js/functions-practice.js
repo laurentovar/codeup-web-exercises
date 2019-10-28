@@ -619,3 +619,24 @@ function deleteLast(array) {
      return array;
 }
 console.log(deleteLast(["hello", "hi", "hola", "wave"]));
+
+//function deleteFirst that takes in array and deletes the first index
+function deleteFirst(array) {
+    array.shift(array.indexOf(0));
+    return array;
+}
+console.log(deleteFirst(["hello", "hi", "hola", "wave"]));
+
+//function arrayToString that takes in an array and turns it into a string
+    // array ["The", "dog", "is", "good!"]
+function arrayToString(array) {
+    var string = " ";
+   for (var i = 0; i <= array.length -1; i++){
+       string = string + array[i] + " ";
+   }
+   return string;
+}
+
+console.log(arrayToString(["The", "dog", "is", "good!"]));
+
+
