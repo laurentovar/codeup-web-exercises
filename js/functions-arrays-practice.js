@@ -172,3 +172,15 @@ console.log(removeElement([2, 4, 6, 8, 10], 7));
 console.log(removeElement([20], 20));
 console.log(removeElement([1, 2, 3, 3, 4, 5, 3], 3));
 
+//create a flexible rewards system (pizza points)
+    //if a customer has made at least N orders of at least Y price, they get a free pizza
+    //function that takes an object of customers, a minimum number of orders and order price.
+        //return an array of customers that are eligible for free pizza
+//ex. var customersObj = {
+    //"Batman": [22,30,11,17,15,52,27,12],
+    //"Spider-Man": [5,17,30,33,40,22,26,10,11,45]
+    //}
+//pizzaPoints(customersObj, 5, 20) --> ["Spider-Man"]
+//pizzaPoints(customersObj, 3, 10) --> ["Batman", "Spider-Man"]
+//pizzaPoints(customersObj, 5, 100) --> []
+    //then sort the returned array of customer names in alphabetical order
