@@ -291,6 +291,7 @@ var futureYear = 2000;
 var age = futureYear - birthYear;
 console.log ("The age I will be is either " + age + " or " + (age-1) + " depending on the month I was born");
 
+//===============================///
 //===REVIEW FOR ASSESSMENT 3===//
 //functions, objects, loops, arrays
     //function anom
