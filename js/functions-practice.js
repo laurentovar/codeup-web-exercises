@@ -612,3 +612,10 @@ function multipleAllNegative(array) {
 }
 console.log("multipleAllNegative");
 console.log(multipleAllNegative([1, -2, 10, -3, -1, -4])); //24
+
+//function deleteLast that takes in array and deletes the last index
+function deleteLast(array) {
+     array.pop(array.indexOf(-1));
+     return array;
+}
+console.log(deleteLast(["hello", "hi", "hola", "wave"]));
