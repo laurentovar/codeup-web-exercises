@@ -483,19 +483,43 @@ function removeAll(array,value) {
 console.log(removeAll(bugs, "ant"));
 
 //function called arrayNumbers that returns an array with only numbers
-    // function isNumeric(value) {
-    //     //added parse
-    //     return  !isNaN(parseFloat(value));
-    // }
-
-// array = ["T", "one", 2, "3", false]
 function arrayNumbers(input) {
-    // for (var i = 0; i < input.length; i++){
-        if (isNumeric(input) === true){
-            return input
+    var array = [];
+    for (var i = 0; i <= input.length -1; i++){
+        if (isNumeric(input[i]) === true){
+            console.log("im in the if");
+            console.log(input[i]);
+            //parseInt if they want to return an array of just numbers returns (2,3)
+                //you dont need a parseInt if they just want 2 and "3"
+            if (input[i] === true){
+                array.push(1);
+            }
+            else if (input[i] === false) {
+                array.push (0);
+            }
+            else {
+                array.push(parseFloat(input[i]));
+            }
         }
-    // }
-
+    }
+    return array;
 }
 
-console.log(arrayNumbers(["t", "one", 2, "3", false]));
+console.log(arrayNumbers(["t", "one", 2, "3", false, 2.5]));
+
+//arrayNumbers 2 with no false in the array
+function arrayNumbers2(input) {
+    var array = [];
+    for (var i = 0; i <= input.length -1; i++){
+        if (isNumeric(input[i]) === true){
+            console.log("im in the if");
+            console.log(input[i]);
+            //parseInt if they want to return an array of just numbers returns (2,3)
+            //you dont need a parseInt if they just want 2 and "3"
+                array.push(parseFloat(input[i]));
+        }
+    }
+    return array;
+}
+
+console.log(arrayNumbers2(["t", "one", 4, "7", 6.5]));
