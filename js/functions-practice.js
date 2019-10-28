@@ -291,7 +291,7 @@ var futureYear = 2000;
 var age = futureYear - birthYear;
 console.log ("The age I will be is either " + age + " or " + (age-1) + " depending on the month I was born");
 
-//REVIEW FOR ASSESSMENT 3//
+//===REVIEW FOR ASSESSMENT 3===//
 //functions, objects, loops, arrays
     //function anom
     var sayHello = function () {
@@ -463,3 +463,21 @@ function countAll (arrayStr, letter){
 
 console.log(countAll(["banana", "html", "java"], "a")); // returns [3,0,2]
 console.log(countAll(["push", "your", "commits"], "u")); // returns [1,1,0]
+
+//function named removeAll(array, value) that takes in two arguments.
+// The first argument should be an array and the second argument should be a value you wish to remove
+var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+function removeAll(array,value) {
+    for (var i = 0; i < array.length -1; i++){
+        //if it does not find it indexOf returns -1, if it finds it then it returns the first instance it found it
+        if (array.indexOf(value) !== -1){
+            array.splice (array.indexOf(value),1);
+        }
+        else {
+            //adding a break stops you from looking through the entire thing again when
+            break;
+        }
+    }
+    return array
+}
+console.log(removeAll(bugs, "ant"));
