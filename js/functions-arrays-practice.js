@@ -156,8 +156,8 @@ function reverseArray() {
 //Write a function 'removeElement' that takes in an array and a value, and returns an Array with the first instance of the indicated value removed.
     //https://stackoverflow.com/questions/5767325/how-do-i-remove-a-particular-element-from-an-array-in-javascript
     //splice removes or replaces existing elements
-function removeElement (array,value){
-    var remove = array.indexOf(value);
+function removeElement(array,elementToRemove) {
+    var remove = array.indexOf(elementToRemove);
     //do in two steps. returning it in one line gives you what you took out and not the changed array
     if (remove > -1){
         array.splice(remove,1);
@@ -166,8 +166,9 @@ function removeElement (array,value){
     return array
 }
 
+
 console.log(removeElement([1, 2, 3, 4, 5], 2));
 console.log(removeElement([2, 4, 6, 8, 10], 7));
 console.log(removeElement([20], 20));
-console.log(removeElement([1, 3, 3, 4, 5, 6, 3], 3));
+console.log(removeElement([1, 2, 3, 3, 4, 5, 3], 3));
 
