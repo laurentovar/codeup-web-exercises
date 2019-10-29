@@ -13,7 +13,6 @@ nav {
 .container{
     display: flex;
     justify-content: center;
-    margin-right: 15%;
     background-image: url("../img/Coffee-Stain-Texture.jpg");
     border-radius: 25px;
 }
@@ -99,6 +98,10 @@ select {
 }
 .card-text {
     border-radius: 15px;
+}
+#fan-favs {
+    text-align: left;
+    margin-left: 10%;
 }
 
 
