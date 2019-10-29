@@ -238,5 +238,42 @@ function mostOranges(carts) {
 
 console.log(mostOranges(shoppingCarts));
 
+//function that accepts an array of student objects and should return an array of student objects that are not registered
+var students = [
+    {
+        name: "Mary",
+        grade: 10,
+        gpa: 3.7,
+        isRegistered: true
+    },
+    {
+        name: "Tim",
+        grade: 12,
+        gpa: 3.2,
+        isRegistered: false
+    },
+    {
+        name: "Ellie",
+        grade: 9,
+        gpa: 4.0,
+        isRegistered: false
+    },
+    {
+        name: "Alex",
+        grade: 10,
+        gpa: 3.9,
+        isRegistered: true
+    }
+];
+function notRegistered(arr) {
+    var notInClass = [];
+    // for (var i = 0; i <= arr.length -1; i++){
+    students.forEach(function (student) {
+        if (!students.isRegistered){
+            notInClass.push(student)
+        }
+    });
 
+    return notInClass
+}
 
