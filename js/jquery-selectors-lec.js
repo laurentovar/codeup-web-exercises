@@ -57,7 +57,10 @@ $(document).ready(function() {
 
 	// TODO BONUS: Add additional class names to the page, and practice changing the css or viewing the contents
 		//added this in
-	 $('.book-genre').css({'font-weight' : "bold", 'color': 'purple'});
+	 $('.book-genre').css({
+		 'font-weight' : "bold",
+		 'color': 'purple'
+	 });
 
 
 	/**********************************************
@@ -66,7 +69,10 @@ $(document).ready(function() {
 	//	$('tag_name')
 
 	// TODO TOGETHER: Change the background color of all paragraph tags
-	$('p').css({'background-color': '#e2186d', 'color': 'white'});
+	$('p').css({
+		'background-color': '#e2186d',
+		'color': 'white'
+	});
 
 	// TODO: Explore the following JS Bin example:
 	//  https://jsbin.com/gayir/1/edit?js,output
@@ -106,4 +112,26 @@ $(document).ready(function() {
 	//  https://jsbin.com/fivucu/1/edit?js,output
 
 
+});
+
+//this is another way to use multiple css
+// $('#important-circle').click(function() {
+//   $(this).css('background-image','url(img/io.png)').css('background-size','cover');
+//});
+
+//TODO example using a click to change an empty div to something else:
+	//the e is for what the event does
+$('#submit').click(function(e) {
+	//the e.preventDefault stops the default thing to occur
+		// (in this example the click was to a submit button, so this way stops it from running that)
+	e.preventDefault();
+	var val = $('input').val().toLowerCase();
+	console.log(val);
+	if (val === 'pikachu') {
+		$('#picture-example').html('<img class="push" src="img/pikachu.gif" alt="pikachu gif">');
+	} else if (val === 'dragonite') {
+		$('#picture-example').html('<img class="push" src="img/dragonite.gif" alt="dragonite gif">');
+	} else {
+		$('#picture-example').html('<img class="push" src="img/you-were-close.png" alt="you were close">');
+	}
 });

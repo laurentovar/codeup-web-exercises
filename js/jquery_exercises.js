@@ -48,9 +48,9 @@ $(document).ready(function() {
     );
 
     //this is another way to use multiple css
-    //$('#blah').click(function(){
-        //$(this).css('background-image', 'url(img/img.png')').css('background-size','cover')
-
+        // $('#important-circle').click(function() {
+         //   $(this).css('background-image','url(img/io.png)').css('background-size','cover');
+         //});
 
 
 
