@@ -266,8 +266,15 @@ var students = [
     }
 ];
 function notRegistered(arr) {
+    var bucket = [];
+//     students[1].isRegistered;
+//     students.forEach(function (student) {
+//         if (student.isRegistered === false){
+//
+//         }
+//     })
+// }
     var notInClass = [];
-    // for (var i = 0; i <= arr.length -1; i++){
     students.forEach(function (student) {
         if (!students.isRegistered){
             notInClass.push(student)
@@ -276,7 +283,6 @@ function notRegistered(arr) {
 
     return notInClass
 }
-
 //function that will return an array of objects sorted by height in ascending order
 var hamsters = [
     {
@@ -320,3 +326,4 @@ function sortedByHeight(array) {
 }
 
 console.log(sortedByHeight(hamsters));
+

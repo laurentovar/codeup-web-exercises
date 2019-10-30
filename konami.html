@@ -25,6 +25,7 @@
     "use strict";
     //create an array to hold the konami code
     var konamiCode = [38,38,40,40,37,39,37,39,66,65,13];
+    // var konamiCheck = [];
 
     //create a variable to hold the current index as we read through array
     var codeIndex = 0;
@@ -97,29 +98,33 @@
                 console.log("Start Button");
                 showStartImage();
             }
+            if(codeIndex === konamiCode.length -1){
+                success();
+            }
 
             codeIndex++;
             console.log("correct so far...");
 
             //if they code index is >= the length of the array
-            if(codeIndex >= konamiCode.length){
-                console.log("you entered the Konami Code!");
-
-                var audio = new Audio('KonamiCode.mp3');
-                audio.play();
-
-                alert("Hey cheater you added 30 lives!!");
-                //then they entered the konami code! Reset codeIndex to start again
-                codeIndex = 0;
-            }
 
         }
         //If it doesn't match, reset the codeIndex to 0 so they can keep trying
-        else{
-            codeIndex = 0;
-            console.log("oops you messed up");
-        }
+        // else{
+        //     codeIndex = 0;
+        //     console.log("oops you messed up");
+        // }
 
+        var audio;
+        function success() {
+            console.log("you entered the Konami Code!");
+            audio = new Audio('KonamiCode.mp3');
+            audio.play();
+            setTimeout(function(){
+                alert("Hey cheater you added 30 lives!!");
+            },1000);
+            //then they entered the konami code! Reset codeIndex to start again
+            codeIndex = 0;
+        }
     });
 </script>
 </body>
