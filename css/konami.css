@@ -55,3 +55,21 @@ body {
     top:65%;
     left:51%;
 }
+.glow {
+    /*font-size: 80px;*/
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a5a4a4, 0 0 40px #a5a4a4, 0 0 50px #a5a4a4, 0 0 60px #a5a4a4, 0 0 70px #a5a4a4;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #a5a4a4, 0 0 50px #a5a4a4, 0 0 60px #a5a4a4, 0 0 70px #a5a4a4, 0 0 80px #a5a4a4;
+    }
+}

@@ -4,9 +4,10 @@
     <title>Konami Code</title>
     <link rel="stylesheet" href="css/konami.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<h1>Enter the Konami Code Below</h1>
+<h1 class="glow">Enter the Konami Code Below</h1>
 <p>Display in full screen</p>
         <!-- check code is: ↑ ↑ ↓ ↓ ← → ← → b a enter-->
     <img id ="konamiCode" src="img/konamicode.png" alt="konamicode">
@@ -107,7 +108,7 @@
                 var audio = new Audio('KonamiCode.mp3');
                 audio.play();
 
-                alert("You added 30 lives!!");
+                alert("Hey cheater you added 30 lives!!");
                 //then they entered the konami code! Reset codeIndex to start again
                 codeIndex = 0;
             }
