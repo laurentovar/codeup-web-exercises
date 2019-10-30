@@ -172,6 +172,7 @@ console.log(removeElement([2, 4, 6, 8, 10], 7));
 console.log(removeElement([20], 20));
 console.log(removeElement([1, 2, 3, 3, 4, 5, 3], 3));
 
+
 //create a flexible rewards system (pizza points)
     //if a customer has made at least N orders of at least Y price, they get a free pizza
     //function that takes an object of customers, a minimum number of orders and order price.
