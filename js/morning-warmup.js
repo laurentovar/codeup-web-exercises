@@ -277,3 +277,46 @@ function notRegistered(arr) {
     return notInClass
 }
 
+//function that will return an array of objects sorted by height in ascending order
+var hamsters = [
+    {
+        name: "Hamtaro",
+        heightInMM: 86,
+        fur: ['orange', 'white'],
+        gender: "male",
+        dateOfBirth: "August 6"
+    } , {
+        name: "Bijou",
+        heightInMM: 75,
+        fur: ['white'],
+        gender: "female",
+        dateOfBirth: "July 10"
+    } , {
+        name: "Oxnard",
+        heightInMM: 100,
+        fur: ['grey', 'white'],
+        gender: "male",
+        dateOfBirth: "May 3"
+    } , {
+        name: "Boss",
+        heightInMM: 120,
+        fur: ['brown', 'white'],
+        gender: "male",
+        dateOfBirth: "Spetember 21"
+    } , {
+        name: "Snoozer",
+        heightInMM: 85,
+        fur: ['brown', 'white', "pink"],
+        gender: "male",
+        dateOfBirth: "January 14"
+    }
+];
+
+function sortedByHeight(array) {
+    return array.sort(function (a, b) {
+        //doing - gets it to return with ascending order b.heightInMM - a.heightInMM will return in descending order
+        return a.heightInMM - b.heightInMM;
+    })
+}
+
+console.log(sortedByHeight(hamsters));
