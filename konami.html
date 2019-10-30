@@ -2,21 +2,64 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <link rel="stylesheet" href="css/konami.css">
 </head>
 <body>
 <h1>Enter Konami Code!!</h1>
         <!-- check code is: ↑ ↑ ↓ ↓ ← → ← → b a enter-->
     <img src="img/konamicode.png" alt="konamicode">
-
+    <img id="cart" src="img/cart.png" alt="" style="display: none" >
 
 <script src = "js/jquery-2.2.4.js"></script>
 <script>
+    //use enter as the return key (use prevent default)
     "use strict";
+    //create an array to hold the konami code
+    var konamiCode = [38,38,40,40,37,39,37,39,66,65,13];
 
-    $(document).keyup(function(event){
-        console.log(event.keyCode);
+    //create a variable to hold the current index as we read through array
+    var codeIndex = 0;
 
+    //jquery
+        //for the images that popup
+        function showImage (){
+            $('#cart').show('fast');
+            $('#cart').hide('slow');
+        }
 
+    $(document).keydown(function(event){
+            //which is the key(the number from the keyboard)
+        console.log(event.which);
+
+        //if key code matches the number in array at the specified index
+        //then they entered the right key, so iterate the code index
+        if(event.which === konamiCode[codeIndex]){
+            if (konamiCode[codeIndex] === 38){
+                console.log("up arrow");
+                showImage();
+            }
+
+            codeIndex++;
+            console.log("correct so far...");
+
+            //if they code index is >= the length of the array
+            if(codeIndex >= konamiCode.length){
+                console.log("you entered the Konami Code!");
+
+                var audio = new Audio('KonamiCode.mp3');
+                audio.play();
+
+                alert("You added 30 lives!!");
+                //then they entered the konami code! Reset codeIndex to start again
+                codeIndex = 0;
+            }
+
+        }
+        //If it doesn't match, reset the codeIndex to 0 so they can keep trying
+        else{
+            codeIndex = 0;
+            console.log("oops you messed up");
+        }
 
     });
 </script>

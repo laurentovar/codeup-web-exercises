@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+    color: white;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    z-index: 0;
+}
+body {
+    background-color: #111111;
+}
+#cart {
+    z-index: 1;
+    position: absolute;
+    top:40px;
+    left: 30px;
+}
