@@ -2,19 +2,55 @@ h1 {
     text-align: center;
     color: white;
 }
-img {
+#konamiCode {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 90%;
     z-index: 0;
 }
 body {
     background-color: #111111;
 }
-#cart {
+#redDot-up {
     z-index: 1;
     position: absolute;
-    top:40px;
-    left: 30px;
+    top:48%;
+    left:24%;
+}
+#redDot-down {
+    z-index: 1;
+    position: absolute;
+    top:62%;
+    left:24%;
+}
+#redDot-right {
+    /*z-index: 1;*/
+    position: absolute;
+    top:54%;
+    left:20%;
+}
+#redDot-left {
+    /*z-index: 1;*/
+    position: absolute;
+    top:54%;
+    left:28%;
+}
+#b-button {
+    /*z-index: 1;*/
+    position: absolute;
+    top:60%;
+    left:64%;
+}
+#a-button {
+    /*z-index: 1;*/
+    position: absolute;
+    top:61%;
+    left:73%;
+}
+#start-button {
+    /*z-index: 1;*/
+    position: absolute;
+    top:63%;
+    left:51%;
 }
