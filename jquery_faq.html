@@ -76,6 +76,30 @@
     </dl>
     <button class="switch">Click me</button>
 
+    <!--3 national parks with 4 facts-->
+    <h3>Grand Canyon</h3>
+    <ul>
+        <li>There's a town inside of it</li>
+        <li>It's missing 950 million years worth of rocks </li>
+        <li>Fish are relatively uncommon</li>
+        <li>There are no dinosaur bones</li>
+    </ul>
+    <h3>Dry Tortugas</h3>
+    <ul>
+        <li>More than 80,000 people visit each year</li>
+        <li>The only way to reach the park is by charter or private boat, ferry, or float plane </li>
+        <li>Well known for the sunken treasures and shipwrecks in the area</li>
+        <li>It is a popular place for sea turtles to nest.</li>
+    </ul>
+    <h3>Rocky Mountains</h3>
+    <ul>
+        <li>The Great Divide runs through the land</li>
+        <li>Bighorn sheep are the symbol of the park </li>
+        <li>It features the highest continuous paved road in the country</li>
+        <li>It's home to one of only a few active cemeteries located in a national park</li>
+    </ul>
+    <button class="switch2">Click me</button>
+
 <script src = "js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
@@ -95,6 +119,36 @@
             })
 
         });
+
+    //li would be the children
+    //$ ('ul').last().children().each(function(i){
+    //if (i %2 === 0) {
+    // $ (this).css('background-color', "purple")
+
+    //chaining (makes only the first li tag blue)
+    //$('ul').last().children().first().css('background-color', 'blue');
+
+    //any p in the main tag gives it a border of orange
+    //$('#national-parks').children("p").css('border', '2px orange');
+
+    //using parents selector you need to specify where to go (unlike the parent selector)
+
+//when the button is pressed the last li in each ul should have yellow background
+    $('.switch2').click(function () {
+        $('li').parent().children().last('li').css('background-color', 'yellow')
+
+    });
+
+//when h3 is pressed the li underneath it should bold
+    $('h3').click(function () {
+        $('ul').children().css('font-weight', 'bold');
+    });
+
+    //when any li is clicked the first li of the parent ul should have font color blue
+    $('li').click(function () {
+        $('li').parent().first('li').css('color', 'blue');
+    })
+
 
 </script>
 </body>
