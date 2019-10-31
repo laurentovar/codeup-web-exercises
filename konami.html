@@ -108,11 +108,12 @@
                 console.log("oops you messed up");
             }
         }
+        //reads this when they completed the konami code
         if (codeIndex === konamiCode.length) {
             success();
         }
     });
-
+        //function that is called when the konami code is done
         var audio;
         function success() {
             console.log("you entered the Konami Code!");
