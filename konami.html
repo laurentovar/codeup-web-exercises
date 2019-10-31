@@ -9,14 +9,14 @@
 <body>
     <p class="glow">Display in full screen</p>
     <h1 class="glow">Enter the Konami Code Below</h1>
+        <!-- check code is: ↑ ↑ ↓ ↓ ← → ← → b a enter-->
     <h2 class="glow">&#8679; &#8679; &#8681; &#8681; &#8678; &#8680; &#8678; &#8680; B A ENTER</h2>
-<!-- check code is: ↑ ↑ ↓ ↓ ← → ← → b a enter-->
+
     <div class ="parentPics">
         <img id ="marioGif" src="img/mariogif.gif" height="300px" width="450px" alt="marioGif">
         <img id="retrotv" src="img/retro-tv.png" height="350px" width="460px" alt="">
 
-
-
+    <!-- dot images-->
     <img id="redDot-up" src="img/red-dot.png" height="150px" width="150px" alt="" style="display: none">
     <img id="redDot-down" src="img/red-dot.png" height="150px" width="150px" alt="" style="display: none">
     <img id="redDot-right" src="img/red-dot.png" height="150px" width="150px" alt="" style="display: none">
@@ -34,7 +34,6 @@
     "use strict";
     //create an array to hold the konami code
     var konamiCode = [38,38,40,40,37,39,37,39,66,65,13];
-    // var konamiCheck = [];
 
     //create a variable to hold the current index as we read through array
     var codeIndex = 0;
@@ -122,7 +121,7 @@
             setTimeout(function(){
                 alert("Hey cheater you added 30 lives!!");
             },1000);
-            //then they entered the konami code! Reset codeIndex to start again
+            // they entered the konami code! Reset codeIndex to start again
             codeIndex = 0;
         }
 
