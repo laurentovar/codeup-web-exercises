@@ -30,89 +30,79 @@
     //create a variable to hold the current index as we read through array
     var codeIndex = 0;
 
-    //jquery
-        //for the images that popup
-        function showImageUp (){
-            $('#redDot-up').show('fast');
-            $('#redDot-up').hide('slow');
-        }
-        function showImageDown (){
-            $('#redDot-down').show('fast');
-            $('#redDot-down').hide('slow');
-        }
-        function showImageLeft (){
-            $('#redDot-left').show('fast');
-            $('#redDot-left').hide('slow');
-        }
-        function showImageRight (){
-            $('#redDot-right').show('fast');
-            $('#redDot-right').hide('slow');
-        }
-        function showBImage (){
-            $('#b-button').show('fast');
-            $('#b-button').hide('slow');
-        }
-        function showAImage (){
-            $('#a-button').show('fast');
-            $('#a-button').hide('slow');
-        }
-
-        function showStartImage (){
-            $('#start-button').show('fast');
-            $('#start-button').hide('slow');
-        }
+    function showImageGeneric (id){
+        console.log(id);
+        $(id).show('fast');
+        $(id).hide('slow');
+    }
 
 
-    $(document).keydown(function(event){
-            //which is the key(the number from the keyboard)
+    $(document).keydown(function(event) {
+        //which is the key(the number from the keyboard)
         console.log(event.which);
 
-        //if key code matches the number in array at the specified index
-        //then they entered the right key, so iterate the code index
-        if(event.which === konamiCode[codeIndex]){
-            if (konamiCode[codeIndex] === 38){
-                console.log("up arrow");
-                showImageUp();
-            }
-             if (konamiCode[codeIndex] === 40){
-                console.log("down arrow");
-                showImageDown();
-            }
-            if (konamiCode[codeIndex] === 37){
-                console.log("left arrow");
-                showImageLeft();
-            }
-            if (konamiCode[codeIndex] === 39){
-                console.log("right arrow");
-                showImageRight();
-            }
-            if (konamiCode[codeIndex] === 66){
-                console.log("B Button");
-                showBImage();
-            }
-            if (konamiCode[codeIndex] === 65){
-                console.log("A Button");
-                showAImage();
-            }
-            if (konamiCode[codeIndex] === 13){
-                console.log("Start Button");
-                showStartImage();
-            }
-            if(codeIndex === konamiCode.length -1){
-                success();
-            }
 
-            codeIndex++;
-            console.log("correct so far...");
-
-            //if they code index is >= the length of the array
-
+        if (event.which === 38) {
+            showImageGeneric('#redDot-up');
+            if (konamiCode[codeIndex] === 38) {
+                codeIndex++
+            } else {
+                codeIndex = 0;
+                console.log("oops you messed up");
+            }
+        } else if (event.which === 40) {
+            showImageGeneric('#redDot-down');
+            if (konamiCode[codeIndex] === 40) {
+                codeIndex++;
+            } else {
+                codeIndex = 0;
+                console.log("oops you messed up");
+            }
+        } else if (event.which === 37) {
+            showImageGeneric('#redDot-left');
+            if (konamiCode[codeIndex] === 37) {
+                codeIndex++;
+            } else {
+                codeIndex = 0;
+                console.log("oops you messed up");
+            }
+        } else if (event.which === 39) {
+            showImageGeneric('#redDot-right');
+            if (konamiCode[codeIndex] === 39) {
+                codeIndex++;
+            } else {
+                codeIndex = 0;
+                console.log("oops you messed up");
+            }
+        } else if (event.which === 66) {
+            showImageGeneric('#b-button');
+            if (konamiCode[codeIndex] === 66) {
+                codeIndex++;
+            } else {
+                codeIndex = 0;
+                console.log("oops you messed up");
+            }
+        } else if (event.which === 65) {
+            showImageGeneric('#a-button');
+            if (konamiCode[codeIndex] === 65) {
+                codeIndex++;
+            } else {
+                codeIndex = 0;
+                console.log("oops you messed up");
+            }
+        } else if (event.which === 13) {
+            showImageGeneric('#start-button');
+            if (konamiCode[codeIndex] === 13) {
+                codeIndex++;
+            } else {
+                codeIndex = 0;
+                console.log("oops you messed up");
+            }
         }
-        //If it doesn't match, reset the codeIndex to 0 so they can keep trying
-        // else{
-        //     codeIndex = 0;
-        //     console.log("oops you messed up");
-        // }
+        if (codeIndex === konamiCode.length - 1) {
+            success();
+        }
+    });
 
         var audio;
         function success() {
@@ -125,7 +115,7 @@
             //then they entered the konami code! Reset codeIndex to start again
             codeIndex = 0;
         }
-    });
+
 </script>
 </body>
 </html>
