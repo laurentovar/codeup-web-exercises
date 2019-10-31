@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Jquery FAQ</title>
+    <style>
+        .invisible {
+           visibility: hidden;
+        }
+        .highlighter{
+            background-color: #00ABA9;
+        }
+    </style>
 </head>
 <body>
     <h1>Yellowstone FAQ's</h1>
-    <dl>
+    <dl class="dl-horizontal">
 
         <dt>1. How do I get there?</dt>
         <dd>Three of the five entrances to Yellowstone National Park are located in Montana’s Yellowstone Country; they can be accessed through West Yellowstone, Gardiner and Cooke City, MT.</dd>
@@ -33,7 +41,7 @@
         <br>
 
         <dt>5. What can I do besides scenic driving?</dt>
-        <dd>Simply put, a lot. While scenic drives, photography and wildlife watching are the most popular activities in the park, exploration is endless. Adventurers can hike, fish, bike, horseback ride and boat.
+        <dd >Simply put, a lot. While scenic drives, photography and wildlife watching are the most popular activities in the park, exploration is endless. Adventurers can hike, fish, bike, horseback ride and boat.
             For those who prefer a more educational experience, sign up for a Ranger Program or seasonal talks. Yellowstone also offers a number of youth programs and activities.
         </dd>
         <br>
@@ -65,15 +73,28 @@
 
         <dt>10. Does the park have cell service and internet connections?</dt>
         <dd>Cell phone service is limited, but available at Old Faithful, Yellowstone Lake, Canyon, Grant and Mammoth Hot Springs Villages. Wireless internet can be purchased at select locations within these area lodges.</dd>
-
-
     </dl>
-
+    <button class="switch">Click me</button>
 
 <script src = "js/jquery-2.2.4.js"></script>
 <script>
     "use strict";
+//css that sets elements with invisible class to visibility: hidden;
 
+    // $('.invisible').css('visibility', 'hidden');
+
+    // class that toggles the class on and off
+    $(document).ready(function() {
+        $('dd').addClass('invisible');
+
+        $('.switch').click(function () {
+            $('dd').toggleClass('invisible')
+        });
+        $('dt').click(function () {
+            $(this).toggleClass('highlighter')
+            })
+
+        });
 
 </script>
 </body>
