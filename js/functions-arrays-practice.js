@@ -172,31 +172,3 @@ console.log(removeElement([2, 4, 6, 8, 10], 7));
 console.log(removeElement([20], 20));
 console.log(removeElement([1, 2, 3, 3, 4, 5, 3], 3));
 
-
-//create a flexible rewards system (pizza points)
-    //if a customer has made at least N orders of at least Y price, they get a free pizza
-    //function that takes an object of customers, a minimum number of orders and order price.
-        //return an array of customers that are eligible for free pizza
-//ex. var customersObj = {
-    //"Batman": [22,30,11,17,15,52,27,12],
-    //"Spider-Man": [5,17,30,33,40,22,26,10,11,45]
-    //}
-    //not batman because it has 4 orders of 20+
-//pizzaPoints(customersObj, 5, 20) --> ["Spider-Man"]
-//pizzaPoints(customersObj, 3, 10) --> ["Batman", "Spider-Man"]
-    //not either because they don't have any pizza that cost $100
-//pizzaPoints(customersObj, 5, 100) --> []
-    //then sort the returned array of customer names in alphabetical order
-
-
-//split the bill only for non-spicy items. You will pay in full for the spicy dishes.
-// 2 arrays: one classifying the dishes as spicy vs. non-spicy and the other listing their prices,
-// write a function that outputs an array where the first element is how much you pay and the second element is how much your friend pays.
-//billSplit(["S", "N", "S", "S"], [13, 18, 15, 4]) ➞ [41, 9]
-// // Since:
-// // You pay: [13, 9, 15, 4] = 41
-// // Friend pays: [0, 9, 0, 0] = 9
-
-var billSplit = [
-    ['s', 'n', 's', 's']
-]
