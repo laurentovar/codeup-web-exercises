@@ -119,7 +119,7 @@
             })
 
         });
-
+//notes for children, parent, ect..
     //li would be the children
     //$ ('ul').last().children().each(function(i){
     //if (i %2 === 0) {
@@ -134,19 +134,21 @@
     //using parents selector you need to specify where to go (unlike the parent selector)
 
 //when the button is pressed the last li in each ul should have yellow background
-    $('.switch2').click(function () {
-        $('li').parent().children().last('li').css('background-color', 'yellow')
 
+    $('.switch2').click(function () {
+        $('ul').each(function () {
+            $(this).children().last().css('background-color', 'yellow')
+        })
     });
 
 //when h3 is pressed the li underneath it should bold
     $('h3').click(function () {
-        $('ul').children().css('font-weight', 'bold');
+        $(this).next().children().css('font-weight', 'bold');
     });
 
     //when any li is clicked the first li of the parent ul should have font color blue
     $('li').click(function () {
-        $('li').parent().first('li').css('color', 'blue');
+        $(this).parent().children('li').first().css('color', 'blue');
     })
 
 
