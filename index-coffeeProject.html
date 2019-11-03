@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Ground One Coffee</title>
-    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao%7CPermanent+Marker%7CSatisfy&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao%7CPermanent+Marker%7CSatisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style-coffeeProject.css">
@@ -68,38 +69,81 @@
     </a>
 </div>
 <br>
-<!--for fav favorites-->
-<h2 id="fan-favs">Fan Favorites:</h2>
-        <!--for  cold brew favorite -->
-<div class="card mb-3 card-favs" style="max-width: 540px;">
-    <div class="row no-gutters">
-        <div class="col-md-4">
-            <img src="img/coldbrew.jpeg" class="card-img" alt="coldbrew">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body-favs">
-                <h5 class="card-title">Cold Brew</h5>
-                <p class="card-text">It has a super-smooth flavor. It is slow-steeped in cool water, and topped off with a splash of milk.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+<!--<div class="containerFavs">-->
+<!--    <div class="card-group">-->
+<!--        &lt;!&ndash;for fav favorites&ndash;&gt;-->
+<!--        <h2 id="fan-favs">Fan Favorites:</h2>-->
+<!--                &lt;!&ndash;for  cold brew favorite &ndash;&gt;-->
+<!--        <div class="card mb-3 card-favs" style="max-width: 540px;">-->
+<!--            <div class="row no-gutters">-->
+<!--                <div class="col-md-4">-->
+<!--                    <img src="img/coldbrew.jpeg" class="card-img" alt="coldbrew">-->
+<!--                </div>-->
+<!--                <div class="col-md-8">-->
+<!--                    <div class="card-body-favs">-->
+<!--                        <h5 class="card-title">Cold Brew</h5>-->
+<!--                        <p class="card-text">It has a super-smooth flavor. It is slow-steeped in cool water, and topped off with a splash of milk.</p>-->
+<!--                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--                &lt;!&ndash;for white chocolate mocha favorite &ndash;&gt;-->
+<!--        <div class="card mb-3 card-favs" style="max-width: 540px;">-->
+<!--            <div class="row no-gutters">-->
+<!--                <div class="col-md-4">-->
+<!--                    <img src="img/whitechocolate-mocha.jpg" class="card-img" alt="whitemocha">-->
+<!--                </div>-->
+<!--                <div class="col-md-8">-->
+<!--                    <div class="card-body-favs">-->
+<!--                        <h5 class="card-title">White Chocolate Mocha</h5>-->
+<!--                        <p class="card-text">It’s creamy, sweet, and so good. Espresso meets white chocolate sauce and steamed milk, and is finished off with whipped cream.</p>-->
+<!--                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="container-fav">
+    <div class="card-group">
+
+        <!--bootstrap card with 3 horizontal images-->
+        <div class="row">
+            <div class="card col-md-3 favs">
+                <img class="card-img-top fan-favs" src="img/coldbrew.jpeg" >
+
+                <div class="card-body-fav">
+                    <h3 class="card-title">Compare</h3>
+                    <p class="card-text">JavaScript | Python</p>
+                </div>
             </div>
+
+            <div class="card col-md-3 favs">
+                <img class="card-img-top fan-favs" src="img/whitechocolate-mocha.jpg" >
+
+                <div class="card-body-fav">
+                    <h3 class="card-title text-primary">Placement</h3>
+                    <p class="card-text">Sudo Placement Course</p>
+                </div>
+            </div>
+
+            <div class="card col-md-3 favs">
+                <img class="card-img-top fan-favs" id="carmelMacchiato" src="img/caramelmacchiato.jpg"  >
+
+                <div class="card-body-fav">
+                    <h3 class="card-title">DSA</h3>
+                    <p class="card-text">DS & Algo Course</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
-        <!--for white chocolate mocha favorite -->
-<div class="card mb-3 card-favs" style="max-width: 540px;">
-    <div class="row no-gutters">
-        <div class="col-md-4">
-            <img src="img/whitechocolate-mocha.jpg" class="card-img" alt="whitemocha">
-        </div>
-        <div class="col-md-8">
-            <div class="card-body-favs">
-                <h5 class="card-title">White Chocolate Mocha</h5>
-                <p class="card-text">It’s creamy, sweet, and so good. Espresso meets white chocolate sauce and steamed milk, and is finished off with whipped cream.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!--card for the search for a coffee-->
 <div class="card-deck">

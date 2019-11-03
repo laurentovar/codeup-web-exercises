@@ -327,3 +327,4 @@ function sortedByHeight(array) {
 
 console.log(sortedByHeight(hamsters));
 
+//3 of your favorite web applications and why

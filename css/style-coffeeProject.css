@@ -74,6 +74,7 @@ select {
 .card-body {
     background-image: url("../img/Coffee-Stain-Texture.jpg");
     border-radius: 25px;
+
 }
 
 .coffee {
@@ -83,6 +84,7 @@ select {
 .card-deck {
     margin-left: 40px;
     margin-right: 40px;
+    margin-top: 20px;
 }
 .inputFields {
     font-family: 'Satisfy', cursive;
@@ -99,13 +101,18 @@ select {
 .card-text {
     border-radius: 15px;
 }
-#fan-favs {
-    text-align: left;
-    margin-left: 12%;
-}
-.card-body-favs, .card-favs {
-    margin-left: 20px;
-}
+
+/*#fan-favs {*/
+/*    text-align: left;*/
+/*    margin-left: 12%;*/
+/*}*/
+/*.card-body-favs, .card-favs {*/
+/*    margin-left: 20px;*/
+/*}*/
 
 
+
+.card-fav {
+    margin: 30px;
+}
 
