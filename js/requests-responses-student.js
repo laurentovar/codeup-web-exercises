@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
     "use strict";
     console.log("Intro to AJAX!");
 
@@ -51,7 +51,7 @@ $(document).ready(function(){
      * API and get data back. Uncomment the line below.
      */
 
-    $.ajax("https://pokeapi.co/api/v2/pokemon").done(function(data){
+    $.ajax("https://pokeapi.co/api/v2/pokemon").done(function (data) {
         console.log(data);
     });
 
@@ -60,12 +60,12 @@ $(document).ready(function(){
      * return a list of all Star Wars films.
      */
 
-    var starWars =  $.ajax("https://swapi.co/api/films");
-      starWars.done(function (data) {
-          console.log(data)
-      });
+    var starWars = $.ajax("https://swapi.co/api/films");
+    starWars.done(function (data) {
+        console.log(data)
+    });
 
-     $.ajax("https://swapi.co/api/films").done(function(data){
+    $.ajax("https://swapi.co/api/films").done(function (data) {
         console.log(data);
     });
 
@@ -78,7 +78,7 @@ $(document).ready(function(){
      * TO DO TOGETHER: Let's make a request to the books inventory we saved
       * previously.
      */
-    var myBooks =  $.ajax("data/books.json");
+    var myBooks = $.ajax("data/books.json");
     myBooks.done(function (data) {
         console.log(data);
     });
@@ -123,14 +123,14 @@ $(document).ready(function(){
       * that displays the director of the film.
      */
 
-     //within films we are searching for a new hope
-    var myMovie= $.ajax("https://swapi.co/api/films", {
+    //within films we are searching for a new hope
+    var myMovie = $.ajax("https://swapi.co/api/films", {
         type: "GET",
         data: {
             "search": "A New Hope"
         }
     });
-        //once search is done, log results, the next thing searches the director
+    //once search is done, log results, the next thing searches the director
     myMovie.done(function (data) {
         console.log("The director of a New Hope is " + data.results[0].director);
     });
@@ -140,9 +140,9 @@ $(document).ready(function(){
      * "The Force Awakens" and console log its release date.
      */
     var forceAwakens = $.ajax("https://swapi.co/api/films", {
-        type:"GET",
+        type: "GET",
         data: {
-            "search":"The Force Awakens"
+            "search": "The Force Awakens"
         }
     });
 
@@ -186,7 +186,7 @@ $(document).ready(function(){
      * a request to a server!
      */
     var forceAwakens2 = $.get("https://swapi.co/api/films", {
-            "search":"The Force Awakens"
+        "search": "The Force Awakens"
     });
     forceAwakens2.done(function (data) {
         console.log("The release " + data.results[0].release_date);
@@ -214,18 +214,21 @@ $(document).ready(function(){
      * titles to your html. You may need to create a div and assign a
      * class/id to target it.
      */
+
+
     var requestBooks = $.ajax('data/books.json');
 
     //once the request is done do this
     requestBooks.done(function (data) {
         console.log(data);
         //first item what we are going over (iterate over), second is a function
-        $.each(data,function (index,book) {
-           var content = "<h2>";
-           content += book.title;
-           content += "</h2>";
-           content += "<h4>";
-
+        $.each(data, function (index, book) {
+            var content = "<h2>";
+            content += book.title;
+            content += "</h2>";
+            content += "<h4>";
+            content += book.author;
+            content += "</h4>";
 
 
             //log each book title
@@ -239,8 +242,6 @@ $(document).ready(function(){
         console.log("Something went wrong");
     });
 
-
-
     /*
      * TO DO: Add your favorite book to the end of books.json.
      */
@@ -250,6 +251,10 @@ $(document).ready(function(){
      * without refreshing the page.
      */
 
+    $('#refresh').click(function () {
+        $('#main').html('');
+        generateBooks();
+    })
 
 
 });
