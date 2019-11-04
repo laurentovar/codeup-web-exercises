@@ -215,6 +215,8 @@ $(document).ready(function() {
      * class/id to target it.
      */
 
+function generateBooks() {
+
 
     var requestBooks = $.ajax('data/books.json');
 
@@ -241,7 +243,11 @@ $(document).ready(function() {
     requestBooks.fail(function (data) {
         console.log("Something went wrong");
     });
+}
 
+
+    //call the function to generate data on page load
+    generateBooks();
     /*
      * TO DO: Add your favorite book to the end of books.json.
      */
@@ -251,10 +257,11 @@ $(document).ready(function() {
      * without refreshing the page.
      */
 
+    //event listener on refresh button
     $('#refresh').click(function () {
         $('#main').html('');
         generateBooks();
-    })
+    });
 
 
 });
