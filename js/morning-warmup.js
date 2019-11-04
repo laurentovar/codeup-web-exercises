@@ -283,6 +283,7 @@ function notRegistered(arr) {
 
     return notInClass
 }
+
 //function that will return an array of objects sorted by height in ascending order
 var hamsters = [
     {
@@ -327,4 +328,36 @@ function sortedByHeight(array) {
 
 console.log(sortedByHeight(hamsters));
 
-//3 of your favorite web applications and why
+//takes in whole numbers 1-10 and returns the number spelled out as a string (ex.return one)
+
+function numAsWord(num) {
+   switch (num) {
+       case 1:
+           return "one";
+       case 2:
+           return "two";
+       case 3:
+           return "three";
+       case 4:
+           return "four";
+       case 5:
+           return "five";
+       case 6:
+           return "six";
+       case 7:
+           return "seven";
+       case 8:
+           return "eight";
+       case 9:
+           return "nine";
+       case 10:
+           return "ten";
+       default:
+           return false;
+   }
+}
+
+console.log(numAsWord(5));
+console.log(numAsWord(3));
+console.log(numAsWord(10));
+
