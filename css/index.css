@@ -14,15 +14,8 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: darkcyan;
-
-}
-
-li {
-    /*float: left;*/
-    align-items: center;
-
 
 }
 
@@ -30,7 +23,7 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 5px;
+    padding : 5px;
     margin: 7px;
     text-decoration: none;
     font-weight: bold;
@@ -44,7 +37,7 @@ li a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 
 }
 h1 {
@@ -64,39 +57,5 @@ h2 {
     color: darkred;
 
 }
-.hexagon {
-    position: relative;
-    width: 50px;
-    height: 28.87px;
-    background-color: #cc6575;
-    margin: 14.43px 0;
-
-}
-
-.hexagon:before,
-.hexagon:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-}
-
-.hexagon:before {
-    bottom: 100%;
-    border-bottom: 14.43px solid #cc6575;
-}
-
-.hexagon:after {
-    top: 100%;
-    width: 0;
-    border-top: 14.43px solid #cc6575;
-}
-/*#about {*/
-/*    display: flex;*/
-
-/*}*/
-
-
 
 
