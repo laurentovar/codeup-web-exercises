@@ -10,6 +10,9 @@
         .highlighter{
             background-color: #00ABA9;
         }
+        ul, h2 {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -134,31 +137,31 @@
     });
 
 //when h3 is pressed the li underneath it should bold
-    $('h3').click(function () {
-        $(this).next().children().css('font-weight', 'bold');
-    });
+//     $('h3').click(function () {
+//         $(this).next().children().css('font-weight', 'bold');
+//     });
 
     //when any li is clicked the first li of the parent ul should have font color blue
     $('li').click(function () {
         $(this).parent().children('li').first().css('color', 'blue');
     });
 
+
+
 //when the x is clicked hide the div
     $('span').click(function() {
         $('span').parent().hide();
     });
 
-    //uls containing facts about each park should start hidden and when each h3 is clicked display the ul
+//uls containing facts about each park should start hidden and when each h3 is clicked display the ul
         //with the sliding effect
-
-
     $('h3').click(function () {
-        $(this).next().children().slideToggle();
+        $(this).next().slideToggle(50);
     });
 
-    //after the user has been on page for 8secs an h2 should fade in to ask to register
-    $('h2').hide();
-    $('h2').delay(5000).fadeIn(100);
+
+//after the user has been on page for 8secs an h2 should fade in to ask to register
+    $('h2').delay(8000).fadeIn(100);
 
 
 </script>
