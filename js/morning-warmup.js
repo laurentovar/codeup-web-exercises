@@ -360,4 +360,5 @@ function numAsWord(num) {
 console.log(numAsWord(5));
 console.log(numAsWord(3));
 console.log(numAsWord(10));
+console.log(numAsWord(14));
 
