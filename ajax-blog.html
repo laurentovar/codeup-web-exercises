@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>ajax-blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans:400i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+
+        h1{
+            font-family: 'Amatic SC', cursive;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        #title{
+            font-size: 60px;
+            color: #00ABA9;
+        }
+        .lead {
+            color: cadetblue;
+        }
+        p{
+            font-family: 'Open Sans', sans-serif;
+        }
+        .jumbotron-fluid {
+            background-image: url("img/marble.jpg");
+        }
+        h3{
+            font-size: 20px;
+        }
+        h4 {
+            font-size: 17px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Blog Ajax</h1>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 id="title" style="text-align: center">Blog Ajax</h1>
+            <p class="lead" style="text-align: center">Welcome to my blog. Please enjoy all the topics discussed!</p>
+        </div>
+    </div>
+
     <div id="posts">
 
     </div>
@@ -22,17 +58,17 @@
                 console.log(data);
 
              $.each(data,function (index,blog) {
-                 var content = "<h1>";
+                 var content = "<h1 style='color: #0F6367; font-weight: bold'>";
                   content += blog.title;
                   content +="</h1>";
 
-                 content += "<h2>";
+                 content += "<h3>";
                  content += blog.date;
-                 content += "</h2>";
+                 content += "</h3>";
 
-                 content += "<h2>";
+                 content += "<h4>";
                  content += blog.categories;
-                 content += "</h2>";
+                 content += "</h4>";
 
                  content += "<p>";
                  content += blog.content;
