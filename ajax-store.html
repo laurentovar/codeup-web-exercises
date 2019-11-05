@@ -2,22 +2,26 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
 
 <h1>My Tool Store</h1>
 
-<table id="products">
+<table id="products" class="table table-dark">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
+            <th scope="col">Row</th>
+            <th scope="col">Title</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Categories</th>
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<button id="refresh">Refresh</button>
+
 
 <!--<script src="data/inventory.json"></script>-->
 
@@ -35,10 +39,60 @@
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
-    var inventory = $.ajax("data/inventory.json");
+    function generateTools() {
+
+        var inventory = $.ajax("data/inventory.json");
+
         inventory.done(function (data) {
+            //log it
             console.log(data);
+
+            //iterate over inventory
+            $.each(data, function (index, tool) {
+                var content = "<tr>";
+                content += "<th scope='row'>";
+                content += index+1;
+                content += "</th>";
+
+                content += "<td>";
+                content += tool.title;
+                content += "</td>";
+
+                content += "<td>";
+                content += tool.quantity;
+                content += "</td>";
+
+                content += "<td>";
+                content += tool.price;
+                content += "</td>";
+
+                content += "<td>";
+                content += tool.categories;
+                content += "</td>";
+
+                content += "</tr>";
+
+
+                $('#insertProducts').append(content);
+
+            });
+
         });
+
+
+        inventory.fail(function (data) {
+            console.log("Something went wrong");
+        });
+    }
+
+        // call the function to generate data on page load
+        generateTools();
+
+        $('#refresh').click(function () {
+            $('#insertProducts').html('');
+            generateTools();
+        });
+
 
 
 })();
