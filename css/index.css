@@ -84,3 +84,11 @@ button {
     top:52%;
     left:44%;
 }
+.parallax {
+    background-image: url("../img/profile_background.png");
+    /*width: 10000%;*/
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    /*background-size: cover;*/
+}
