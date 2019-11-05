@@ -362,3 +362,13 @@ console.log(numAsWord(3));
 console.log(numAsWord(10));
 console.log(numAsWord(14));
 
+//that will return you're welcome but only when passed a js object with a property of gratitude that has the value of "Thank you"
+
+function sayWelcome(obj) {
+    var object = {
+        gratitude: "Thank you"
+    };
+    if (obj.gratitude === "Thank you"){
+        return "You're welcome"
+    }
+}
