@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+<!--    <script src = "css/weather_map.css"></script>-->
+
+</head>
+<body>
+    <h2>Weather Map</h2>
+
+    <div id='map'></div>
+
+<!--Scripts-->
+    <script src = "js/jquery-2.2.4.js"></script>
+    <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+    <script src="js/keys.js"></script>
+    <script src = "js/weather_map.js"></script>
+    <script>
+        $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/API_KEY_HERE/29.4241,-98.4936") + darkSkyKey;
+        $.get("https://api.darksky.net/forecast/1441981f17b80ddabcad6ec5ea8f21ff/37.8267,-122.4233").done(function(data) {
+            console.log(data);
+        });
+    </script>
+
+</body>
+
+
+</html>
