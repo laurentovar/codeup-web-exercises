@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Review</title>
+</head>
+<body>
+<div class="container">
+    <div id="main">
+        <input type="text" id="input">
+        <button id="add-to-list">Add to List</button>
+
+        <h4>Favorite Food:</h4>
+        <ul id="favorite-food">
+            <li>Ramen</li>
+            <li>Sushi</li>
+            <li>Curry</li>
+        </ul>
+
+        <h4 id="change-me">Change Me</h4>
+
+        <h4>My Cohort: <span id="my-cohort"></span></h4>
+        <input type="text" id="cohort-name">
+        <button id="change-cohort">Update</button>
+
+        <br>
+        <button id="change-to-red">Change to Red</button>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    //Allow the user to type in their favorite food into the input and append
+    // it to the list once the button is clicked.
+    $("#add-to-list").click(function () {
+        //value gets the value that they entered
+        console.log($('#input').val());
+
+        var content = "<li>";
+        content += $('#input').val();
+        content += "</li>";
+
+        $('#favorite-food').append(content);
+    });
+
+    //When the heading 'Change Me' is double clicked, change its background-color to purple.
+    $('#change-me').dblclick(function () {
+        $('#change-me').css('background-color','purple');
+    });
+
+    //Allow the user to input their cohort name.
+    // Once Update button is clicked, the text should should update with the name of the cohort.
+
+    $('#change-cohort').click(function () {
+        console.log($('#cohort-name').val());
+        // getting the value of cohort-name(input field) and setting it to a var to call later
+        var cohortValue = $('#cohort-name').val();
+
+        //call the var so that you can add it to the end of my cohort
+        $('#my-cohort').append(cohortValue);
+
+    })
+
+
+
+
+
+</script>
+</body>
+</html>
