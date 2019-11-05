@@ -109,7 +109,11 @@
         </ul>
         <button class="switch2">Click me</button>
 
-<script src = "js/jquery-2.2.4.js"></script>
+<!--<script src = "js/jquery-2.2.4.js"></script>-->
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
 <script>
     "use strict";
 //css that sets elements with invisible class to visibility: hidden;
@@ -142,9 +146,13 @@
 //     });
 
     //when any li is clicked the first li of the parent ul should have font color blue
-    $('li').click(function () {
-        $(this).parent().children('li').first().css('color', 'blue');
-    });
+    // $('li').click(function () {
+    //     $(this).parent().children('li').first().css('color', 'blue');
+    // });
+
+    $("li").click(function () {
+        $(this).parent().next().next().children().last().css('color', 'pink')
+    })
 
 
 
