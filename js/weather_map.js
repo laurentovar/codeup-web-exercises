@@ -29,7 +29,7 @@ function onDragEnd() {
     coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
 
     //Call UpdateForcast function and pass it the lat and long(in that order) to update the weather on the cards
-    updateForcast(lngLat.lat,lngLat.lng);
+    updateForecast(lngLat.lat,lngLat.lng);
 }
 
 marker.on('dragend', onDragEnd);
@@ -86,10 +86,16 @@ function updateForecast(lat, long) {
     console.log(lat);
     console.log(long);
 
+    //for the loading gif
+    $('#today-iconloading').attr('src', '../img/loader.gif').toggleClass("loading");
+    $('#tommorrow-iconloading').attr('src', '../img/loader.gif').toggleClass("loading");
+    $('#next-iconloading').attr('src', '../img/loader.gif').toggleClass("loading");
+
     $("#search-button").click(function () {
         var lat =  $("#latitude").val();
         var long = $("#longitude").val();
     });
+
 
     //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
     $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
@@ -97,9 +103,11 @@ function updateForecast(lat, long) {
         console.log(response.daily.data);
         console.log(Math.floor(response.daily.data[0].temperatureHigh));
 
+
         //Current Day Temps
             //math.floor rounds the tempature down
             // "&#176;" adds the degrees symbol
+
         $("#today-temp").html("<h4>" + Math.floor(response.daily.data[0].temperatureHigh) + "&#176;" + "/" + Math.floor(response.daily.data[0].temperatureLow) + "&#176;" + "</h4>");
 
         //Current Day Icon
@@ -112,15 +120,17 @@ function updateForecast(lat, long) {
 
 
         //Append html with the data from dark sky. For Current Day
+        $('#today-icon').attr('src', todayIcon).toggleClass("loading");
         $("#today-forecast").html(response.currently.summary);
         $("#today-humidity").html(response.currently.humidity * 100  + " %");
         $("#today-precipitation").html(response.currently.precipProbability  * 100 + " %");
         $("#today-winds").html(response.currently.windSpeed + " mph");
 
-
+//Tomorrow
         //tomorrow temps
-            //math.floor rounds the tempature down
-            // "&#176;" adds the degrees symbol
+
+        //math.floor rounds the tempature down
+        // "&#176;" adds the degrees symbol
         $("#tomorrow-temp").html("<h4>" + Math.floor(response.daily.data[1].temperatureHigh) + "&#176;" + "/" + Math.floor(response.daily.data[1].temperatureLow) + "&#176;" + "</h4>");
 
         //tomorrow icon
@@ -138,9 +148,10 @@ function updateForecast(lat, long) {
         $("#tomorrow-winds").html(response.daily.data[1].windSpeed + " mph");
     });
 
+
+//next day
     //Day After Tomorrow
     $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
-
         //next temps
             //math.floor rounds the tempature down
             // "&#176;" adds the degrees symbol
@@ -155,6 +166,7 @@ function updateForecast(lat, long) {
         });
 
         //append html with the data from dark sky for next day
+        $('#next-icon').attr('src', nextIcon).toggleClass("loading");
         $("#next-forecast").html(response.daily.data[2].summary);
         $("#next-humidity").html(response.daily.data[2].humidity * 100 + " %");
         $("#next-precipitation").html(response.daily.data[2].precipProbability  * 100 + " %");
