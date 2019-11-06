@@ -1,14 +1,40 @@
 
-//weather maps
-// mapboxgl.accessToken = mapboxToken;
-// var map = new mapboxgl.Map({
-//     container: 'map',
-//     style: 'mapbox://styles/mapbox/dark-v9',
-//     center: [-98.48753, 29.42172]
-// });
+// Creates weather maps
+mapboxgl.accessToken = mapboxToken;
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v9',
+    zoom: 8,
+    center: [-98.48753, 29.42172]
+
+});
+
+//Default Initial forcast using center location
+updateForcast(29.42172,-98.48753);
+
+
+//Creates a draggable marker
+//https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/
+var marker = new mapboxgl.Marker({
+    draggable: true
+})
+    .setLngLat([-98.48753, 29.42172])
+    .addTo(map);
+
+function onDragEnd() {
+    var lngLat = marker.getLngLat();
+    coordinates.style.display = 'block';
+    coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+
+    //Call UpdateForcast function and pass it the lat and long(in that order)
+    updateForcast(lngLat.lat,lngLat.lng);
+}
+
+marker.on('dragend', onDragEnd);
 
 
 
+//Create an array of objects that holds the condition and url to the icon
 var weatherIcons = [
     {
         condition: "clear-day",
@@ -56,52 +82,54 @@ var weatherIcons = [
 //var testHtml = '<img src="' + weatherIcons[0].url + '">';
 //$("#today-icon").append(testHtml);
 
+function updateForcast(lat, long){
+    // $("#search-button").click(function () {
+    //     var lat =  $("#latitude").val();
+    //     var long = $("#longitude").val();
 
-$("#search-button").click(function () {
-    var lat =  $("#latitude").val();
-    var long = $("#longitude").val();
-
-    console.log(lat);
-    console.log(long);
-
-
-    //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
-  $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
-      console.log(response);
-      console.log(response.daily.data);
-      console.log(response.daily.data[0].temperatureHigh);
-
-      //Current Day Temps
-      $("#today-temp").append("<h4>" + response.daily.data[0].temperatureHigh  + "/" + response.daily.data[0].temperatureLow + "</h4>");
-
-      //Current Day Icon
-      var todayIconFromDarkSky = response.currently.icon;
-      weatherIcons.forEach(function(weatherIcon){
-          if (weatherIcon.condition === todayIconFromDarkSky){
-              $("#today-icon").append('<img src="' + weatherIcon.url + '">');
-          }
-      });
+        console.log(lat);
+        console.log(long);
 
 
-      //Append html with the data from dark sky. For Current Day
-      $("#today-clouds").append(response.currently.summary);
-      $("#today-humidity").append(response.currently.humidity * 100);
-      $("#today-winds").append(response.currently.windSpeed);
-      $("#today-pressure").append(response.currently.pressure);
+        //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
+        $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
+            console.log(response);
+            console.log(response.daily.data);
+            console.log(response.daily.data[0].temperatureHigh);
+
+            //Current Day Temps
+            $("#today-temp").html("<h4>" + response.daily.data[0].temperatureHigh  + "/" + response.daily.data[0].temperatureLow + "</h4>");
+
+            //Current Day Icon
+            var todayIconFromDarkSky = response.currently.icon;
+            weatherIcons.forEach(function(weatherIcon){
+                if (weatherIcon.condition === todayIconFromDarkSky){
+                    $("#today-icon").html('<img id=todayIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
+                }
+            });
 
 
-      //Tomorrow
+            //Append html with the data from dark sky. For Current Day
+            $("#today-clouds").html(response.currently.summary);
+            $("#today-humidity").html(response.currently.humidity * 100);
+            $("#today-winds").html(response.currently.windSpeed);
+            $("#today-pressure").html(response.currently.pressure);
 
 
-      //Day After Tomorrow
+            //Tomorrow
 
 
-    });
+            //Day After Tomorrow
+
+
+        });
 
 
 
 
-})
+   // })
+
+}
 
 
 

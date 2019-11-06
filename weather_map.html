@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map</title>
-    <!--    <script src = "css/weather_map.css"></script>-->
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/weather_map.css">
+
 
 
 </head>
@@ -20,8 +23,8 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col s4 m5">
+    <div class="col">
+        <div class="col s4 m4">
             <div class="card-panel teal">
                 <h3>Today</h3>
                 <div id="today-temp"></div>
@@ -44,8 +47,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col s4 m5">
+    <div class="col">
+        <div class="col s4 m4">
             <div class="card-panel teal">
         <span class="white-text">I am a very simple card. I am good at containing small bits of information.
         I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
@@ -53,8 +56,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col s4 m5">
+    <div class="col">
+        <div class="col s4 m4">
             <div class="card-panel teal">
         <span class="white-text">I am a very simple card. I am good at containing small bits of information.
         I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
@@ -65,19 +68,22 @@
 </div>
 
 <div id='map'></div>
+<pre id='coordinates' class='coordinates'></pre>
 
-<div class="row">
-<div class="input-field col s6">
-    <input placeholder="Latitude" id="latitude" type="text" class="validate">
-</div>
-</div>
-<div class="row">
-    <div class="input-field col s6">
-        <input placeholder="Longitude" id="longitude" type="text" class="validate">
-    </div>
-</div>
 
-<a class="waves-effect waves-light btn" id="search-button">Search</a>
+<!--&lt;!&ndash;Fields and Buttons for latitude and longitude&ndash;&gt;-->
+<!--<div class="row">-->
+<!--<div class="input-field col s6">-->
+<!--    <input placeholder="Latitude" id="latitude" type="text" class="validate">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--    <div class="input-field col s6">-->
+<!--        <input placeholder="Longitude" id="longitude" type="text" class="validate">-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<a class="waves-effect waves-light btn" id="search-button">Search</a>-->
 
 
 
@@ -85,15 +91,12 @@
 
 <!--Scripts-->
 <script src="js/jquery-2.2.4.js"></script>
+
 <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
 <script src="js/keys.js"></script>
 <script src="js/weather_map.js"></script>
-<script>
-
-
-</script>
-
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 </body>
 
 
