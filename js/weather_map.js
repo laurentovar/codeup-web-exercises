@@ -81,17 +81,18 @@ var weatherIcons = [
 ];
 
 
-//var testHtml = '<img src="' + weatherIcons[0].url + '">';
-//$("#today-icon").append(testHtml);
+
+
+
 
 function updateForcast(lat, long) {
-    // $("#search-button").click(function () {
-    //     var lat =  $("#latitude").val();
-    //     var long = $("#longitude").val();
-
     console.log(lat);
     console.log(long);
 
+    $("#search-button").click(function () {
+        var lat =  $("#latitude").val();
+        var long = $("#longitude").val();
+    });
 
     //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
     $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
