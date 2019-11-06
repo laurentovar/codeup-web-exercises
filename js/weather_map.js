@@ -11,6 +11,7 @@ var map = new mapboxgl.Map({
 
 //Default Initial forcast using center location
 updateForcast(29.42172,-98.48753);
+// updateForcastTomorrow(29.42172,-98.48753);
 
 
 //Creates a draggable marker
@@ -28,6 +29,7 @@ function onDragEnd() {
 
     //Call UpdateForcast function and pass it the lat and long(in that order)
     updateForcast(lngLat.lat,lngLat.lng);
+    // updateForcastTomorrow(lngLat.lat,lngLat.lng)
 }
 
 marker.on('dragend', onDragEnd);
@@ -76,58 +78,101 @@ var weatherIcons = [
         condition: "partly-cloudy-night",
         url: "./icons/Cloud-Moon.svg"
     }
-]
+];
 
 
 //var testHtml = '<img src="' + weatherIcons[0].url + '">';
 //$("#today-icon").append(testHtml);
 
-function updateForcast(lat, long){
+function updateForcast(lat, long) {
     // $("#search-button").click(function () {
     //     var lat =  $("#latitude").val();
     //     var long = $("#longitude").val();
 
-        console.log(lat);
-        console.log(long);
+    console.log(lat);
+    console.log(long);
 
 
-        //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
-        $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
-            console.log(response);
-            console.log(response.daily.data);
-            console.log(response.daily.data[0].temperatureHigh);
+    //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
+    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
+        console.log(response);
+        console.log(response.daily.data);
+        console.log(response.daily.data[0].temperatureHigh);
 
-            //Current Day Temps
-            $("#today-temp").html("<h4>" + response.daily.data[0].temperatureHigh  + "/" + response.daily.data[0].temperatureLow + "</h4>");
+        //Current Day Temps
+        $("#today-temp").html("<h4>" + response.daily.data[0].temperatureHigh + "/" + response.daily.data[0].temperatureLow + "</h4>");
 
-            //Current Day Icon
-            var todayIconFromDarkSky = response.currently.icon;
-            weatherIcons.forEach(function(weatherIcon){
-                if (weatherIcon.condition === todayIconFromDarkSky){
-                    $("#today-icon").html('<img id=todayIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
-                }
-            });
-
-
-            //Append html with the data from dark sky. For Current Day
-            $("#today-clouds").html(response.currently.summary);
-            $("#today-humidity").html(response.currently.humidity * 100);
-            $("#today-winds").html(response.currently.windSpeed);
-            $("#today-pressure").html(response.currently.pressure);
-
-
-            //Tomorrow
-
-
-            //Day After Tomorrow
-
-
+        //Current Day Icon
+        var todayIconFromDarkSky = response.currently.icon;
+        weatherIcons.forEach(function (weatherIcon) {
+            if (weatherIcon.condition === todayIconFromDarkSky) {
+                $("#today-icon").html('<img id=todayIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
+            }
         });
 
 
+        //Append html with the data from dark sky. For Current Day
+        $("#today-clouds").html(response.currently.summary);
+        $("#today-humidity").html(response.currently.humidity * 100);
+        $("#today-winds").html(response.currently.windSpeed);
+        $("#today-pressure").html(response.currently.pressure);
 
+        //tomorrow temps
+        $("#tomorrow-temp").html("<h4>" + response.daily.data[1].temperatureHigh + "/" + response.daily.data[1].temperatureLow + "</h4>");
 
-   // })
+        var tomorrowIconFromDarkSky = response.daily.data[1].icon;
+        weatherIcons.forEach(function (weatherIcon) {
+            if (weatherIcon.condition === tomorrowIconFromDarkSky) {
+                $("#tomorrow-icon").html('<img id=tomorrowIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
+            }
+        });
+
+        $("#tomorrow-clouds").html(response.daily.data[1].summary);
+        $("#tomorrow-humidity").html(response.daily.data[1].humidity * 100);
+        $("#tomorrow-winds").html(response.daily.data[1].windSpeed);
+        $("#tomorrow-pressure").html(response.daily.data[1].pressure);
+    });
+
+    //Tomorrow
+    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
+        console.log(response);
+        console.log(response.daily.data);
+        console.log(response.daily.data[1].temperatureHigh);
+
+        //tomorrow temps
+        $("#tomorrow-temp").html("<h4>" + response.daily.data[1].temperatureHigh + "/" + response.daily.data[1].temperatureLow + "</h4>");
+
+        var tomorrowIconFromDarkSky = response.daily.data[1].icon;
+        weatherIcons.forEach(function (weatherIcon) {
+            if (weatherIcon.condition === tomorrowIconFromDarkSky) {
+                $("#tomorrow-icon").html('<img id=tomorrowIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
+            }
+        });
+
+        $("#tomorrow-clouds").html(response.daily.data[1].summary);
+        $("#tomorrow-humidity").html(response.daily.data[1].humidity * 100);
+        $("#tomorrow-winds").html(response.daily.data[1].windSpeed);
+        $("#tomorrow-pressure").html(response.daily.data[1].pressure);
+    });
+
+    //Day After Tomorrow
+    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
+
+        //next temps
+        $("#next-temp").html("<h4>" + response.daily.data[2].temperatureHigh + "/" + response.daily.data[2].temperatureLow + "</h4>");
+
+        var nextIconFromDarkSky = response.daily.data[2].icon;
+        weatherIcons.forEach(function (weatherIcon) {
+            if (weatherIcon.condition === nextIconFromDarkSky) {
+                $("#next-icon").html('<img id=nextIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
+            }
+        });
+
+        $("#next-clouds").html(response.daily.data[2].summary);
+        $("#next-humidity").html(response.daily.data[2].humidity * 100);
+        $("#next-winds").html(response.daily.data[2].windSpeed);
+        $("#next-pressure").html(response.daily.data[2].pressure);
+    });
 
 }
 
@@ -135,32 +180,8 @@ function updateForcast(lat, long){
 
 
 
-////Pasted From Somewhere
-//function that shows your postion
-// var lat= position.coords.latitude;
-// var long = position.coords.latitudel;
-//
-// function showPosition(position) {
-//     var lat= position.coords.latitude;
-//     var long = position.coords.latitudel
-// }
-// //function that cant find your position
-// function positionNotFound() {
-//     alert("Unable to retrieve your location.")
-// }
-// var darkSky = "https://api.darksky.net/forecast/1441981f17b80ddabcad6ec5ea8f21ff/37.8267,-122.4233";
-// var latlng = lat + "," + long ;
-//
-// //to get where the weather is (the name)
-// $.get(darkSky, function (data) {
-//     var arr_address = data.results[0].address_components
-//     arr_address.forEach(function (val) {
-//         if (val.types[0] === "locality"){
-//             cityName = val.long_name;
-//         }
-//         if (val.types[0] === "country"){
-//             countryCode = val.short_name;
-//             countryName = val.long_name
-//         }
-//     })
-// });
+
+
+
+
+

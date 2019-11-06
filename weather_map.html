@@ -19,9 +19,10 @@
             Map</a>
     </div>
 </nav>
-<!--    <h2>Weather Map</h2>-->
 
+<!--container for the cards-->
 
+    <!--todays card-->
 <div class="container">
     <div class="col">
         <div class="col s4 m4">
@@ -47,24 +48,60 @@
             </div>
         </div>
     </div>
+
+    <!--tomorrows card-->
     <div class="col">
         <div class="col s4 m4">
             <div class="card-panel teal">
-        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-        </span>
+                <h3>Tomorrow</h3>
+                <div id="tomorrow-temp"></div>
+                <div id="tomorrow-icon"></div>
+                <br>
+                <ul>
+                    <li>Clouds:
+                        <div id="tomorrow-clouds"></div>
+                    </li>
+                    <li>Humidity:
+                        <div id="tomorrow-humidity"></div>
+                    </li>
+                    <li>Winds:
+                        <div id="tomorrow-winds"></div>
+                    </li>
+                    <li>Pressure:
+                        <div id="tomorrow-pressure"></div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+
+    <!--next day card-->
     <div class="col">
         <div class="col s4 m4">
             <div class="card-panel teal">
-        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-        </span>
+                <h3>Next</h3>
+                <div id="next-temp"></div>
+                <div id="next-icon"></div>
+                <br>
+                <ul>
+                    <li>Clouds:
+                        <div id="next-clouds"></div>
+                    </li>
+                    <li>Humidity:
+                        <div id="next-humidity"></div>
+                    </li>
+                    <li>Winds:
+                        <div id="next-winds"></div>
+                    </li>
+                    <li>Pressure:
+                        <div id="next-pressure"></div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+
+
 </div>
 
 <div id='map'></div>
