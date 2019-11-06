@@ -40,43 +40,43 @@ marker.on('dragend', onDragEnd);
 var weatherIcons = [
     {
         condition: "clear-day",
-        url: "./Icons/Sun.svg"
+        url: "./img/clearday.png"
     },
     {
         condition: "clear-night",
-        url: "./icons/Moon.svg"
+        url: "./img/clearnight.png"
     },
     {
         condition: "rain",
-        url: "./icons/Cloud-Rain.svg"
+        url: "./img/rain.png"
     },
     {
         condition: "snow",
-        url: "./icons/Snowflake.svg"
+        url: "./img/snow.png"
     },
     {
         condition: "sleet",
-        url: "./icons/Cloud-Hail.svg"
+        url: "./img/storm.png"
     },
     {
         condition: "wind",
-        url: "./icons/Wind.svg"
+        url: "./img/wind.png"
     },
     {
         condition: "fog",
-        url: "./icons/Cloud-Fog.svg"
+        url: "./img/fog.png"
     },
     {
         condition: "cloudy",
-        url: "./icons/Cloud.svg"
+        url: "./img/cloudy.png"
     },
     {
         condition: "partly-cloudy-day",
-        url: "./icons/Cloud-Sun.svg"
+        url: "./img/partlycloudy.png"
     },
     {
         condition: "partly-cloudy-night",
-        url: "./icons/Cloud-Moon.svg"
+        url: "./img/cloudynight.png"
     }
 ];
 
