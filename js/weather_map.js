@@ -113,7 +113,7 @@ function updateForcast(lat, long) {
 
 
         //Append html with the data from dark sky. For Current Day
-        $("#today-clouds").html(response.currently.summary);
+        $("#today-forecast").html(response.currently.summary);
         $("#today-humidity").html(response.currently.humidity * 100);
         $("#today-winds").html(response.currently.windSpeed);
         $("#today-pressure").html(response.currently.pressure);
@@ -128,29 +128,7 @@ function updateForcast(lat, long) {
             }
         });
 
-        $("#tomorrow-clouds").html(response.daily.data[1].summary);
-        $("#tomorrow-humidity").html(response.daily.data[1].humidity * 100);
-        $("#tomorrow-winds").html(response.daily.data[1].windSpeed);
-        $("#tomorrow-pressure").html(response.daily.data[1].pressure);
-    });
-
-    //Tomorrow
-    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
-        console.log(response);
-        console.log(response.daily.data);
-        console.log(response.daily.data[1].temperatureHigh);
-
-        //tomorrow temps
-        $("#tomorrow-temp").html("<h4>" + response.daily.data[1].temperatureHigh + "/" + response.daily.data[1].temperatureLow + "</h4>");
-
-        var tomorrowIconFromDarkSky = response.daily.data[1].icon;
-        weatherIcons.forEach(function (weatherIcon) {
-            if (weatherIcon.condition === tomorrowIconFromDarkSky) {
-                $("#tomorrow-icon").html('<img id=tomorrowIcon src="' + weatherIcon.url + '" alt="' + weatherIcon.condition + '" >');
-            }
-        });
-
-        $("#tomorrow-clouds").html(response.daily.data[1].summary);
+        $("#tomorrow-forecast").html(response.daily.data[1].summary);
         $("#tomorrow-humidity").html(response.daily.data[1].humidity * 100);
         $("#tomorrow-winds").html(response.daily.data[1].windSpeed);
         $("#tomorrow-pressure").html(response.daily.data[1].pressure);
@@ -169,7 +147,7 @@ function updateForcast(lat, long) {
             }
         });
 
-        $("#next-clouds").html(response.daily.data[2].summary);
+        $("#next-forecast").html(response.daily.data[2].summary);
         $("#next-humidity").html(response.daily.data[2].humidity * 100);
         $("#next-winds").html(response.daily.data[2].windSpeed);
         $("#next-pressure").html(response.daily.data[2].pressure);

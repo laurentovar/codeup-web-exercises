@@ -7,6 +7,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/weather_map.css">
+    <link href="https://fonts.googleapis.com/css?family=Poller+One|Roboto:500&display=swap" rel="stylesheet">
 
 
 
@@ -15,7 +16,7 @@
 <!--nav for the weather map-->
 <nav>
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><i class="material-icons"><img id="cloud-logo" src="img/cloud.png" height="32px"></i>Weather
+        <a href="#" class="brand-logo"><i class="material-icons"><img id="cloud-logo" src="img/weatherlogo.png" height="50px"></i>Weather
             Map</a>
     </div>
 </nav>
@@ -32,16 +33,16 @@
                 <div id="today-icon"></div>
                 <br>
                 <ul>
-                    <li>Clouds:
-                        <div id="today-clouds"></div>
+                    <li class="title">Forecast:
+                        <div id="today-forecast"></div>
                     </li>
-                    <li>Humidity:
+                    <li class="title">Humidity:
                         <div id="today-humidity"></div>
                     </li>
-                    <li>Winds:
+                    <li class="title">Winds:
                         <div id="today-winds"></div>
                     </li>
-                    <li>Pressure:
+                    <li class="title">Pressure:
                         <div id="today-pressure"></div>
                     </li>
                 </ul>
@@ -58,16 +59,16 @@
                 <div id="tomorrow-icon"></div>
                 <br>
                 <ul>
-                    <li>Clouds:
-                        <div id="tomorrow-clouds"></div>
+                    <li class="title">Forecast:
+                        <div id="tomorrow-forecast"></div>
                     </li>
-                    <li>Humidity:
+                    <li class="title">Humidity:
                         <div id="tomorrow-humidity"></div>
                     </li>
-                    <li>Winds:
+                    <li class="title">Winds:
                         <div id="tomorrow-winds"></div>
                     </li>
-                    <li>Pressure:
+                    <li class="title">Pressure:
                         <div id="tomorrow-pressure"></div>
                     </li>
                 </ul>
@@ -84,16 +85,16 @@
                 <div id="next-icon"></div>
                 <br>
                 <ul>
-                    <li>Clouds:
-                        <div id="next-clouds"></div>
+                    <li class="title">Forecast:
+                        <div id="next-forecast"></div>
                     </li>
-                    <li>Humidity:
+                    <li class="title">Humidity:
                         <div id="next-humidity"></div>
                     </li>
-                    <li>Winds:
+                    <li class="title">Winds:
                         <div id="next-winds"></div>
                     </li>
-                    <li>Pressure:
+                    <li class="title">Pressure:
                         <div id="next-pressure"></div>
                     </li>
                 </ul>
