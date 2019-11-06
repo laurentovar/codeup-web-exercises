@@ -372,3 +372,9 @@ function sayWelcome(obj) {
         return "You're welcome"
     }
 }
+//function that returns a random boolean
+function randomBoolean() {
+    return Boolean(Math.floor(Math.random()*2));
+}
+
+console.log(randomBoolean());
