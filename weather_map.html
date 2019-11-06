@@ -3,26 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather Map</title>
-<!--    <script src = "css/weather_map.css"></script>-->
+    <!--    <script src = "css/weather_map.css"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 
 </head>
 <body>
-    <h2>Weather Map</h2>
+<!--nav for the weather map-->
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo"><i class="material-icons"><img id="cloud-logo" src="img/cloud.png" height="32px"></i>Weather
+            Map</a>
+    </div>
+</nav>
+<!--    <h2>Weather Map</h2>-->
 
-    <div id='map'></div>
+<div id="Test">
+    <img src="./Icons/Sun.svg">
+    <img src="../Icons/Sun.svg" alt = "test" height="40" width="40">
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s4 m5">
+            <div class="card-panel teal">
+                <h3>Today</h3>
+                <h4 id="today-temp"></h4>
+                <ul>
+                    <li>Clouds: <div id="today-clouds"></div></li>
+                    <li>Humidity: <div id="today-humidity"></div></li>
+                    <li>Winds: <div id=" today-winds"></div></li>
+                    <li>Pressure: <div id="today-pressure"></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s4 m5">
+            <div class="card-panel teal">
+        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+        </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s4 m5">
+            <div class="card-panel teal">
+        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+        </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    <div id='map'></div>-->
 
 <!--Scripts-->
-    <script src = "js/jquery-2.2.4.js"></script>
-    <script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
-    <script src="js/keys.js"></script>
-    <script src = "js/weather_map.js"></script>
-    <script>
-        $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/API_KEY_HERE/29.4241,-98.4936") + darkSkyKey;
-        $.get("https://api.darksky.net/forecast/1441981f17b80ddabcad6ec5ea8f21ff/37.8267,-122.4233").done(function(data) {
-            console.log(data);
-        });
-    </script>
+<script src="js/jquery-2.2.4.js"></script>
+<script src='https://static-assets.mapbox.com/gl-pricing/dist/mapbox-gl.js'></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.min.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/weather_map.js"></script>
+<script>
+
+    //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
+    $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/29.4241,-98.4936").done(function (data) {
+        console.log(data);
+    });
+</script>
 
 </body>
 
