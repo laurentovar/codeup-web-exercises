@@ -115,9 +115,11 @@ function updateForecast(lat, long) {
         $("#today-winds").html(response.currently.windSpeed);
         $("#today-pressure").html(response.currently.pressure);
 
+
         //tomorrow temps
         $("#tomorrow-temp").html("<h4>" + response.daily.data[1].temperatureHigh + "/" + response.daily.data[1].temperatureLow + "</h4>");
 
+        //tomorrow icon
         var tomorrowIconFromDarkSky = response.daily.data[1].icon;
         weatherIcons.forEach(function (weatherIcon) {
             if (weatherIcon.condition === tomorrowIconFromDarkSky) {
@@ -125,6 +127,7 @@ function updateForecast(lat, long) {
             }
         });
 
+        //append html with the data from dark sky for tomorrow
         $("#tomorrow-forecast").html(response.daily.data[1].summary);
         $("#tomorrow-humidity").html(response.daily.data[1].humidity * 100);
         $("#tomorrow-winds").html(response.daily.data[1].windSpeed);
@@ -137,6 +140,7 @@ function updateForecast(lat, long) {
         //next temps
         $("#next-temp").html("<h4>" + response.daily.data[2].temperatureHigh + "/" + response.daily.data[2].temperatureLow + "</h4>");
 
+        //next day icon
         var nextIconFromDarkSky = response.daily.data[2].icon;
         weatherIcons.forEach(function (weatherIcon) {
             if (weatherIcon.condition === nextIconFromDarkSky) {
@@ -144,6 +148,7 @@ function updateForecast(lat, long) {
             }
         });
 
+        //append html with the data from dark sky for next day
         $("#next-forecast").html(response.daily.data[2].summary);
         $("#next-humidity").html(response.daily.data[2].humidity * 100);
         $("#next-winds").html(response.daily.data[2].windSpeed);
