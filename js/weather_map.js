@@ -114,8 +114,8 @@ function updateForecast(lat, long) {
         //Append html with the data from dark sky. For Current Day
         $("#today-forecast").html(response.currently.summary);
         $("#today-humidity").html(response.currently.humidity * 100  + " %");
-        $("#today-winds").html(response.currently.windSpeed);
-        $("#today-pressure").html(response.currently.pressure);
+        $("#today-precipitation").html(response.currently.precipProbability  * 100 + " %");
+        $("#today-winds").html(response.currently.windSpeed + " mph");
 
 
         //tomorrow temps
@@ -134,8 +134,8 @@ function updateForecast(lat, long) {
         //append html with the data from dark sky for tomorrow
         $("#tomorrow-forecast").html(response.daily.data[1].summary);
         $("#tomorrow-humidity").html(response.daily.data[1].humidity * 100  + " %");
-        $("#tomorrow-winds").html(response.daily.data[1].windSpeed);
-        $("#tomorrow-pressure").html(response.daily.data[1].pressure);
+        $("#tomorrow-precipitation").html(response.daily.data[1].precipProbability  * 100 + " %");
+        $("#tomorrow-winds").html(response.daily.data[1].windSpeed + " mph");
     });
 
     //Day After Tomorrow
@@ -157,8 +157,8 @@ function updateForecast(lat, long) {
         //append html with the data from dark sky for next day
         $("#next-forecast").html(response.daily.data[2].summary);
         $("#next-humidity").html(response.daily.data[2].humidity * 100 + " %");
-        $("#next-winds").html(response.daily.data[2].windSpeed);
-        $("#next-pressure").html(response.daily.data[2].pressure);
+        $("#next-precipitation").html(response.daily.data[2].precipProbability  * 100 + " %");
+        $("#next-winds").html(response.daily.data[2].windSpeed + " mph");
     });
 
 }
