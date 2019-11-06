@@ -1,11 +1,29 @@
+html{
+    width: 1600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
+.mainContainer {
+    background-image: url("../img/citybackground.jpg");
+    /*background-repeat: no-repeat;*/
+    object-fit: fill;
+}
+
 h3, .title {
     font-family: 'Poller One', cursive;
+    color: honeydew;
 }
 .title {
     font-size: 19px;
+}
+.nav-wrapper {
+    background-color: #226666;
+    color: honeydew;
 }
 
 #map {
@@ -26,9 +44,13 @@ h3, .title {
     margin-left: 10px;
     width: 400px;
 }
+#today-temp, #tomorrow-temp, #next-temp{
+    color: honeydew;
+}
 
 @media only screen and (min-width: 993px){
     .container {
         width:100%;
     }
 }
+

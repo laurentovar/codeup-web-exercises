@@ -111,7 +111,7 @@ function updateForecast(lat, long) {
 
         //Append html with the data from dark sky. For Current Day
         $("#today-forecast").html(response.currently.summary);
-        $("#today-humidity").html(response.currently.humidity * 100);
+        $("#today-humidity").html(response.currently.humidity * 100  + " %");
         $("#today-winds").html(response.currently.windSpeed);
         $("#today-pressure").html(response.currently.pressure);
 
@@ -129,7 +129,7 @@ function updateForecast(lat, long) {
 
         //append html with the data from dark sky for tomorrow
         $("#tomorrow-forecast").html(response.daily.data[1].summary);
-        $("#tomorrow-humidity").html(response.daily.data[1].humidity * 100);
+        $("#tomorrow-humidity").html(response.daily.data[1].humidity * 100  + " %");
         $("#tomorrow-winds").html(response.daily.data[1].windSpeed);
         $("#tomorrow-pressure").html(response.daily.data[1].pressure);
     });
@@ -150,7 +150,7 @@ function updateForecast(lat, long) {
 
         //append html with the data from dark sky for next day
         $("#next-forecast").html(response.daily.data[2].summary);
-        $("#next-humidity").html(response.daily.data[2].humidity * 100);
+        $("#next-humidity").html(response.daily.data[2].humidity * 100 + " %");
         $("#next-winds").html(response.daily.data[2].windSpeed);
         $("#next-pressure").html(response.daily.data[2].pressure);
     });
