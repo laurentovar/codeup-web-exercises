@@ -10,8 +10,7 @@ var map = new mapboxgl.Map({
 });
 
 //Default Initial forcast using center location
-updateForcast(29.42172,-98.48753);
-// updateForcastTomorrow(29.42172,-98.48753);
+updateForecast(29.42172,-98.48753);
 
 
 //Creates a draggable marker
@@ -22,14 +21,15 @@ var marker = new mapboxgl.Marker({
     .setLngLat([-98.48753, 29.42172])
     .addTo(map);
 
+
+//function that using the marker and updates the lat and long
 function onDragEnd() {
     var lngLat = marker.getLngLat();
     coordinates.style.display = 'block';
     coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
 
-    //Call UpdateForcast function and pass it the lat and long(in that order)
+    //Call UpdateForcast function and pass it the lat and long(in that order) to update the weather on the cards
     updateForcast(lngLat.lat,lngLat.lng);
-    // updateForcastTomorrow(lngLat.lat,lngLat.lng)
 }
 
 marker.on('dragend', onDragEnd);
@@ -81,11 +81,8 @@ var weatherIcons = [
 ];
 
 
-
-
-
-
-function updateForcast(lat, long) {
+//main function to update the forecast
+function updateForecast(lat, long) {
     console.log(lat);
     console.log(long);
 
