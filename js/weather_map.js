@@ -95,10 +95,12 @@ function updateForecast(lat, long) {
     $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
         console.log(response);
         console.log(response.daily.data);
-        console.log(response.daily.data[0].temperatureHigh);
+        console.log(Math.floor(response.daily.data[0].temperatureHigh));
 
         //Current Day Temps
-        $("#today-temp").html("<h4>" + response.daily.data[0].temperatureHigh + "/" + response.daily.data[0].temperatureLow + "</h4>");
+            //math.floor rounds the tempature down
+            // "&#176;" adds the degrees symbol
+        $("#today-temp").html("<h4>" + Math.floor(response.daily.data[0].temperatureHigh) + "&#176;" + "/" + Math.floor(response.daily.data[0].temperatureLow) + "&#176;" + "</h4>");
 
         //Current Day Icon
         var todayIconFromDarkSky = response.currently.icon;
@@ -117,7 +119,9 @@ function updateForecast(lat, long) {
 
 
         //tomorrow temps
-        $("#tomorrow-temp").html("<h4>" + response.daily.data[1].temperatureHigh + "/" + response.daily.data[1].temperatureLow + "</h4>");
+            //math.floor rounds the tempature down
+            // "&#176;" adds the degrees symbol
+        $("#tomorrow-temp").html("<h4>" + Math.floor(response.daily.data[1].temperatureHigh) + "&#176;" + "/" + Math.floor(response.daily.data[1].temperatureLow) + "&#176;" + "</h4>");
 
         //tomorrow icon
         var tomorrowIconFromDarkSky = response.daily.data[1].icon;
@@ -138,7 +142,9 @@ function updateForecast(lat, long) {
     $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
 
         //next temps
-        $("#next-temp").html("<h4>" + response.daily.data[2].temperatureHigh + "/" + response.daily.data[2].temperatureLow + "</h4>");
+            //math.floor rounds the tempature down
+            // "&#176;" adds the degrees symbol
+        $("#next-temp").html("<h4>" + Math.floor(response.daily.data[2].temperatureHigh) + "&#176;" + "/" + Math.floor(response.daily.data[2].temperatureLow) + "&#176;" + "</h4>");
 
         //next day icon
         var nextIconFromDarkSky = response.daily.data[2].icon;
