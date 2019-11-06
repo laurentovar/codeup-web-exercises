@@ -52,10 +52,59 @@ var weatherIcons = [
     }
 ]
 
-var testHtml = '<img src="' + weatherIcons[0].url + '">';
-console.log(weatherIcons[0].url);
-$("#Test").append(testHtml);
-console.log(testHtml);
+
+//var testHtml = '<img src="' + weatherIcons[0].url + '">';
+//$("#today-icon").append(testHtml);
+
+
+$("#search-button").click(function () {
+    var lat =  $("#latitude").val();
+    var long = $("#longitude").val();
+
+    console.log(lat);
+    console.log(long);
+
+
+    //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
+  $.get("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + lat + "," + long).done(function (response) {
+      console.log(response);
+      console.log(response.daily.data);
+      console.log(response.daily.data[0].temperatureHigh);
+
+      //Current Day Temps
+      $("#today-temp").append("<h4>" + response.daily.data[0].temperatureHigh  + "/" + response.daily.data[0].temperatureLow + "</h4>");
+
+      //Current Day Icon
+      var todayIconFromDarkSky = response.currently.icon;
+      weatherIcons.forEach(function(weatherIcon){
+          if (weatherIcon.condition === todayIconFromDarkSky){
+              $("#today-icon").append('<img src="' + weatherIcon.url + '">');
+          }
+      });
+
+
+      //Append html with the data from dark sky. For Current Day
+      $("#today-clouds").append(response.currently.summary);
+      $("#today-humidity").append(response.currently.humidity * 100);
+      $("#today-winds").append(response.currently.windSpeed);
+      $("#today-pressure").append(response.currently.pressure);
+
+
+      //Tomorrow
+
+
+      //Day After Tomorrow
+
+
+    });
+
+
+
+
+})
+
+
+
 
 
 ////Pasted From Somewhere
