@@ -18,6 +18,20 @@ h3, .title {
     font-family: 'Poller One', cursive;
     color: honeydew;
 }
+h2 {
+    font-family: 'Poller One', cursive;
+    text-align: center;
+    color: darkslategrey;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 40px;
+}
+.card-panel{
+    filter: alpha(opacity=60);
+    opacity: 0.8;
+
+
+}
 .title {
     font-size: 19px;
 }

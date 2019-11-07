@@ -1,9 +1,8 @@
 
-
 //Initialize page with default settings (san antonio)
-initializeMap(-98.48753, 29.42172)
-initializeMarker(-98.48753, 29.42172)
-updateCityName("San Antonio, Texas, United States")
+initializeMap(-98.48753, 29.42172);
+initializeMarker(-98.48753, 29.42172);
+// updateCityName("San Antonio, Texas, United States");
 
 var map;
 function initializeMap(long,lat){
@@ -18,13 +17,12 @@ function initializeMap(long,lat){
 });
 }
 
-//Default Initial forcast using center location
+//Default Initial forecast using center location
 updateForecast(29.42172,-98.48753);
 
 
 //Creates a draggable marker
 //https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/
-var marker;
 function initializeMarker(long, lat){
     marker = new mapboxgl.Marker({
         draggable: true
@@ -37,12 +35,10 @@ function initializeMarker(long, lat){
 
 function updateMarker(long, lat) {
     // Change the marker location
-    //marker.setPosition(new LatLng(long, lat));
-    initializeMap(long,lat)
+    initializeMap(long,lat);
     initializeMarker(long,lat);
-    //marker.setLngLat([long,lat])
-
 }
+
 
 //function that using the marker and updates the lat and long
 function onDragEnd() {
@@ -123,10 +119,11 @@ function updateForecast(lat, long) {
         console.log(Math.floor(response.daily.data[0].temperatureHigh));
 
 
+ //current day
         //Current Day Temps
+
             //math.floor rounds the tempature down
             // "&#176;" adds the degrees symbol
-
         $("#today-temp").html("<h4>" + Math.floor(response.daily.data[0].temperatureHigh) + "&#176;" + "/" + Math.floor(response.daily.data[0].temperatureLow) + "&#176;" + "</h4>");
 
         //Current Day Icon
@@ -192,22 +189,18 @@ function updateForecast(lat, long) {
 
 }
 
-
-
-
-
-
+//function that searches what the user is inputting
 $("#search-button").click(function () {
     var city =  $("#city").val();
+    //call geocode function so that it will update the marker,map,forecast
     geocode(city);
 
 });
 
-
+//function to update the city name at the top
 function updateCityName(city){
     $('#current-city').html("<h2>"+ city + "</h2>");
 }
-
 
 
 function geocode(search) {
@@ -220,19 +213,16 @@ function geocode(search) {
         }).then(function(data) {
             //console.log(data.features[0].geometry.coordinates);
             var coor = data.features[0].geometry.coordinates;
-            updateForecast(coor[1],coor[0]);
-            updateMarker(coor[0],coor[1])
-            updateCityName(data.features[0].place_name)
 
+            updateForecast(coor[1],coor[0]);
+            //updates where the marker is
+            updateMarker(coor[0],coor[1]);
+            //updated the citys name
+            updateCityName(data.features[0].place_name)
 
         });
 
 }
-
-
-
-
-
 
 function reverseGeocode(coordinates) {
     var baseUrl = 'https://api.mapbox.com';

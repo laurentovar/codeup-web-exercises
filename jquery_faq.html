@@ -141,14 +141,14 @@
     });
 
 //when h3 is pressed the li underneath it should bold
-//     $('h3').click(function () {
-//         $(this).next().children().css('font-weight', 'bold');
-//     });
+    $('h3').click(function () {
+        $(this).next().children().css('font-weight', 'bold');
+    });
 
-    //when any li is clicked the first li of the parent ul should have font color blue
-    // $('li').click(function () {
-    //     $(this).parent().children('li').first().css('color', 'blue');
-    // });
+    // when any li is clicked the first li of the parent ul should have font color blue
+    $('li').click(function () {
+        $(this).parent().children('li').first().css('color', 'blue');
+    });
 
     $("li").click(function () {
         $(this).parent().next().next().children().last().css('color', 'pink')
