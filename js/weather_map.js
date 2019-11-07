@@ -1,36 +1,35 @@
 
 //Initialize page with default settings (san antonio)
-initializeMap(-98.48753, 29.42172);
-initializeMarker(-98.48753, 29.42172);
+    initializeMap(-98.48753, 29.42172);
+    initializeMarker(-98.48753, 29.42172);
 // updateCityName("San Antonio, Texas, United States");
 
-var map;
-function initializeMap(long,lat){
-    // Creates weather maps
-    mapboxgl.accessToken = mapboxToken;
+    var map;
+    function initializeMap(long,lat){
+        // Creates weather maps
+        mapboxgl.accessToken = mapboxToken;
 
-    map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v9',
-    zoom: 8,
-    center: [long, lat]
-});
-}
+        map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v9',
+        zoom: 8,
+        center: [long, lat]
+        });
+    }
 
 //Default Initial forecast using center location
-updateForecast(29.42172,-98.48753);
+    updateForecast(29.42172,-98.48753);
 
 
 //Creates a draggable marker
 //https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/
-function initializeMarker(long, lat){
-    marker = new mapboxgl.Marker({
-        draggable: true
-    })
-        .setLngLat([long, lat])
-        .addTo(map);
-}
-
+    function initializeMarker(long, lat){
+        marker = new mapboxgl.Marker({
+            draggable: true
+        })
+            .setLngLat([long, lat])
+            .addTo(map);
+    }
 
 
 function updateMarker(long, lat) {
@@ -41,69 +40,68 @@ function updateMarker(long, lat) {
 
 
 //function that using the marker and updates the lat and long
-function onDragEnd() {
-    var lngLat = marker.getLngLat();
-    coordinates.style.display = 'block';
-    coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+    function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
 
     //Call UpdateForcast function and pass it the lat and long(in that order) to update the weather on the cards
     updateForecast(lngLat.lat,lngLat.lng);
-
 }
 
-marker.on('dragend', onDragEnd);
+    marker.on('dragend', onDragEnd);
 
 
 
 //Create an array of objects that holds the condition and url to the icon
-var weatherIcons = [
-    {
-        condition: "clear-day",
-        url: "./img/clearday.png"
-    },
-    {
-        condition: "clear-night",
-        url: "./img/clearnight.png"
-    },
-    {
-        condition: "rain",
-        url: "./img/rain.png"
-    },
-    {
-        condition: "snow",
-        url: "./img/snow.png"
-    },
-    {
-        condition: "sleet",
-        url: "./img/storm.png"
-    },
-    {
-        condition: "wind",
-        url: "./img/wind.png"
-    },
-    {
-        condition: "fog",
-        url: "./img/fog.png"
-    },
-    {
-        condition: "cloudy",
-        url: "./img/cloudy.png"
-    },
-    {
-        condition: "partly-cloudy-day",
-        url: "./img/partlycloudy.png"
-    },
-    {
-        condition: "partly-cloudy-night",
-        url: "./img/cloudynight.png"
-    }
-];
+    var weatherIcons = [
+        {
+            condition: "clear-day",
+            url: "./img/clearday.png"
+        },
+        {
+            condition: "clear-night",
+            url: "./img/clearnight.png"
+        },
+        {
+            condition: "rain",
+            url: "./img/rain.png"
+        },
+        {
+            condition: "snow",
+            url: "./img/snow.png"
+        },
+        {
+            condition: "sleet",
+            url: "./img/storm.png"
+        },
+        {
+            condition: "wind",
+            url: "./img/wind.png"
+        },
+        {
+            condition: "fog",
+            url: "./img/fog.png"
+        },
+        {
+            condition: "cloudy",
+            url: "./img/cloudy.png"
+        },
+        {
+            condition: "partly-cloudy-day",
+            url: "./img/partlycloudy.png"
+        },
+        {
+            condition: "partly-cloudy-night",
+            url: "./img/cloudynight.png"
+        }
+    ];
 
 
 //main function to update the forecast
-function updateForecast(lat, long) {
-    console.log(lat);
-    console.log(long);
+    function updateForecast(lat, long) {
+        console.log(lat);
+        console.log(long);
 
     //for the loading gif
     $('#today-iconloading').attr('src', '../img/loader.gif').toggleClass("loading");
@@ -189,53 +187,55 @@ function updateForecast(lat, long) {
 
 }
 
-//function that searches what the user is inputting
-$("#search-button").click(function () {
-    var city =  $("#city").val();
-    //call geocode function so that it will update the marker,map,forecast
-    geocode(city);
 
-});
+
+//function that searches what the user is inputting
+    $("#search-button").click(function () {
+        var city =  $("#city").val();
+        //call geocode function so that it will update the marker,map,forecast
+        geocode(city);
+
+    });
 
 //function to update the city name at the top
-function updateCityName(city){
-    $('#current-city').html("<h2>"+ city + "</h2>");
-}
+    function updateCityName(city){
+        $('#current-city').html("<h2>"+ city + "</h2>");
+    }
 
 
-function geocode(search) {
-    var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + mapboxToken)
-        .then(function(res) {
-            return res.json();
+    function geocode(search) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + mapboxToken)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                //console.log(data.features[0].geometry.coordinates);
+                var coor = data.features[0].geometry.coordinates;
+
+                updateForecast(coor[1],coor[0]);
+                //updates where the marker is
+                updateMarker(coor[0],coor[1]);
+                //updated the citys name
+                updateCityName(data.features[0].place_name)
+
+            });
+
+    }
+
+    function reverseGeocode(coordinates) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + mapboxToken)
+            .then(function(res) {
+                return res.json();
+            })
             // to get all the data from the request, comment out the following three lines...
-        }).then(function(data) {
-            //console.log(data.features[0].geometry.coordinates);
-            var coor = data.features[0].geometry.coordinates;
-
-            updateForecast(coor[1],coor[0]);
-            //updates where the marker is
-            updateMarker(coor[0],coor[1]);
-            //updated the citys name
-            updateCityName(data.features[0].place_name)
-
-        });
-
-}
-
-function reverseGeocode(coordinates) {
-    var baseUrl = 'https://api.mapbox.com';
-    var endPoint = '/geocoding/v5/mapbox.places/';
-    return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + mapboxToken)
-        .then(function(res) {
-            return res.json();
-        })
-        // to get all the data from the request, comment out the following three lines...
-        .then(function(data) {
-            return data.features[0].place_name;
-        });
-}
+            .then(function(data) {
+                return data.features[0].place_name;
+            });
+    }
 
 
 
