@@ -10,7 +10,6 @@ html{
 }
 .mainContainer {
     background-image: url("../img/citybackground.jpg");
-    /*background-repeat: no-repeat;*/
     object-fit: fill;
 }
 
@@ -41,7 +40,6 @@ h2 {
 }
 
 #map {
-    /* the width and height may be set to any size */
     width: 77.8%;
     height: 500px;
     margin-left: auto;
