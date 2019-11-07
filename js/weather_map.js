@@ -1,13 +1,20 @@
 
-// Creates weather maps
-mapboxgl.accessToken = mapboxToken;
-var map = new mapboxgl.Map({
+
+
+initializeMap(-98.48753, 29.42172)
+initializeMarker(-98.48753, 29.42172)
+var map;
+function initializeMap(long,lat){
+    // Creates weather maps
+    mapboxgl.accessToken = mapboxToken;
+
+    map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v9',
     zoom: 8,
-    center: [-98.48753, 29.42172]
-
+    center: [long, lat]
 });
+}
 
 //Default Initial forcast using center location
 updateForecast(29.42172,-98.48753);
@@ -15,12 +22,25 @@ updateForecast(29.42172,-98.48753);
 
 //Creates a draggable marker
 //https://docs.mapbox.com/mapbox-gl-js/example/drag-a-marker/
-var marker = new mapboxgl.Marker({
-    draggable: true
-})
-    .setLngLat([-98.48753, 29.42172])
-    .addTo(map);
+var marker;
+function initializeMarker(long, lat){
+    marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([long, lat])
+        .addTo(map);
+}
 
+
+
+function updateMarker(long, lat) {
+    // Change the marker location
+    //marker.setPosition(new LatLng(long, lat));
+    initializeMap(long,lat)
+    initializeMarker(long,lat);
+    //marker.setLngLat([long,lat])
+
+}
 
 //function that using the marker and updates the lat and long
 function onDragEnd() {
@@ -92,10 +112,6 @@ function updateForecast(lat, long) {
     $('#tommorrow-iconloading').attr('src', '../img/loader.gif').toggleClass("loading");
     $('#next-iconloading').attr('src', '../img/loader.gif').toggleClass("loading");
 
-    $("#search-button").click(function () {
-        var lat =  $("#latitude").val();
-        var long = $("#longitude").val();
-    });
 
 
     //For the darksky api to work we need us a proxy server which is the "cors-anywhere.herokuapp" url
@@ -174,6 +190,55 @@ function updateForecast(lat, long) {
 
 }
 
+
+
+
+
+
+$("#search-button").click(function () {
+    var city =  $("#city").val();
+    geocode(city);
+
+});
+
+
+
+
+
+function geocode(search) {
+    var baseUrl = 'https://api.mapbox.com';
+    var endPoint = '/geocoding/v5/mapbox.places/';
+    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + mapboxToken)
+        .then(function(res) {
+            return res.json();
+            // to get all the data from the request, comment out the following three lines...
+        }).then(function(data) {
+            //console.log(data.features[0].geometry.coordinates);
+            var coor = data.features[0].geometry.coordinates;
+            updateForecast(coor[1],coor[0]);
+            updateMarker(coor[0],coor[1])
+
+        });
+
+}
+
+
+
+
+
+
+function reverseGeocode(coordinates) {
+    var baseUrl = 'https://api.mapbox.com';
+    var endPoint = '/geocoding/v5/mapbox.places/';
+    return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + mapboxToken)
+        .then(function(res) {
+            return res.json();
+        })
+        // to get all the data from the request, comment out the following three lines...
+        .then(function(data) {
+            return data.features[0].place_name;
+        });
+}
 
 
 
