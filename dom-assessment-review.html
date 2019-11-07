@@ -102,10 +102,13 @@
     alert(contents);
 
     //Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
-    $( "li" ).each(function() {
-        $( this ).addClass( "listitem" );
-        $('.listitem').css('color,red');
-    });
+    $("li").click(function(){
+        $( "li" ).each(function() {
+            $( this ).addClass( "listitem" );
+            $('.listitem').css('color', 'red');
+        });
+    })
+
 
 
 
