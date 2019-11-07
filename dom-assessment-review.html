@@ -59,6 +59,7 @@
         $('#my-cohort').append(cohortValue);
 
     });
+
     //when button is clicked change background of cohort name to red
     $('#change-to-red').click(function () {
         $('#my-cohort').css('background-color', 'red');
@@ -69,7 +70,31 @@
             setTimeout(function() {
                 $('.container').css("background-color", "pink");
             }, 3000);
-        })
+        });
+
+     //craft selectors that highlight all h1, p, li elements
+    $('h1, p, li').css('background-color', '#61FFFF');
+
+
+    //change the background color of all p to pink and text white
+    $('p').css({
+        'background-color': '#e2186d',
+        'color': 'white'
+    });
+
+    //set all li text color to red when the mouse is hovering, reset to black when its not
+    $('li').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        }
+    );
+
+    // //alert the contents of your h1 elements
+    var contents = $('h1').html();
+    alert(contents);
 
 
 
