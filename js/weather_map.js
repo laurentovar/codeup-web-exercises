@@ -1,8 +1,10 @@
 
 
-
+//Initialize page with default settings (san antonio)
 initializeMap(-98.48753, 29.42172)
 initializeMarker(-98.48753, 29.42172)
+updateCityName("San Antonio, Texas, United States")
+
 var map;
 function initializeMap(long,lat){
     // Creates weather maps
@@ -202,6 +204,9 @@ $("#search-button").click(function () {
 });
 
 
+function updateCityName(city){
+    $('#current-city').html("<h2>"+ city + "</h2>");
+}
 
 
 
@@ -217,6 +222,8 @@ function geocode(search) {
             var coor = data.features[0].geometry.coordinates;
             updateForecast(coor[1],coor[0]);
             updateMarker(coor[0],coor[1])
+            updateCityName(data.features[0].place_name)
+
 
         });
 
