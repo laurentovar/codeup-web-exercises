@@ -30,6 +30,7 @@ function onDragEnd() {
 
     //Call UpdateForcast function and pass it the lat and long(in that order) to update the weather on the cards
     updateForecast(lngLat.lat,lngLat.lng);
+
 }
 
 marker.on('dragend', onDragEnd);
@@ -120,7 +121,6 @@ function updateForecast(lat, long) {
 
 
         //Append html with the data from dark sky. For Current Day
-        $('#today-icon').attr('src', todayIcon).toggleClass("loading");
         $("#today-forecast").html(response.currently.summary);
         $("#today-humidity").html(response.currently.humidity * 100  + " %");
         $("#today-precipitation").html(response.currently.precipProbability  * 100 + " %");
@@ -166,7 +166,6 @@ function updateForecast(lat, long) {
         });
 
         //append html with the data from dark sky for next day
-        $('#next-icon').attr('src', nextIcon).toggleClass("loading");
         $("#next-forecast").html(response.daily.data[2].summary);
         $("#next-humidity").html(response.daily.data[2].humidity * 100 + " %");
         $("#next-precipitation").html(response.daily.data[2].precipProbability  * 100 + " %");
