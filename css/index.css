@@ -6,31 +6,18 @@
  6. Link resume and identify as job seeker
 */
 /*may want to use parallax scrolling*/
-/**{*/
-/*    font-family: 'Raleway', sans-serif;*/
-/*}*/
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    /*overflow: hidden;*/
-    background-color: darkcyan;
+
+
+nav {
+    position: sticky !important;
+    top: 0 !important;
+    font-family: 'Playfair Display', serif !important;
+    background-color: #0F6367!important;
+}
+.brand-logo {
+    font-size: 20px !important;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding : 5px;
-    margin: 7px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: medium;
-}
-
-li a:hover {
-    background-color: cadetblue;
-}
 #profile {
     display: flex;
     width: 100%;
@@ -89,4 +76,12 @@ button {
     background-attachment: fixed;
     background-position: center;
     /*background-size: cover;*/
+}
+#profile-background {
+   display: block;
+    float: left;
+    width: 100%
+}
+.container {
+    background-color: #263948 !important;
 }

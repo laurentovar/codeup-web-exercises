@@ -21,7 +21,8 @@
 <!--    <img id="profile" src="img/profile-laurent.png" alt="profile-image" width= 200em" height="200em">-->
 <!--    <h1 id="profile-name">Lauren Tovar</h1>-->
 <!--    <h2>Web Developer</h2>-->
-    <img id="profile" src="img/blank-jumbotron.png" alt="profile-image">
+
+<img id="profile" src="img/blank-jumbotron.png" alt="profile-image">
 
 <h1>Lauren Tovar</h1>
 <!--<img id="line" src="img/line.png" alt="">-->
@@ -35,14 +36,38 @@
 </h2>
 <a href="#" class="w3-btn w3-black" id="button">View my work</a>
 
+<nav>
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Lauren Tovar</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Home</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">About</a></li>
+            <li><a href="badges.html"></a>Skills</li>
+            <li><a href="collapsible.html">Portfolio</a></li>
+            <li><a href="mobile.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-<h3>About Me</h3>
-<div class="parallax" ></div>
-<div style="height:1000px;font-size:60px;">
-    <p>test</p>
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Home</a></li>
+    <li><a href="badges.html">About</a></li>
+    <li><a href="collapsible.html">Portfolio</a></li>
+    <li><a href="mobile.html">Contact</a></li>
+</ul>
+
+
+<!--&lt;!&ndash;<h3>About Me</h3>&ndash;&gt;-->
+<!--<div class="parallax" ></div>-->
+<!--<div style="height:1000px;font-size:60px;">-->
+<!--    <p>test</p>-->
+<!--</div>-->
+
+<div class="container">
+    <img id="profile-background" src="img/profile_background.png" alt="profile-image" width="150%">
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     var TxtRotate = function(el, toRotate, period) {
         this.toRotate = toRotate;
@@ -100,6 +125,11 @@
         css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
         document.body.appendChild(css);
     };
+
+    //for small nav
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+    });
 
 
 </script>
