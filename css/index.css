@@ -14,9 +14,7 @@ ul {
     margin: 0;
     padding: 0;
     /*overflow: hidden;*/
-
     background-color: darkcyan;
-
 }
 
 li a {
@@ -40,25 +38,25 @@ li a:hover {
 }
 h1 {
     position: absolute;
-    top: 20%;
-   text-align: left;
-    margin-left: 20px;
-    font-size: 50px;
+    top: 35%;
+    text-align: left;
+    margin-left: 10px !important;
+    font-size: 98px !important;
     color: floralwhite;
     font-weight: bold;
     margin-bottom: 0;
-
+    font-family: 'Playfair Display', serif !important;
 
 }
 h2 {
     position: absolute;
-    top: 30%;
-    margin-left: 22px;
+    top: 47%;
+    margin-left: 6.5% !important;
     font-family: 'Shadows Into Light', cursive;
     text-align: left;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 45px;
+    font-size: 75px !important;
     color: floralwhite;
 }
 button {
@@ -81,7 +79,7 @@ button {
     color: floralwhite;
     font-family: 'Shadows Into Light', cursive;
     border-radius: 8px ;
-    top:52%;
+    top:80%;
     left:44%;
 }
 .parallax {
