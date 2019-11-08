@@ -187,8 +187,6 @@ function updateMarker(long, lat) {
 
 }
 
-
-
 //function that searches what the user is inputting
     $("#search-button").click(function () {
         var city =  $("#city").val();
