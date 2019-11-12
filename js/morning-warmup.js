@@ -362,7 +362,7 @@ console.log(numAsWord(3));
 console.log(numAsWord(10));
 console.log(numAsWord(14));
 
-//that will return you're welcome but only when passed a js object with a property of gratitude that has the value of "Thank you"
+//function that will return you're welcome but only when passed a js object with a property of gratitude that has the value of "Thank you"
 
 function sayWelcome(obj) {
     var object = {
@@ -372,9 +372,19 @@ function sayWelcome(obj) {
         return "You're welcome"
     }
 }
+
 //function that returns a random boolean
 function randomBoolean() {
     return Boolean(Math.floor(Math.random()*2));
 }
-
 console.log(randomBoolean());
+
+//write a loop that returns an array of all even numbers
+var array = [1,2,3,4,5,6,7,8];
+var evenArray = [];
+
+for (var i = 0; i >= array.length; i++){
+    if (array[i] % 2 === 0){
+        evenArray.push(array[i]);
+    }
+}
