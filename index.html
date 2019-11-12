@@ -4,28 +4,19 @@
     <meta charset="UTF-8">
     <title>Lauren Tovar</title>
     <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <!-- Small Navbar-->
 </head>
+
 <body>
-<!--<nav>-->
-<!--    <ul>-->
-<!--        <li><a  href="#">HOME</a></li>-->
-<!--        <li><a href="#">ABOUT ME</a></li>-->
-<!--        <li><a href="#">PROJECTS</a></li>-->
-<!--        <li><a href="#">CONTACT ME</a></li>-->
-<!--    </ul>-->
-<!--</nav>-->
-<!--    <img id="profile" src="img/profile-laurent.png" alt="profile-image" width= 200em" height="200em">-->
-<!--    <h1 id="profile-name">Lauren Tovar</h1>-->
-<!--    <h2>Web Developer</h2>-->
 
 <img id="profile" src="img/blank-jumbotron.png" alt="profile-image">
 
 <h1>Lauren Tovar</h1>
-<!--<img id="line" src="img/line.png" alt="">-->
 
 <h2>
     <span
@@ -34,8 +25,9 @@
             data-rotate='[ "Web developer.", "Creative.", "Passionate."]'>
     </span>
 </h2>
-<a href="#" class="w3-btn w3-black" id="button">View my work</a>
+<a href="#" class="w3-btn " id="button">View my work</a>
 
+<!--=============================Navbar====================================-->
 <nav>
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Lauren Tovar</a>
@@ -64,7 +56,28 @@
 <!--</div>-->
 
 <div class="container">
-    <img id="profile-background" src="img/profile_background.png" alt="profile-image" width="150%">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--    <p>About</p>-->
+    <!--    <img id="profile" src="img/profile-laurent.png" alt="profile-image" width= 200em" height="200em">-->
+
+<!--    <div class="quote">-->
+<!--        <blockquote contenteditable="false"><q>Good art inspires; Good design motivates.</q>-->
+<!--&lt;!&ndash;            <cite>- Gotl Aicher</cite>&ndash;&gt;-->
+<!--        </blockquote>-->
+<!--    </div>-->
+
+
+    <!--    <img id="profile-background" src="img/profile_background.png" alt="profile-image" width="150%">-->
+
+<!--============NEW STUFF=========-->
+
+    <!-- About Section -->
+
+<!--    https://www.free-css.com/template-categories/responsive?start=12-->
+
+
+
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -130,6 +143,48 @@
     $(document).ready(function(){
         $('.sidenav').sidenav();
     });
+
+ //for the quote
+    function splitWords() {
+        var quote = document.querySelector("blockquote q");
+        quote.innerText.replace(/(<([^>]+)>)/ig,"");
+        quotewords = quote.innerText.split(" "),
+            wordCount = quotewords.length;
+        quote.innerHTML = "";
+        for (var i=0; i < wordCount; i++) {
+            quote.innerHTML += "<span>"+quotewords[i]+"</span>";
+            if (i < quotewords.length - 1) {
+                quote.innerHTML += " ";
+            }
+        }
+        quotewords = document.querySelectorAll("blockquote q span");
+        fadeWords(quotewords);
+    }
+
+    function getRandom(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function fadeWords(quotewords) {
+        Array.prototype.forEach.call(quotewords, function(word) {
+             var animate = word.animate([{
+                    opacity: 0,
+                    filter: "blur("+getRandom(2,5)+"px)"
+                }, {
+                    opacity: 1,
+                    filter: "blur(0px)"
+                }],
+                {
+                    duration: 1000,
+                    delay: getRandom(500,1300),
+                    fill: 'forwards'
+                }
+            )
+        })
+    }
+
+
+    splitWords();
 
 
 </script>

@@ -8,6 +8,11 @@
 /*may want to use parallax scrolling*/
 
 
+.container {
+    max-width: 1900px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
 nav {
     position: sticky !important;
     top: 0 !important;
@@ -38,36 +43,28 @@ h1 {
 h2 {
     position: absolute;
     top: 47%;
+    font-weight: bold !important;
     margin-left: 6.5% !important;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive !important;
     text-align: left;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 75px !important;
     color: floralwhite;
 }
-button {
-    position: absolute;
-    background-color:#0F6367 ;
-    font-size: 25px;
-    color: floralwhite;
-    font-family: 'Shadows Into Light', cursive;
-    border-radius: 8px ;
-    top:52%;
-    left:43%;
-}
 
 #button {
     text-decoration: none;
     position: absolute;
-    background-color:#0F6367 ;
-    font-size: 26px;
+    background-color:#0F6367;
+    font-size: 36px !important;
     padding: 6px;
     color: floralwhite;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light', cursive !important;
     border-radius: 8px ;
     top:80%;
     left:44%;
+    font-weight: bold !important;
 }
 .parallax {
     background-image: url("../img/profile_background.png");
@@ -84,4 +81,55 @@ button {
 }
 .container {
     background-color: #263948 !important;
+    /*background-image: url("../img/profile_background.png");*/
+    display: flex;
+    width: 100%;
+    background-repeat: no-repeat;
+    /*background-size: 120rem 50rem;*/
+    /*background-position: center;*/
+
 }
+
+p {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 80px;
+    color: floralwhite;
+    font-weight: bold;
+    margin-left: 70% !important;
+    margin-top: 1%;
+
+}
+
+blockquote {
+    display: block;
+    font-size: 30px;
+    border-left: none !important;
+    margin-top: 200% !important;
+    color: whitesmoke;
+    white-space: nowrap;
+    font-family: 'Shadows Into Light', cursive !important;
+    /*margin-left: 10% !important;*/
+
+}
+cite {
+   font-size: 10px;
+    font-family: 'Playfair Display', serif !important;
+
+}
+blockquote q span {
+    will-change: opacity, filter;
+    opacity: 0;
+    filter: blur(0px);
+}
+/*.quote {*/
+/*    display: flex;*/
+/*    margin-left: % !important;*/
+/*    !*margin-top: 30% !important;*!*/
+/*}*/
+
+/*@media only screen and (min-width: 993px){*/
+/*    .container {*/
+/*     width: 100% !important;*/
+/*     height: auto;*/
+/*    }*/
+/*}*/
