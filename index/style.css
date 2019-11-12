@@ -447,7 +447,7 @@ xclip
 #mainNav.navbar-shrink {
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #333333;
+    background-color: #0F6367;
 }
 
 #clouds{
@@ -2208,7 +2208,7 @@ select.mobile-device {
 
 .copyrights {
     border-top: 1px dashed rgba(255, 255, 255, 0.1);
-    background-color: #1f1f1f;
+    background-color: #0F6367;
     box-sizing: border-box;
     width: 100%;
     text-align: left;
