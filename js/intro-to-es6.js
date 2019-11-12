@@ -202,6 +202,6 @@ const carInfo = ({make,model}) => {
 
 //passes in mycar object
 carInfo(myCar);
-carInfo(yourCar)
+carInfo(yourCar);
 
 //BONUS: Array Destructuring.
