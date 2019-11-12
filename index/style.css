@@ -2046,11 +2046,11 @@ select.mobile-device {
 }
 
 .contact_form .form-control {
-    background-color: #333333;
+    background-color: #0F6367;
     margin-bottom: 30px;
     border: 1px solid #ebebeb;
     box-sizing: border-box;
-    color: #bcbcbc;
+    color: white;
     font-size: 16px;
     outline: 0 none;
     padding: 10px 25px;
@@ -2062,7 +2062,7 @@ select.mobile-device {
 }
 
 .contact_form textarea {
-    color: #bcbcbc;
+    color: white;
     padding: 20px 25px !important;
     height: 160px !important;
 }
@@ -2336,7 +2336,7 @@ select.mobile-device {
 }
 
 .dmtop {
-    background-color: #3C3D41;
+    background-color: #0b2e13;
     z-index: 100;
     width: 50px;
     height: 50px;
