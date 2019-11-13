@@ -12,12 +12,12 @@
     IMPORT FILES
 -------------------------------------------------------------------*/
 
-@import url(css/animate.css);
-@import url(css/camera.css);
-@import url(css/flaticon.css);
-@import url(css/prettyPhoto.css);
-@import url(css/owl.carousel.css);
-@import url(css/font-awesome.min.css);
+/*@import url(css/animate.css);*/
+/*@import url(css/camera.css);*/
+/*@import url(css/flaticon.css);*/
+/*@import url(css/prettyPhoto.css);*/
+/*@import url(css/owl.carousel.css);*/
+/*@import url(css/font-awesome.min.css);*/
 
 /*------------------------------------------------------------------
     SKELETON
@@ -72,12 +72,7 @@ a {
     transition: all .3s ease-in-out;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0;
     font-weight: normal;
     position: relative;
@@ -113,23 +108,13 @@ h6 {
     font-size: 13px
 }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: #212121;
     text-decoration: none!important;
     opacity: 1
 }
 
-h1 a:hover,
-h2 a:hover,
-h3 a:hover,
-h4 a:hover,
-h5 a:hover,
-h6 a:hover {
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     opacity: .8
 }
 
@@ -139,8 +124,7 @@ a {
     outline: none;
 }
 
-a,
-.btn {
+a, .btn {
     text-decoration: none !important;
     outline: none !important;
     -webkit-transition: all .3s ease-in-out;
@@ -194,8 +178,7 @@ ul, li, ol{
     margin: 5px 20px 20px 0;
 }
 
-.aligncenter,
-div.aligncenter {
+.aligncenter, div.aligncenter {
     display: block;
     margin: 5px auto 5px auto;
 }
@@ -383,9 +366,6 @@ a img.aligncenter {
 	padding: 20px 0px;
 }
 
-/*.heading h3{*/
-/*	color: ffffff;*/
-/*}*/
 
 .cd-words-wrapper {
   display: inline-block;
@@ -451,17 +431,7 @@ xclip
     background-color: #0F6367;
 }
 
-#clouds{
-	margin-top: -5%;
-	position: relative;
-	z-index: 1;
-}
-#clouds path {
-    fill: #ffffff;
-    bottom: -10px;
-    overflow: hidden;
-    stroke: #ffffff;
-}
+
 
 .section {
     display: block;
@@ -568,7 +538,7 @@ xclip
 
 
 .btn-hover-new{
-	color: #333333;
+	color: whitesmoke;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
@@ -576,8 +546,9 @@ xclip
 	position: relative;
 	border: 1px solid #333333;
 	overflow: hidden;
-	padding: 0px 18px;
+	padding: 0 18px;
 	display: inline-block;
+    background-color: #0F6367;
 }
 
 .sim-btn{
@@ -586,7 +557,7 @@ xclip
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 0px;
+	margin-top: 0;
 	cursor: pointer;
 }
 
@@ -615,7 +586,7 @@ xclip
 
 .btn-hover-new:hover{
 	color: #ffffff;
-	background-color: #333333;
+	background-color: #053638;
 }
 .btn-hover-new:hover > span {
     opacity: 0;
@@ -688,7 +659,17 @@ xclip
     z-index: 2;
     padding: 0;
 }
-
+#design-project{
+    height: 259px !important;
+}
+#weather-map {
+    height: 260px !important;
+    width: 100%;
+}
+#tool-store {
+    height: 270px !important;
+    width: 100%;
+}
 .isotope-hidden.isotope-item {
     pointer-events: none;
     z-index: 1;
@@ -1425,7 +1406,7 @@ hr.invis1 {
 }
 
 .filter-button-group button.active{
-	background: #333333;
+	background: #053638;
 	color: #fff;
 	box-shadow: 2px 20px 45px 5px rgba(0,0,0,.2);	
 }
@@ -1440,7 +1421,7 @@ hr.invis1 {
 	background: #fff;
 	padding: 12px 40px;
 	border: none;
-	border-radius: 0px;
+	border-radius: 0;
 }
 
 
@@ -1461,7 +1442,7 @@ hr.invis1 {
     left: 10px;
     right: 10px;
     bottom: 10px;
-    background: rgba(51, 51, 51, 0.80);
+    background: rgb(5, 54, 56);
     color: #35424C;
     opacity: 0;
     -webkit-transition: all .5s;
@@ -1499,8 +1480,8 @@ hr.invis1 {
 }
 
 .post-box{
-	-webkit-box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
-	box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
+	-webkit-box-shadow: 0 5px 35px 0 rgba(148, 146, 245, 0.15);
+	box-shadow: 0 5px 35px 0 rgba(148, 146, 245, 0.15);
 	background: #ffffff;
 }
 
@@ -1527,14 +1508,14 @@ hr.invis1 {
 }
 
 .post-info{
-	padding: 0px 15px 40px 15px;
+	padding: 0 15px 40px 15px;
 	background: #ffffff;
 	text-align: left;
 	margin-top: 40px;
 }
 
 .post-info p{
-	margin: 0px;
+	margin: 0;
 }
 
 .post-info h4{
@@ -1623,7 +1604,7 @@ hr.invis1 {
 
 .features-right li:last-child,
 .features-left li:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     padding-bottom: 0 !important;
 }
 
@@ -2101,7 +2082,7 @@ select.mobile-device {
 .help-block{
 	position: absolute;
 	top: 100%;
-	left: 0px;
+	left: 0;
 }
 
 /*------------------------------------------------------------------
@@ -2168,7 +2149,7 @@ select.mobile-device {
 }
 
 .footer-links a {
-    color: #999;
+    color: whitesmoke;
 }
 
 .footer-links a:hover,
@@ -2213,7 +2194,7 @@ select.mobile-device {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
-    padding: 30px 0px;
+    padding: 30px 0;
     overflow: hidden;
 }
 
