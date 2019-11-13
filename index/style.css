@@ -89,11 +89,12 @@ h6 {
 }
 
 h1 {
-    font-size: 24px
+    font-size: 24px;
+
 }
 
 h2 {
-    font-size: 22px
+    font-size: 22px;
 }
 
 h3 {
@@ -171,9 +172,9 @@ blockquote {
 }
 
 ul, li, ol{
-	margin: 0px;
+	margin: 0;
 	list-style: none;
-	padding: 0px;
+	padding: 0;
 }
 
 
@@ -641,7 +642,7 @@ xclip
 }
 .right-box-pro::before {
     content: "";
-    background: url(images/country-quilt-dark.png);
+    background-color: #053638;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -2081,7 +2082,7 @@ select.mobile-device {
 }
 
 #contact {
-    background: url(images/bg.png) no-repeat center center #333333;
+    background: url(images/grey-pattern.png) no-repeat center center darkgrey;
 }
 
 
@@ -2459,7 +2460,7 @@ select.mobile-device {
     padding: 13px 40px;
     font-size: 18px;
     border: 1px solid #ececec !important;
-    color: #1f1f1f;
+    color: darkslategrey;
     background-color: transparent;
 }
 
