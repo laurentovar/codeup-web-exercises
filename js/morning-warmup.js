@@ -380,11 +380,16 @@ function randomBoolean() {
 console.log(randomBoolean());
 
 //write a loop that returns an array of all even numbers
-var array = [1,2,3,4,5,6,7,8];
-var evenArray = [];
+var myNumbers = [1,2,3,4,5,6,7,8];
 
-for (var i = 0; i >= array.length; i++){
-    if (array[i] % 2 === 0){
-        evenArray.push(array[i]);
-    }
+function evenNumbers(arr){
+    var newArray = [];
+    arr.forEach(function(num){
+        if(num % 2 === 0){
+            newArray.push(num);
+        }
+    });
+    return newArray;
 }
+
+console.log(evenNumbers(myNumbers));
