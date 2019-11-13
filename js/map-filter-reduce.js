@@ -40,33 +40,63 @@ const users = [
 ];
 
 //use .filter to create an array of user objects where each user object has at least 3 languages in the lang array
-const threeLangs = users.filter(function (langs) {
+let threeLangs = users.filter(function (langs) {
     return langs.languages.length >= 3;
 });
 console.log(threeLangs);
 
+//another way
+//let atleastthree = users.filter ((user) => users.languages.length >=3);
+//console.log(atleastthree);
 
 //use .map to create an array of strings where each element is a user's email address
 let newArray2 = users.map((emails) => emails.email);
 
 console.log(newArray2);
 
+
 //use . reduce to get the total years of experience from the list of users. Then calc the average
-const totalYears = users.reduce( function (total, years) {
+let totalYears = users.reduce( function (total, years) {
     return total + years.yearsOfExperience;
 },0);
 console.log(totalYears);
 
-const averageTotal = totalYears / 5;
+let averageTotal = totalYears / 5;
 console.log(averageTotal);
 
+//another way
+//let totalYearsOf = users.reduce((total, user) => {
+// return total + user.totalYearsOf
+//},0);
+// let average = totalYearsOf / users.length;
+//console.log(totalYearsOf)
+//console.log(average)
 
-//use . reduce to get the longest email from the users
-
+// use . reduce to get the longest email from the users
+let longestEmail = email.reduce((longest,email) => {
+    if (email.length > longest.length){
+    return email;
+    }else {
+    return longest
+    }
+}, "");
+console.log(longestEmail);
 
 //use .reduce to get the list of users names in a single string ex. "Your instructors are: ryan, luis, zach, fernando"
-const userNames = users.reduce(function (currentString,word) {
-    return `${currentString} ${word}`
-}, "");
-console.log(userNames);
+// const userNames = users.reduce(function (currentString,word) {
+//     return `${currentString} ${word}`
+// }, "");
+// console.log(userNames);
+
+let instructors = users.reduce((str,user) => {
+return `${str}, ${user.name}`
+}, "Your instructors are ryan, luis, zach") + ".";
+console.log(instructors);
+
+//Use .reduce to get the unique list of languages from the list of users.
+let listOfLanguages = Array.from(users.reduce((accumulator, user) => {
+    user.languages.forEach(language => accumulator.add(language));
+    return accumulator;
+}, new Set()));
+console.log(listOfLanguages);
 
