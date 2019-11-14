@@ -643,8 +643,22 @@ xclip
 	font-size: 22px;
 	font-weight: 600;
 }
-
-
+#teamwork-icon {
+    background-image: url("images/team.png");
+    background-repeat: no-repeat;
+}
+#devices-icon {
+     background-image: url("images/devices.png");
+     background-repeat: no-repeat;
+ }
+#creative-icon {
+    background-image: url("images/art2.png");
+    background-repeat: no-repeat;
+}
+#knowledge-icon {
+    background-image: url("images/brain.png");
+    background-repeat: no-repeat;
+}
 /*------------------------------------------------------------------
     PORTFOLIO
 -------------------------------------------------------------------*/
