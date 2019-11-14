@@ -396,13 +396,15 @@ console.log(evenNumbers(myNumbers));
 
 //function that returns a promise. The promise should resolve if the function takes in an even number
 //and rejects if passed anything else
-const myPromise = new Promise((resolve, reject) =>{
-    if (myPromise % 2 === 0){
-        resolve();
-    }else {
-        reject();
-    }
-});
+
+//doesnt actually take in a number to check if its even
+// const myPromise = new Promise((resolve, reject) =>{
+//     if (myPromise % 2 === 0){
+//         resolve();
+//     }else {
+//         reject();
+//     }
+// });
 
  const evenPromise = num => {
      return new Promise((resolve, reject) => {
