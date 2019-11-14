@@ -656,7 +656,15 @@ xclip
     background-repeat: no-repeat;
 }
 #knowledge-icon {
-    background-image: url("images/brain.png");
+    background-image: url("images/book.png");
+    background-repeat: no-repeat;
+}
+#troubleshooting-icon {
+    background-image: url("images/lightbulb.png");
+    background-repeat: no-repeat;
+}
+#ux-icon {
+    background-image: url("images/heart.png");
     background-repeat: no-repeat;
 }
 /*------------------------------------------------------------------
