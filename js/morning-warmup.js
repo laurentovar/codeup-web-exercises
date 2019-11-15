@@ -423,3 +423,16 @@ evenPromise(4)
     //related to reject
     .catch(message => console.log(message));
 
+//function that returns a promise. It should resolve with a message of "hello".
+    //write to the html doc an h1 that has the text of the resolve
+const thisPromise = () =>{
+    return new Promise((resolve, reject) => {
+        resolve (`hello`);
+    })
+
+};
+
+thisPromise().then(message => {
+    document.getElementsByTagName('body')[0].innerHTML += `<h1> ${message} </h1>`
+});
+
