@@ -436,3 +436,12 @@ thisPromise().then(message => {
     document.getElementsByTagName('body')[0].innerHTML += `<h1> ${message} </h1>`
 });
 
+//function that returns pi to 6 decimal places as a number
+// function pi(num) {
+//     let number = num.PI;
+//     number.toFixed(6)
+// }
+
+//you need parsefloat so that the datatype will be a number and not a string
+const piToSix = () => parseFloat(Math.PI.toFixed(6));
+console.log(piToSix());
