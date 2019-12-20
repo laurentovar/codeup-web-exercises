@@ -10,12 +10,12 @@ jQuery(document).ready(function($){
 		typeLettersDelay = 150,
 		selectionDuration = 500,
 		typeAnimationDelay = selectionDuration + 800,
-		//clip effect 
+		//clip effect
 		revealDuration = 600,
 		revealAnimationDelay = 1500;
-	
+
 	initHeadline();
-	
+
 
 	function initHeadline() {
 		//insert <i> element for each letter of a changing word
@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 				letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>': '<i>' + letters[i] + '</i>';
 			}
 		    var newLetters = letters.join('');
-		    word.html(newLetters).css('opacity', 1);
+		    // word.html(newLetters).css('opacity', 1);
 		});
 	}
 
@@ -42,7 +42,7 @@ jQuery(document).ready(function($){
 		var duration = animationDelay;
 		$headlines.each(function(){
 			var headline = $(this);
-			
+
 			if(headline.hasClass('loading-bar')) {
 				duration = barAnimationDelay;
 				setTimeout(function(){ headline.find('.cd-words-wrapper').addClass('is-loading') }, barWaiting);
@@ -68,16 +68,16 @@ jQuery(document).ready(function($){
 
 	function hideWord($word) {
 		var nextWord = takeNext($word);
-		
+
 		if($word.parents('.cd-headline').hasClass('type')) {
 			var parentSpan = $word.parent('.cd-words-wrapper');
-			parentSpan.addClass('selected').removeClass('waiting');	
-			setTimeout(function(){ 
-				parentSpan.removeClass('selected'); 
+			parentSpan.addClass('selected').removeClass('waiting');
+			setTimeout(function(){
+				parentSpan.removeClass('selected');
 				$word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
 			}, selectionDuration);
 			setTimeout(function(){ showWord(nextWord, typeLettersDelay) }, typeAnimationDelay);
-		
+
 		} else if($word.parents('.cd-headline').hasClass('letters')) {
 			var bool = ($word.children('i').length >= nextWord.children('i').length) ? true : false;
 			hideLetter($word.find('i').eq(0), $word, bool, lettersDelay);
@@ -107,33 +107,33 @@ jQuery(document).ready(function($){
 			$word.addClass('is-visible').removeClass('is-hidden');
 
 		}  else if($word.parents('.cd-headline').hasClass('clip')) {
-			$word.parents('.cd-words-wrapper').animate({ 'width' : $word.width() + 10 }, revealDuration, function(){ 
-				setTimeout(function(){ hideWord($word) }, revealAnimationDelay); 
+			$word.parents('.cd-words-wrapper').animate({ 'width' : $word.width() + 10 }, revealDuration, function(){
+				setTimeout(function(){ hideWord($word) }, revealAnimationDelay);
 			});
 		}
 	}
 
 	function hideLetter($letter, $word, $bool, $duration) {
 		$letter.removeClass('in').addClass('out');
-		
+
 		if(!$letter.is(':last-child')) {
-		 	setTimeout(function(){ hideLetter($letter.next(), $word, $bool, $duration); }, $duration);  
-		} else if($bool) { 
+		 	setTimeout(function(){ hideLetter($letter.next(), $word, $bool, $duration); }, $duration);
+		} else if($bool) {
 		 	setTimeout(function(){ hideWord(takeNext($word)) }, animationDelay);
 		}
 
 		if($letter.is(':last-child') && $('html').hasClass('no-csstransitions')) {
 			var nextWord = takeNext($word);
 			switchWord($word, nextWord);
-		} 
+		}
 	}
 
 	function showLetter($letter, $word, $bool, $duration) {
 		$letter.addClass('in').removeClass('out');
-		
-		if(!$letter.is(':last-child')) { 
-			setTimeout(function(){ showLetter($letter.next(), $word, $bool, $duration); }, $duration); 
-		} else { 
+
+		if(!$letter.is(':last-child')) {
+			setTimeout(function(){ showLetter($letter.next(), $word, $bool, $duration); }, $duration);
+		} else {
 			if($word.parents('.cd-headline').hasClass('type')) { setTimeout(function(){ $word.parents('.cd-words-wrapper').addClass('waiting'); }, 200);}
 			if(!$bool) { setTimeout(function(){ hideWord($word) }, animationDelay) }
 		}
@@ -152,3 +152,107 @@ jQuery(document).ready(function($){
 		$newWord.removeClass('is-hidden').addClass('is-visible');
 	}
 });
+
+// var TxtRotate = function(el, toRotate, period) {
+// 	this.toRotate = toRotate;
+// 	this.el = el;
+// 	this.loopNum = 0;
+// 	this.period = parseInt(period, 10) || 2000;
+// 	this.txt = '';
+// 	this.tick();
+// 	this.isDeleting = false;
+// };
+//
+// TxtRotate.prototype.tick = function() {
+// 	var i = this.loopNum % this.toRotate.length;
+// 	var fullTxt = this.toRotate[i];
+//
+// 	if (this.isDeleting) {
+// 		this.txt = fullTxt.substring(0, this.txt.length - 1);
+// 	} else {
+// 		this.txt = fullTxt.substring(0, this.txt.length + 1);
+// 	}
+//
+// 	this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+//
+// 	var that = this;
+// 	var delta = 300 - Math.random() * 100;
+//
+// 	if (this.isDeleting) { delta /= 2; }
+//
+// 	if (!this.isDeleting && this.txt === fullTxt) {
+// 		delta = this.period;
+// 		this.isDeleting = true;
+// 	} else if (this.isDeleting && this.txt === '') {
+// 		this.isDeleting = false;
+// 		this.loopNum++;
+// 		delta = 500;
+// 	}
+//
+// 	setTimeout(function() {
+// 		that.tick();
+// 	}, delta);
+// };
+//
+// window.onload = function() {
+// 	var elements = document.getElementsByClassName('txt-rotate');
+// 	for (var i=0; i<elements.length; i++) {
+// 		var toRotate = elements[i].getAttribute('data-rotate');
+// 		var period = elements[i].getAttribute('data-period');
+// 		if (toRotate) {
+// 			new TxtRotate(elements[i], JSON.parse(toRotate), period);
+// 		}
+// 	}
+// 	// INJECT CSS
+// 	var css = document.createElement("style");
+// 	css.type = "text/css";
+// 	css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+// 	document.body.appendChild(css);
+// };
+//
+// //for small nav
+// $(document).ready(function(){
+// 	$('.sidenav').sidenav();
+// });
+//
+// //for the quote
+// function splitWords() {
+// 	var quote = document.querySelector("blockquote q");
+// 	quote.innerText.replace(/(<([^>]+)>)/ig,"");
+// 	quotewords = quote.innerText.split(" "),
+// 		wordCount = quotewords.length;
+// 	quote.innerHTML = "";
+// 	for (var i=0; i < wordCount; i++) {
+// 		quote.innerHTML += "<span>"+quotewords[i]+"</span>";
+// 		if (i < quotewords.length - 1) {
+// 			quote.innerHTML += " ";
+// 		}
+// 	}
+// 	quotewords = document.querySelectorAll("blockquote q span");
+// 	fadeWords(quotewords);
+// }
+//
+// function getRandom(min, max) {
+// 	return Math.random() * (max - min) + min;
+// }
+//
+// function fadeWords(quotewords) {
+// 	Array.prototype.forEach.call(quotewords, function(word) {
+// 		var animate = word.animate([{
+// 				opacity: 0,
+// 				filter: "blur("+getRandom(2,5)+"px)"
+// 			}, {
+// 				opacity: 1,
+// 				filter: "blur(0px)"
+// 			}],
+// 			{
+// 				duration: 1000,
+// 				delay: getRandom(500,1300),
+// 				fill: 'forwards'
+// 			}
+// 		)
+// 	})
+// }
+//
+//
+// splitWords();
