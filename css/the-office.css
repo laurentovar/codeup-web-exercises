@@ -7,3 +7,16 @@ body{
 .nav-item, .navbar-brand  {
     color: whitesmoke !important;
 }
+
+.card {
+    margin: 40px;
+    background-color: transparent;
+}
+.card-body{
+    outline: none !important;
+
+}
+img {
+    /*margin: 30px;*/
+
+}
