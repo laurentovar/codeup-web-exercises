@@ -8,3 +8,9 @@ const palindrome = str => {
     return str === str.split('').reverse().join('')
 };
 palindrome("racecar");
+
+//returns the length of a string
+function recursion(str) {
+    return str.length;
+}
+recursion("hello there");
