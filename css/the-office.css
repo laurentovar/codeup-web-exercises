@@ -9,14 +9,17 @@ body{
 }
 
 .card {
-    margin: 40px;
-    background-color: transparent;
+    height:410px;
+    width: 60%;
 }
-.card-body{
-    outline: none !important;
 
-}
-img {
+.card-img {
     /*margin: 30px;*/
+    margin-top: 5px;
+    height: 400px;
+    width: 300px;
 
+}
+.card-text {
+    margin-left: 120px;
 }
