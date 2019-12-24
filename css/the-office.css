@@ -9,17 +9,20 @@ body{
 }
 
 .card {
+    margin-top: 40px;
     height:410px;
     width: 60%;
+
 }
 
 .card-img {
     /*margin: 30px;*/
-    margin-top: 5px;
+    margin-top: 2.5px;
+    margin-left: 12px;
     height: 400px;
     width: 300px;
 
 }
 .card-text {
-    margin-left: 120px;
+    margin-left: 110px;
 }
