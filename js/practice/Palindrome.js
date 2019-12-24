@@ -14,3 +14,11 @@ function recursion(str) {
     return str.length;
 }
 recursion("hello there");
+
+//takes an array of names and returns an array capitalized
+function capitalize(names) {
+    for (let i = 0; i< names.length; i++){
+        names[i] = names[i].charAt(0).toUpperCase() + names[i].toLowerCase().substring(1);
+    }
+    return names;
+}
