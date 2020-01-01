@@ -65,3 +65,32 @@ convert(3);
 convert(10);
 convert(12);
 convert(1);
+
+//find the number of layers in the rug
+function countLayers(rug) {
+    let allLayers = {};
+    let numOfLayers = 0;
+    for(let i = 0; i < rug.length; i++){
+        if(!(allLayers.hasOwnProperty(rug[i]))){
+            allLayers[rug[i]] = true;
+            numOfLayers++;
+        }
+    }
+    return numOfLayers;
+}
+countLayers([
+    "AAAA",
+    "ABBA",
+    "AAAA"
+]);//should be 3
+countLayers([
+    "AAAAAAAAAAA",
+    "AABBBBBBBAA",
+    "AABCCCCCBAA",
+    "AABCAAACBAA",
+    "AABCADACBAA",
+    "AABCAAACBAA",
+    "AABCCCCCBAA",
+    "AABBBBBBBAA",
+    "AAAAAAAAAAA"
+]); //should be 5
