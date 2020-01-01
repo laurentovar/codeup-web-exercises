@@ -57,3 +57,11 @@ const getBestStudent = (studentClass) => {
 
     return topStudent[0];
 };
+
+function convert(minutes) {
+    return minutes*60
+}
+convert(3);
+convert(10);
+convert(12);
+convert(1);
