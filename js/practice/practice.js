@@ -103,3 +103,14 @@ function changeEnough(change, amountDue) {
     return (quarter+dime+nickle+penny >= amountDue)
 
 }
+//between days
+function getDays(date1, date2) {
+    var a = date1;
+    var b = date2;
+    var result = (b-a)/86400000;
+    return(result)
+}
+getDays(
+    new Date("July 20, 2019"),
+    new Date("July 30, 2019")
+);
