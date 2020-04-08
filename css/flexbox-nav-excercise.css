@@ -6,6 +6,7 @@ body {
 }
 nav {
     background: darkgrey;
+    font-weight: bold;
 }
 ul {
     list-style: none;

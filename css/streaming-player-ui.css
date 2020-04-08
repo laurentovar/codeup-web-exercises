@@ -122,7 +122,6 @@ nav a:hover {
     position: relative;
     /* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
     /*for the transition no color is needed */
-    /* transition: color: .2s*/
     transition: .2s;
 }
 
