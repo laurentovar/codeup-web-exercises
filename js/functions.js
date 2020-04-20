@@ -30,8 +30,12 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myName = sayHello("Bobby");
-console.log(myName);
+// var myName = sayHello("Bobby");
+// console.log(myName);
+
+var myName = "Rumpelstiltskin";
+
+console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
@@ -120,8 +124,8 @@ alert("With a bill of $" + bill.toFixed(2) + " and a tip of " + (tipPercentage *
  */
 
 
-function applyDiscount(price, discountPercentage){
 
-    return price - (price * discountPercentage);
-
+function applyDiscount(originalPrice, discountPercentage) {
+    return originalPrice - (originalPrice * discountPercentage);
 }
+console.log(applyDiscount(100, .2));
