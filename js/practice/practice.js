@@ -129,7 +129,7 @@ function gambleGame(prob, prize, pay) {
     }
 }
 
-gambleGame(0.2, 50, 9) + "should return true".l
-gambleGame(0.9, 1, 2 + "should return false"
-gambleGame(0.9, 3, 2) + "should return true"
+console.log(gambleGame(0.2, 50, 9) + "should return true");
+console.log(gambleGame(0.9, 1, 2 )+ "should return false");
+console.log(gambleGame(0.9, 3, 2) + "should return true");
 
